@@ -9,8 +9,8 @@ const corsHeaders = {
 // These values are read from environment secrets when configured.
 // Placeholders are used until real Apple/Google credentials are provided.
 const APPLE_TEAM_ID = Deno.env.get("APPLE_TEAM_ID") ?? "TEAMIDXXXX";
-const IOS_BUNDLE_ID = Deno.env.get("IOS_BUNDLE_ID") ?? "com.nextflight.academy";
-const ANDROID_PACKAGE_NAME = Deno.env.get("ANDROID_PACKAGE_NAME") ?? "com.nextflight.academy";
+const IOS_BUNDLE_ID = Deno.env.get("IOS_BUNDLE_ID") ?? "app.nextflightacademy";
+const ANDROID_PACKAGE_NAME = Deno.env.get("ANDROID_PACKAGE_NAME") ?? "app.nextflightacademy";
 const ANDROID_SHA256_CERT = Deno.env.get("ANDROID_SHA256_CERT") ?? "AA:BB:CC:DD:EE:FF:00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF:00:11:22:33:44:55:66:77:88:99";
 
 const aasa = {

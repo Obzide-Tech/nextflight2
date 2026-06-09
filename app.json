@@ -15,12 +15,12 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.nextflightacademy.app",
+      "bundleIdentifier": "app.nextflightacademy",
       "buildNumber": "1",
       "associatedDomains": ["applinks:nextflightacademy.app"]
     },
     "android": {
-      "package": "com.nextflightacademy.app",
+      "package": "app.nextflightacademy",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
