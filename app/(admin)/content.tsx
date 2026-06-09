@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { View, Text, StyleSheet, Pressable, ActivityIndicator, Platform, ScrollView, useWindowDimensions } from 'react-native';
+import { View, Text, StyleSheet, Pressable, ActivityIndicator, Platform, ScrollView, useWindowDimensions, Modal, Switch, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StatusPill } from '@/components/admin/StatusPill';
 import {
   fetchProgramsAdmin,
@@ -8,19 +9,131 @@ import {
   fetchLessonsByModule,
   getUploadSignature,
   updateLessonVideoUrl,
+  updateLesson,
 } from '@/lib/admin';
 import { isCloudinaryUrl } from '@/lib/cloudinary';
 import { colors, fonts, fontSize, spacing, radius } from '@/theme/tokens';
-import { ChevronRight, ChevronLeft, Upload, CircleCheck as Check, Film, BookOpen, Layers, CirclePlay as PlayCircle, GraduationCap } from 'lucide-react-native';
+import { ChevronRight, ChevronLeft, Upload, CircleCheck as Check, Film, BookOpen, Layers, CirclePlay as PlayCircle, GraduationCap, Pencil, X, Save } from 'lucide-react-native';
 
 const MAX_SIZE_BYTES = 2 * 1024 * 1024 * 1024;
 
 type ColumnConfig = { title: string; icon: any; count: number };
-
 type MobileStep = 'programs' | 'courses' | 'modules' | 'lessons';
+
+type LessonDraft = {
+  title: string;
+  description: string;
+  duration_minutes: string;
+  is_free: boolean;
+  is_published: boolean;
+};
+
+function LessonEditor({
+  lesson,
+  onSave,
+  onClose,
+  saving,
+}: {
+  lesson: any;
+  onSave: (draft: LessonDraft) => void;
+  onClose: () => void;
+  saving: boolean;
+}) {
+  const [draft, setDraft] = useState<LessonDraft>({
+    title: lesson.title ?? '',
+    description: lesson.description ?? '',
+    duration_minutes: String(Math.round((lesson.duration_seconds ?? 0) / 60)),
+    is_free: !!lesson.is_free,
+    is_published: !!lesson.is_published,
+  });
+
+  return (
+    <View style={editorStyles.wrap}>
+      <View style={editorStyles.header}>
+        <Text style={editorStyles.heading}>Editar lección</Text>
+        <TouchableOpacity onPress={onClose} hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}>
+          <X size={18} color={colors.ink[700]} strokeWidth={2} />
+        </TouchableOpacity>
+      </View>
+
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={editorStyles.body} keyboardShouldPersistTaps="handled">
+        <Text style={editorStyles.label}>Título</Text>
+        <TextInput
+          value={draft.title}
+          onChangeText={(v) => setDraft((d) => ({ ...d, title: v }))}
+          style={editorStyles.input}
+          placeholderTextColor={colors.ink[300]}
+          placeholder="Título de la lección"
+        />
+
+        <Text style={editorStyles.label}>Descripción</Text>
+        <TextInput
+          value={draft.description}
+          onChangeText={(v) => setDraft((d) => ({ ...d, description: v }))}
+          style={[editorStyles.input, editorStyles.inputMulti]}
+          multiline
+          scrollEnabled
+          placeholderTextColor={colors.ink[300]}
+          placeholder="Descripción (opcional)"
+        />
+
+        <Text style={editorStyles.label}>Duración (minutos)</Text>
+        <TextInput
+          value={draft.duration_minutes}
+          onChangeText={(v) => setDraft((d) => ({ ...d, duration_minutes: v.replace(/[^0-9]/g, '') }))}
+          style={editorStyles.input}
+          keyboardType="numeric"
+          placeholderTextColor={colors.ink[300]}
+          placeholder="0"
+        />
+
+        <View style={editorStyles.toggleRow}>
+          <View style={{ flex: 1 }}>
+            <Text style={editorStyles.label}>Gratis</Text>
+            <Text style={editorStyles.toggleSub}>Visible sin suscripción</Text>
+          </View>
+          <Switch
+            value={draft.is_free}
+            onValueChange={(v) => setDraft((d) => ({ ...d, is_free: v }))}
+            trackColor={{ true: colors.burgundy[700], false: colors.cream[300] }}
+            thumbColor={colors.cream[100]}
+          />
+        </View>
+
+        <View style={editorStyles.toggleRow}>
+          <View style={{ flex: 1 }}>
+            <Text style={editorStyles.label}>Publicada</Text>
+            <Text style={editorStyles.toggleSub}>Visible para alumnas</Text>
+          </View>
+          <Switch
+            value={draft.is_published}
+            onValueChange={(v) => setDraft((d) => ({ ...d, is_published: v }))}
+            trackColor={{ true: colors.burgundy[700], false: colors.cream[300] }}
+            thumbColor={colors.cream[100]}
+          />
+        </View>
+      </ScrollView>
+
+      <View style={editorStyles.footer}>
+        <Pressable onPress={onClose} style={editorStyles.cancelBtn}>
+          <Text style={editorStyles.cancelTxt}>Cancelar</Text>
+        </Pressable>
+        <Pressable
+          onPress={() => onSave(draft)}
+          style={[editorStyles.saveBtn, saving && { opacity: 0.6 }]}
+          disabled={saving}
+        >
+          <Save size={14} color={colors.cream[100]} strokeWidth={2} />
+          <Text style={editorStyles.saveTxt}>{saving ? 'Guardando...' : 'Guardar'}</Text>
+        </Pressable>
+      </View>
+    </View>
+  );
+}
 
 export default function ContentAdmin() {
   const { width } = useWindowDimensions();
+  const insets = useSafeAreaInsets();
   const isMobile = width < 768;
 
   const [programs, setPrograms] = useState<any[]>([]);
@@ -38,6 +151,9 @@ export default function ContentAdmin() {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [uploadError, setUploadError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  const [editingLesson, setEditingLesson] = useState<any | null>(null);
+  const [savingEdit, setSavingEdit] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -141,6 +257,22 @@ export default function ContentAdmin() {
     e.target.value = '';
   };
 
+  const handleSaveEdit = async (draft: LessonDraft) => {
+    if (!editingLesson) return;
+    setSavingEdit(true);
+    const fields = {
+      title: draft.title.trim(),
+      description: draft.description.trim() || null,
+      duration_seconds: (parseInt(draft.duration_minutes, 10) || 0) * 60,
+      is_free: draft.is_free,
+      is_published: draft.is_published,
+    };
+    await updateLesson(editingLesson.id, fields as any);
+    setLessons((prev) => prev.map((l) => l.id === editingLesson.id ? { ...l, ...fields } : l));
+    setSavingEdit(false);
+    setEditingLesson(null);
+  };
+
   if (loading) {
     return (
       <View style={styles.loaderWrap}>
@@ -177,6 +309,61 @@ export default function ContentAdmin() {
     lessons: selectedModuleTitle || 'Módulos',
   };
 
+  const renderLessonRow = (l: any) => {
+    const hasVideo = !!l.video_external_url;
+    const isUploading = uploadingLessonId === l.id;
+    const hasCloudinary = hasVideo && isCloudinaryUrl(l.video_external_url);
+
+    return (
+      <View key={l.id} style={styles.lessonItem}>
+        <View style={{ flex: 1 }}>
+          <Text style={styles.lessonTitle} numberOfLines={2}>{l.title}</Text>
+          <View style={styles.lessonMeta}>
+            <Text style={styles.colItemMeta}>{Math.round((l.duration_seconds ?? 0) / 60)} min · {l.is_free ? 'gratis' : 'premium'}</Text>
+            {hasCloudinary && (
+              <View style={styles.cdnBadge}>
+                <Film size={9} color={colors.gold[500]} />
+                <Text style={styles.cdnTxt}>CDN</Text>
+              </View>
+            )}
+          </View>
+          {isUploading ? (
+            <>
+              <View style={styles.progressWrap}>
+                <View style={[styles.progressBar, { width: `${uploadProgress}%` as any }]} />
+              </View>
+              <Text style={styles.progressPct}>{uploadProgress}%</Text>
+            </>
+          ) : null}
+        </View>
+        <View style={styles.lessonRight}>
+          <StatusPill value={l.is_published ? 'active' : 'inactive'} />
+          <View style={styles.lessonActions}>
+            <Pressable
+              onPress={() => setEditingLesson(l)}
+              style={styles.actionBtn}
+            >
+              <Pencil size={12} color={colors.burgundy[700]} strokeWidth={2} />
+            </Pressable>
+            {Platform.OS === 'web' ? (
+              <Pressable
+                onPress={() => triggerUpload(l.id)}
+                style={[styles.uploadBtn, !!uploadingLessonId && { opacity: 0.4 }]}
+                disabled={!!uploadingLessonId}
+              >
+                {isUploading && uploadProgress === 100 ? (
+                  <Check size={13} color={colors.state.success} />
+                ) : (
+                  <Upload size={13} color={colors.burgundy[700]} strokeWidth={2} />
+                )}
+              </Pressable>
+            ) : null}
+          </View>
+        </View>
+      </View>
+    );
+  };
+
   return (
     <View style={styles.wrap}>
       {Platform.OS === 'web' && (
@@ -187,6 +374,27 @@ export default function ContentAdmin() {
           style={{ display: 'none' } as any}
           onChange={handleFileSelected}
         />
+      )}
+
+      {/* Lesson edit modal (mobile) */}
+      {isMobile && (
+        <Modal visible={!!editingLesson} transparent animationType="slide" onRequestClose={() => setEditingLesson(null)}>
+          <View style={styles.mobileModalOverlay}>
+            <Pressable style={styles.mobileModalBackdrop} onPress={() => setEditingLesson(null)} />
+            <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={{ width: '100%' }}>
+              <View style={[styles.mobileModalSheet, { paddingBottom: insets.bottom + 16 }]}>
+                {editingLesson && (
+                  <LessonEditor
+                    lesson={editingLesson}
+                    onSave={handleSaveEdit}
+                    onClose={() => setEditingLesson(null)}
+                    saving={savingEdit}
+                  />
+                )}
+              </View>
+            </KeyboardAvoidingView>
+          </View>
+        </Modal>
       )}
 
       {/* Page header */}
@@ -203,7 +411,6 @@ export default function ContentAdmin() {
       {isMobile ? (
         /* Mobile: step-by-step navigator */
         <View style={styles.mobileExplorer}>
-          {/* Mobile breadcrumb nav bar */}
           <View style={styles.mobileNavBar}>
             {mobileStepBack[mobileStep] !== null ? (
               <Pressable
@@ -228,7 +435,6 @@ export default function ContentAdmin() {
             </View>
           </View>
 
-          {/* Mobile column content */}
           <ScrollView style={styles.mobileColScroll} contentContainerStyle={styles.colContent}>
             {mobileStep === 'programs' && programs.map((p) => (
               <Pressable
@@ -301,57 +507,13 @@ export default function ContentAdmin() {
             {mobileStep === 'lessons' && (
               lessons.length === 0 ? (
                 <Text style={styles.colEmpty}>Sin lecciones en este módulo</Text>
-              ) : lessons.map((l) => {
-                const hasVideo = !!l.video_external_url;
-                const isUploading = uploadingLessonId === l.id;
-                const hasCloudinary = hasVideo && isCloudinaryUrl(l.video_external_url);
-                return (
-                  <View key={l.id} style={styles.lessonItem}>
-                    <View style={{ flex: 1 }}>
-                      <Text style={styles.lessonTitle} numberOfLines={2}>{l.title}</Text>
-                      <View style={styles.lessonMeta}>
-                        <Text style={styles.colItemMeta}>{Math.round((l.duration_seconds ?? 0) / 60)} min · {l.is_free ? 'gratis' : 'premium'}</Text>
-                        {hasCloudinary && (
-                          <View style={styles.cdnBadge}>
-                            <Film size={9} color={colors.gold[500]} />
-                            <Text style={styles.cdnTxt}>CDN</Text>
-                          </View>
-                        )}
-                      </View>
-                      {isUploading ? (
-                        <>
-                          <View style={styles.progressWrap}>
-                            <View style={[styles.progressBar, { width: `${uploadProgress}%` as any }]} />
-                          </View>
-                          <Text style={styles.progressPct}>{uploadProgress}%</Text>
-                        </>
-                      ) : null}
-                    </View>
-                    <View style={styles.lessonRight}>
-                      <StatusPill value={l.is_published ? 'active' : 'inactive'} />
-                      {Platform.OS === 'web' ? (
-                        <Pressable
-                          onPress={() => triggerUpload(l.id)}
-                          style={[styles.uploadBtn, !!uploadingLessonId && { opacity: 0.4 }]}
-                          disabled={!!uploadingLessonId}
-                        >
-                          {isUploading && uploadProgress === 100 ? (
-                            <Check size={13} color={colors.state.success} />
-                          ) : (
-                            <Upload size={13} color={colors.burgundy[700]} strokeWidth={2} />
-                          )}
-                        </Pressable>
-                      ) : null}
-                    </View>
-                  </View>
-                );
-              })
+              ) : lessons.map((l) => renderLessonRow(l))
             )}
           </ScrollView>
         </View>
       ) : (
-        /* Desktop: 4-column finder layout */
-        <>
+        /* Desktop: 4-column finder + optional edit pane */
+        <View style={styles.desktopBody}>
           <View style={styles.colHeadersBar}>
             {COLS.map((col, i) => {
               const Icon = col.icon;
@@ -365,6 +527,7 @@ export default function ContentAdmin() {
                 </View>
               );
             })}
+            {editingLesson && <View style={[styles.colHeader, { flex: 1.4 }]} />}
           </View>
 
           <View style={styles.explorer}>
@@ -442,59 +605,99 @@ export default function ContentAdmin() {
             <ScrollView style={[styles.col, { flex: 1.5 }]} contentContainerStyle={styles.colContent}>
               {lessons.length === 0 ? (
                 <Text style={styles.colEmpty}>Selecciona un módulo</Text>
-              ) : lessons.map((l) => {
-                const hasVideo = !!l.video_external_url;
-                const isUploading = uploadingLessonId === l.id;
-                const hasCloudinary = hasVideo && isCloudinaryUrl(l.video_external_url);
-
-                return (
-                  <View key={l.id} style={styles.lessonItem}>
-                    <View style={{ flex: 1 }}>
-                      <Text style={styles.lessonTitle} numberOfLines={2}>{l.title}</Text>
-                      <View style={styles.lessonMeta}>
-                        <Text style={styles.colItemMeta}>{Math.round((l.duration_seconds ?? 0) / 60)} min · {l.is_free ? 'gratis' : 'premium'}</Text>
-                        {hasCloudinary && (
-                          <View style={styles.cdnBadge}>
-                            <Film size={9} color={colors.gold[500]} />
-                            <Text style={styles.cdnTxt}>CDN</Text>
-                          </View>
-                        )}
-                      </View>
-                      {isUploading ? (
-                        <>
-                          <View style={styles.progressWrap}>
-                            <View style={[styles.progressBar, { width: `${uploadProgress}%` as any }]} />
-                          </View>
-                          <Text style={styles.progressPct}>{uploadProgress}%</Text>
-                        </>
-                      ) : null}
-                    </View>
-                    <View style={styles.lessonRight}>
-                      <StatusPill value={l.is_published ? 'active' : 'inactive'} />
-                      {Platform.OS === 'web' ? (
-                        <Pressable
-                          onPress={() => triggerUpload(l.id)}
-                          style={[styles.uploadBtn, !!uploadingLessonId && { opacity: 0.4 }]}
-                          disabled={!!uploadingLessonId}
-                        >
-                          {isUploading && uploadProgress === 100 ? (
-                            <Check size={13} color={colors.state.success} />
-                          ) : (
-                            <Upload size={13} color={colors.burgundy[700]} strokeWidth={2} />
-                          )}
-                        </Pressable>
-                      ) : null}
-                    </View>
-                  </View>
-                );
-              })}
+              ) : lessons.map((l) => renderLessonRow(l))}
             </ScrollView>
+
+            {/* Desktop edit pane */}
+            {editingLesson && (
+              <>
+                <View style={styles.colDivider} />
+                <View style={[styles.col, styles.editPane]}>
+                  <LessonEditor
+                    lesson={editingLesson}
+                    onSave={handleSaveEdit}
+                    onClose={() => setEditingLesson(null)}
+                    saving={savingEdit}
+                  />
+                </View>
+              </>
+            )}
           </View>
-        </>
+        </View>
       )}
     </View>
   );
 }
+
+const editorStyles = StyleSheet.create({
+  wrap: { flex: 1, backgroundColor: colors.surface.raised, flexDirection: 'column' },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: spacing.lg,
+    paddingVertical: 14,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border.soft,
+  },
+  heading: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.base },
+  body: { padding: spacing.lg, gap: 4, paddingBottom: 24 },
+  label: { fontFamily: fonts.bodyMedium, color: colors.ink[700], fontSize: fontSize.sm, marginBottom: 4, marginTop: 8 },
+  toggleSub: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.xs, marginTop: 2 },
+  input: {
+    fontFamily: fonts.body,
+    fontSize: fontSize.sm,
+    color: colors.ink[800],
+    backgroundColor: colors.cream[100],
+    borderWidth: 1,
+    borderColor: colors.border.soft,
+    borderRadius: radius.sm,
+    paddingHorizontal: spacing.md,
+    paddingVertical: 10,
+    outlineStyle: 'none' as any,
+  },
+  inputMulti: {
+    minHeight: 72,
+    maxHeight: 120,
+    textAlignVertical: 'top' as any,
+  },
+  toggleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 10,
+    borderTopWidth: 1,
+    borderTopColor: colors.border.soft,
+    marginTop: 4,
+  },
+  footer: {
+    flexDirection: 'row',
+    gap: spacing.sm,
+    paddingHorizontal: spacing.lg,
+    paddingVertical: 14,
+    borderTopWidth: 1,
+    borderTopColor: colors.border.soft,
+  },
+  cancelBtn: {
+    flex: 1,
+    paddingVertical: 10,
+    borderRadius: radius.sm,
+    borderWidth: 1,
+    borderColor: colors.border.soft,
+    alignItems: 'center',
+  },
+  cancelTxt: { fontFamily: fonts.bodyMedium, color: colors.ink[700], fontSize: fontSize.sm },
+  saveBtn: {
+    flex: 2,
+    flexDirection: 'row',
+    gap: 6,
+    paddingVertical: 10,
+    borderRadius: radius.sm,
+    backgroundColor: colors.burgundy[800],
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  saveTxt: { fontFamily: fonts.bodySemibold, color: colors.cream[100], fontSize: fontSize.sm },
+});
 
 const styles = StyleSheet.create({
   loaderWrap: { flex: 1, alignItems: 'center', justifyContent: 'center' },
@@ -526,7 +729,7 @@ const styles = StyleSheet.create({
   },
   errorText: { fontFamily: fonts.bodyMedium, color: '#7A1A2C', fontSize: fontSize.sm },
 
-  /* Mobile step navigator */
+  /* Mobile */
   mobileExplorer: { flex: 1, flexDirection: 'column' },
   mobileNavBar: {
     flexDirection: 'row',
@@ -563,7 +766,24 @@ const styles = StyleSheet.create({
   },
   mobileColScroll: { flex: 1, backgroundColor: colors.surface.raised },
 
-  /* Desktop column headers */
+  mobileModalOverlay: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
+  mobileModalBackdrop: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(48,5,14,0.4)',
+  },
+  mobileModalSheet: {
+    backgroundColor: colors.surface.raised,
+    borderTopLeftRadius: radius.xl,
+    borderTopRightRadius: radius.xl,
+    maxHeight: '85%',
+    overflow: 'hidden',
+  },
+
+  /* Desktop */
+  desktopBody: { flex: 1, flexDirection: 'column', overflow: 'hidden', minHeight: 0 },
   colHeadersBar: {
     flexDirection: 'row',
     backgroundColor: colors.burgundy[900],
@@ -593,7 +813,6 @@ const styles = StyleSheet.create({
   },
   colBadgeTxt: { fontFamily: fonts.bodySemibold, color: colors.gold[400], fontSize: 11 },
 
-  /* Desktop explorer */
   explorer: {
     flex: 1,
     flexDirection: 'row',
@@ -603,6 +822,9 @@ const styles = StyleSheet.create({
   col: {
     flex: 1,
     backgroundColor: colors.surface.raised,
+  },
+  editPane: {
+    flex: 1.4,
   },
   colContent: { paddingVertical: 4 },
   colDivider: { width: 1, backgroundColor: colors.border.soft },
@@ -635,6 +857,7 @@ const styles = StyleSheet.create({
   lessonTitle: { fontFamily: fonts.bodyMedium, color: colors.burgundy[900], fontSize: fontSize.sm, lineHeight: 18 },
   lessonMeta: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4, flexWrap: 'wrap' as any },
   lessonRight: { flexDirection: 'column', alignItems: 'flex-end', gap: 6 },
+  lessonActions: { flexDirection: 'row', alignItems: 'center', gap: 4 },
 
   cdnBadge: {
     flexDirection: 'row',
@@ -657,6 +880,16 @@ const styles = StyleSheet.create({
   progressBar: { height: '100%' as any, backgroundColor: colors.gold[500], borderRadius: 3 },
   progressPct: { fontFamily: fonts.support, fontSize: 9, color: colors.ink[500], marginTop: 3 },
 
+  actionBtn: {
+    width: 30,
+    height: 30,
+    borderRadius: radius.sm,
+    borderWidth: 1,
+    borderColor: colors.border.soft,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.cream[100],
+  },
   uploadBtn: {
     width: 30,
     height: 30,

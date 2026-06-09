@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Switch, ActivityIndicator, TextInput, Pressable, ScrollView, useWindowDimensions } from 'react-native';
 import { fetchFeatureFlags, fetchSystemSettings, setFeatureFlag, setSystemSetting } from '@/lib/admin';
 import { colors, fonts, fontSize, spacing, radius } from '@/theme/tokens';
-import { Zap, SlidersHorizontal, Save, ToggleRight } from 'lucide-react-native';
+import { Zap, SlidersHorizontal, Save, ToggleRight, FileText } from 'lucide-react-native';
+
+const LONG_VALUE_THRESHOLD = 120;
 
 export default function SettingsAdmin() {
   const { width } = useWindowDimensions();
@@ -12,6 +14,7 @@ export default function SettingsAdmin() {
   const [settings, setSettings] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [drafts, setDrafts] = useState<Record<string, string>>({});
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const [saving, setSaving] = useState<string | null>(null);
   const [savedKey, setSavedKey] = useState<string | null>(null);
 
@@ -62,10 +65,10 @@ export default function SettingsAdmin() {
         {/* Feature flags */}
         <View style={[styles.column, isMobile && styles.columnMobile]}>
           <View style={styles.sectionHead}>
-            <View style={[styles.sectionIcon, { backgroundColor: '#F0F4FF' }]}>
-              <Zap size={16} color='#3A547A' strokeWidth={1.8} />
+            <View style={[styles.sectionIcon, { backgroundColor: colors.cream[100] }]}>
+              <Zap size={16} color={colors.state.info} strokeWidth={1.8} />
             </View>
-            <View>
+            <View style={{ flex: 1 }}>
               <Text style={styles.sectionTitle}>Feature flags</Text>
               <Text style={styles.sectionSub}>Activa o desactiva módulos de la plataforma</Text>
             </View>
@@ -76,10 +79,10 @@ export default function SettingsAdmin() {
             ) : (
               flags.map((f: any, i) => (
                 <View key={f.key} style={[styles.flagRow, i === flags.length - 1 && styles.flagRowLast]}>
-                  <View style={{ flex: 1 }}>
+                  <View style={{ flex: 1, minWidth: 0 }}>
                     <View style={styles.flagKeyRow}>
-                      <ToggleRight size={13} color={f.enabled ? '#3A547A' : colors.ink[300]} strokeWidth={1.8} />
-                      <Text style={styles.flagKey}>{f.key}</Text>
+                      <ToggleRight size={13} color={f.enabled ? colors.state.info : colors.ink[300]} strokeWidth={1.8} />
+                      <Text style={styles.flagKey} numberOfLines={1}>{f.key}</Text>
                     </View>
                     {f.description ? <Text style={styles.flagDesc}>{f.description}</Text> : null}
                   </View>
@@ -101,7 +104,7 @@ export default function SettingsAdmin() {
             <View style={[styles.sectionIcon, { backgroundColor: '#FDF6E8' }]}>
               <SlidersHorizontal size={16} color={colors.gold[600]} strokeWidth={1.8} />
             </View>
-            <View>
+            <View style={{ flex: 1 }}>
               <Text style={styles.sectionTitle}>System settings</Text>
               <Text style={styles.sectionSub}>Comisión, ventanas, mínimos y reglas de negocio</Text>
             </View>
@@ -112,23 +115,56 @@ export default function SettingsAdmin() {
             ) : (
               settings.map((s: any) => {
                 const isSaved = savedKey === s.key;
+                const rawVal = drafts[s.key] ?? '';
+                const isLong = rawVal.length > LONG_VALUE_THRESHOLD;
+                const isExpanded = expanded[s.key] ?? false;
+
                 return (
                   <View key={s.key} style={styles.settingRow}>
-                    <Text style={styles.flagKey}>{s.key}</Text>
+                    <View style={styles.settingKeyRow}>
+                      {isLong && (
+                        <View style={styles.docBadge}>
+                          <FileText size={10} color={colors.gold[600]} strokeWidth={1.8} />
+                          <Text style={styles.docBadgeTxt}>doc</Text>
+                        </View>
+                      )}
+                      <Text style={styles.flagKey} numberOfLines={1}>{s.key}</Text>
+                    </View>
                     {s.description ? <Text style={styles.flagDesc}>{s.description}</Text> : null}
-                    <TextInput
-                      value={drafts[s.key] ?? ''}
-                      onChangeText={(v) => setDrafts((d) => ({ ...d, [s.key]: v }))}
-                      style={styles.settingInput}
-                      multiline
-                      placeholderTextColor={colors.ink[300]}
-                    />
+
+                    {isLong && !isExpanded ? (
+                      <Pressable
+                        onPress={() => setExpanded((e) => ({ ...e, [s.key]: true }))}
+                        style={styles.expandBtn}
+                      >
+                        <Text style={styles.expandBtnTxt}>
+                          {rawVal.slice(0, 80).trim()}… <Text style={styles.expandLink}>Expandir para editar</Text>
+                        </Text>
+                      </Pressable>
+                    ) : (
+                      <>
+                        <TextInput
+                          value={rawVal}
+                          onChangeText={(v) => setDrafts((d) => ({ ...d, [s.key]: v }))}
+                          style={[styles.settingInput, isLong && styles.settingInputLong]}
+                          multiline
+                          scrollEnabled
+                          placeholderTextColor={colors.ink[300]}
+                        />
+                        {isLong && (
+                          <Pressable onPress={() => setExpanded((e) => ({ ...e, [s.key]: false }))}>
+                            <Text style={styles.collapseLink}>Colapsar</Text>
+                          </Pressable>
+                        )}
+                      </>
+                    )}
+
                     <Pressable
                       onPress={() => onSaveSetting(s.key)}
                       style={[styles.saveBtn, isSaved && styles.saveBtnDone, saving === s.key && { opacity: 0.6 }]}
                       disabled={saving === s.key}
                     >
-                      <Save size={13} color={isSaved ? '#2C5E3C' : colors.cream[100]} strokeWidth={2} />
+                      <Save size={13} color={isSaved ? colors.state.success : colors.cream[100]} strokeWidth={2} />
                       <Text style={[styles.saveTxt, isSaved && styles.saveTxtDone]}>
                         {saving === s.key ? 'Guardando...' : isSaved ? 'Guardado' : 'Guardar'}
                       </Text>
@@ -196,7 +232,7 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
     borderBottomWidth: 1,
     borderBottomColor: colors.border.soft,
-    backgroundColor: '#FAFAF5',
+    backgroundColor: colors.surface.base,
   },
   sectionIcon: {
     width: 40,
@@ -204,6 +240,7 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     alignItems: 'center',
     justifyContent: 'center',
+    flexShrink: 0,
   },
   sectionTitle: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.base },
   sectionSub: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.xs, marginTop: 2 },
@@ -220,8 +257,8 @@ const styles = StyleSheet.create({
   },
   flagRowLast: { borderBottomWidth: 0 },
   flagKeyRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  flagKey: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.sm, minWidth: 0 },
-  flagDesc: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.xs, marginTop: 3, minWidth: 0 },
+  flagKey: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.sm, flex: 1 },
+  flagDesc: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.xs, marginTop: 3 },
 
   emptyTxt: { fontFamily: fonts.body, color: colors.ink[500], padding: spacing.lg },
 
@@ -232,6 +269,33 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.border.soft,
     gap: 8,
   },
+  settingKeyRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  docBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    backgroundColor: colors.cream[200],
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+    flexShrink: 0,
+  },
+  docBadgeTxt: { fontFamily: fonts.support, fontSize: 9, color: colors.gold[600], letterSpacing: 1 },
+
+  expandBtn: {
+    backgroundColor: colors.cream[100],
+    borderRadius: radius.sm,
+    borderWidth: 1,
+    borderColor: colors.border.soft,
+    padding: spacing.sm,
+  },
+  expandBtnTxt: { fontFamily: fonts.support, color: colors.ink[500], fontSize: fontSize.xs, lineHeight: 16 },
+  expandLink: { color: colors.state.info, fontFamily: fonts.bodyMedium },
+  collapseLink: { fontFamily: fonts.bodyMedium, color: colors.ink[500], fontSize: fontSize.xs, alignSelf: 'flex-end' as any },
 
   settingInput: {
     fontFamily: fonts.support,
@@ -243,7 +307,14 @@ const styles = StyleSheet.create({
     borderRadius: radius.sm,
     padding: spacing.md,
     minHeight: 40,
+    maxHeight: 160,
     outlineStyle: 'none' as any,
+  },
+  settingInputLong: {
+    maxHeight: 320,
+    minHeight: 120,
+    fontFamily: fonts.support,
+    fontSize: 11,
   },
 
   saveBtn: {
@@ -262,5 +333,5 @@ const styles = StyleSheet.create({
     borderColor: '#9DC4A4',
   },
   saveTxt: { fontFamily: fonts.bodySemibold, color: colors.cream[100], fontSize: fontSize.sm },
-  saveTxtDone: { color: '#2C5E3C' },
+  saveTxtDone: { color: colors.state.success },
 });

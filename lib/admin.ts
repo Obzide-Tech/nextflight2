@@ -363,6 +363,17 @@ export async function updateLessonVideoUrl(lessonId: string, videoUrl: string) {
   return { error: error?.message ?? null };
 }
 
+export async function updateLesson(
+  lessonId: string,
+  fields: { title?: string; description?: string; duration_seconds?: number; is_free?: boolean; is_published?: boolean }
+) {
+  const { error } = await supabase
+    .from('course_lessons')
+    .update(fields)
+    .eq('id', lessonId);
+  return { error: error?.message ?? null };
+}
+
 // ─────────────────────────────────────────────
 // STORE PRODUCTS
 // ─────────────────────────────────────────────
