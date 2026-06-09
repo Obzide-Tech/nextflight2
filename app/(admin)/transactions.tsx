@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingHorizontal: spacing.lg,
     paddingVertical: 10,
-    backgroundColor: '#F4F1E4',
+    backgroundColor: colors.cream[200],
     borderBottomWidth: 1,
     borderBottomColor: colors.border.medium,
     gap: spacing.sm,
@@ -306,7 +306,7 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.border.soft,
     gap: spacing.sm,
   },
-  ledgerRowAlt: { backgroundColor: '#FAF8F1' },
+  ledgerRowAlt: { backgroundColor: colors.cream[50] },
 
   mobileRow: {
     paddingHorizontal: spacing.md,
@@ -331,6 +331,6 @@ const styles = StyleSheet.create({
   programName: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.sm, flex: 1 },
   rowRef: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.xs },
   rowMeta: { fontFamily: fonts.support, color: colors.ink[500], fontSize: 11, marginTop: 2 },
-  amountPos: { fontFamily: fonts.bodySemibold, color: '#2C5E3C', fontSize: fontSize.sm },
+  amountPos: { fontFamily: fonts.bodySemibold, color: colors.state.success, fontSize: fontSize.sm },
   amountNet: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.sm },
 });

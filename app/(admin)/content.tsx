@@ -319,10 +319,12 @@ export default function ContentAdmin() {
                         )}
                       </View>
                       {isUploading ? (
-                        <View style={styles.progressWrap}>
-                          <View style={[styles.progressBar, { width: `${uploadProgress}%` as any }]} />
+                        <>
+                          <View style={styles.progressWrap}>
+                            <View style={[styles.progressBar, { width: `${uploadProgress}%` as any }]} />
+                          </View>
                           <Text style={styles.progressPct}>{uploadProgress}%</Text>
-                        </View>
+                        </>
                       ) : null}
                     </View>
                     <View style={styles.lessonRight}>
@@ -334,7 +336,7 @@ export default function ContentAdmin() {
                           disabled={!!uploadingLessonId}
                         >
                           {isUploading && uploadProgress === 100 ? (
-                            <Check size={13} color='#2C5E3C' />
+                            <Check size={13} color={colors.state.success} />
                           ) : (
                             <Upload size={13} color={colors.burgundy[700]} strokeWidth={2} />
                           )}
@@ -459,10 +461,12 @@ export default function ContentAdmin() {
                         )}
                       </View>
                       {isUploading ? (
-                        <View style={styles.progressWrap}>
-                          <View style={[styles.progressBar, { width: `${uploadProgress}%` as any }]} />
+                        <>
+                          <View style={styles.progressWrap}>
+                            <View style={[styles.progressBar, { width: `${uploadProgress}%` as any }]} />
+                          </View>
                           <Text style={styles.progressPct}>{uploadProgress}%</Text>
-                        </View>
+                        </>
                       ) : null}
                     </View>
                     <View style={styles.lessonRight}>
@@ -474,7 +478,7 @@ export default function ContentAdmin() {
                           disabled={!!uploadingLessonId}
                         >
                           {isUploading && uploadProgress === 100 ? (
-                            <Check size={13} color='#2C5E3C' />
+                            <Check size={13} color={colors.state.success} />
                           ) : (
                             <Upload size={13} color={colors.burgundy[700]} strokeWidth={2} />
                           )}
@@ -594,6 +598,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     overflow: 'hidden',
+    minHeight: 0,
   },
   col: {
     flex: 1,
@@ -611,7 +616,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: colors.border.soft,
   },
-  colItemActive: { backgroundColor: colors.burgundy[900] + '0D', borderLeftWidth: 3, borderLeftColor: colors.gold[500] },
+  colItemActive: { backgroundColor: colors.burgundy[900] + '0D', borderLeftWidth: 3, borderLeftColor: colors.gold[500], paddingLeft: spacing.md - 3 },
   colItemTitle: { fontFamily: fonts.bodyMedium, color: colors.burgundy[900], fontSize: fontSize.sm, lineHeight: 18 },
   colItemTitleActive: { color: colors.burgundy[900], fontFamily: fonts.bodySemibold },
   colItemMeta: { fontFamily: fonts.support, color: colors.ink[500], fontSize: 11, marginTop: 2 },
@@ -648,10 +653,9 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     marginTop: 6,
     overflow: 'hidden',
-    position: 'relative',
   },
   progressBar: { height: '100%' as any, backgroundColor: colors.gold[500], borderRadius: 3 },
-  progressPct: { position: 'absolute', right: 4, top: -14, fontFamily: fonts.support, fontSize: 9, color: colors.ink[500] },
+  progressPct: { fontFamily: fonts.support, fontSize: 9, color: colors.ink[500], marginTop: 3 },
 
   uploadBtn: {
     width: 30,

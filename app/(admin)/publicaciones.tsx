@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import {
   View, Text, StyleSheet, TextInput, Pressable, Image, ActivityIndicator, ScrollView,
+  useWindowDimensions, Modal, TouchableOpacity,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
   fetchPublicationsAdmin, upsertPublication, deletePublication, type Publication,
 } from '@/lib/admin';
@@ -14,6 +16,87 @@ const CATEGORIES = [
   { value: 'event', label: 'Evento' },
   { value: 'article', label: 'Artículo' },
 ] as const;
+
+type EditorFormProps = {
+  selected: Partial<Publication>;
+  setSelected: (fn: (s: Partial<Publication> | null) => Partial<Publication> | null) => void;
+  feedback: { kind: 'ok' | 'error'; text: string } | null;
+  saving: boolean;
+  onSave: () => void;
+  onCancel: () => void;
+};
+
+function EditorForm({ selected, setSelected, feedback, saving, onSave, onCancel }: EditorFormProps) {
+  return (
+    <>
+      <View style={styles.editorHeader}>
+        <Text style={styles.editorTitle}>{selected.id ? 'Editar publicación' : 'Nueva publicación'}</Text>
+        <Pressable onPress={onCancel} style={styles.editorClose}>
+          <X size={18} color={colors.ink[500]} />
+        </Pressable>
+      </View>
+      <ScrollView contentContainerStyle={styles.editorContent}>
+        <Text style={styles.label}>Título *</Text>
+        <TextInput value={selected.title ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, title: v }))} style={styles.input} placeholder="Título..." placeholderTextColor={colors.ink[300]} />
+
+        <Text style={styles.label}>Contenido</Text>
+        <TextInput value={selected.body ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, body: v }))} style={[styles.input, { minHeight: 120 }]} multiline placeholder="Escribe el contenido..." placeholderTextColor={colors.ink[300]} />
+
+        <Text style={styles.label}>URL de portada</Text>
+        <TextInput value={selected.cover_url ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, cover_url: v }))} style={styles.input} placeholder="https://..." placeholderTextColor={colors.ink[300]} autoCapitalize="none" />
+        {selected.cover_url ? <Image source={{ uri: selected.cover_url }} style={styles.previewImg} resizeMode="cover" /> : null}
+
+        <Text style={styles.label}>Categoría</Text>
+        <View style={styles.catRow}>
+          {CATEGORIES.map((c) => (
+            <Pressable key={c.value} onPress={() => setSelected((s) => ({ ...s, category: c.value }))} style={[styles.chip, selected.category === c.value && styles.chipActive]}>
+              <Text style={[styles.chipTxt, selected.category === c.value && styles.chipTxtActive]}>{c.label}</Text>
+            </Pressable>
+          ))}
+        </View>
+
+        <Text style={styles.label}>Autor / Firma</Text>
+        <TextInput value={selected.author_label ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, author_label: v }))} style={styles.input} placeholder="El equipo NFA" placeholderTextColor={colors.ink[300]} />
+
+        <Text style={styles.label}>CTA — Texto</Text>
+        <TextInput value={selected.cta_label ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, cta_label: v }))} style={styles.input} placeholder="Ver más, Inscribirme..." placeholderTextColor={colors.ink[300]} />
+
+        <Text style={styles.label}>CTA — URL</Text>
+        <TextInput value={selected.cta_url ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, cta_url: v }))} style={styles.input} placeholder="https://..." placeholderTextColor={colors.ink[300]} autoCapitalize="none" />
+
+        <View style={styles.toggleRow}>
+          <Pressable onPress={() => setSelected((s) => ({ ...s, is_pinned: !s?.is_pinned }))} style={[styles.toggleBtn, selected.is_pinned && styles.toggleBtnPin]}>
+            <Pin size={13} color={selected.is_pinned ? colors.gold[500] : colors.ink[300]} />
+            <Text style={[styles.toggleTxt, selected.is_pinned && { color: colors.gold[500] }]}>
+              {selected.is_pinned ? 'Fijada' : 'Fijar arriba'}
+            </Text>
+          </Pressable>
+          <Pressable onPress={() => setSelected((s) => ({ ...s, is_published: !s?.is_published }))} style={[styles.toggleBtn, selected.is_published && styles.toggleBtnPub]}>
+            {selected.is_published ? <Eye size={13} color={colors.state.success} /> : <EyeOff size={13} color={colors.ink[300]} />}
+            <Text style={[styles.toggleTxt, selected.is_published && { color: colors.state.success }]}>
+              {selected.is_published ? 'Publicada' : 'Borrador'}
+            </Text>
+          </Pressable>
+        </View>
+
+        {feedback ? (
+          <View style={[styles.feedback, feedback.kind === 'ok' ? styles.feedbackOk : styles.feedbackError]}>
+            <Text style={feedback.kind === 'ok' ? styles.feedbackOkTxt : styles.feedbackErrorTxt}>{feedback.text}</Text>
+          </View>
+        ) : null}
+
+        <View style={styles.editorBtns}>
+          <Pressable onPress={onCancel} style={styles.cancelBtn}>
+            <Text style={styles.cancelBtnTxt}>Cancelar</Text>
+          </Pressable>
+          <Pressable onPress={onSave} disabled={saving} style={[styles.saveBtn, saving && { opacity: 0.5 }]}>
+            <Text style={styles.saveBtnTxt}>{saving ? 'Guardando...' : 'Guardar'}</Text>
+          </Pressable>
+        </View>
+      </ScrollView>
+    </>
+  );
+}
 
 const CAT_COLORS: Record<string, { bg: string; fg: string }> = {
   announcement: { bg: '#FCE3E3', fg: '#70041D' },
@@ -29,6 +112,10 @@ const EMPTY: Partial<Publication> = {
 };
 
 export default function PublicacionesAdmin() {
+  const { width } = useWindowDimensions();
+  const isMobile = width < 768;
+  const insets = useSafeAreaInsets();
+
   const [pubs, setPubs] = useState<Publication[]>([]);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState<Partial<Publication> | null>(null);
@@ -93,10 +180,10 @@ export default function PublicacionesAdmin() {
   return (
     <View style={styles.wrap}>
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, isMobile && styles.headerMobile]}>
         <View style={styles.headerLeft}>
           <Text style={styles.eyebrow}>Bitácora editorial</Text>
-          <Text style={styles.title}>Publicaciones</Text>
+          <Text style={[styles.title, isMobile && styles.titleMobile]}>Publicaciones</Text>
         </View>
         <View style={styles.headerStats}>
           <View style={styles.statChip}>
@@ -197,77 +284,41 @@ export default function PublicacionesAdmin() {
           )}
         </ScrollView>
 
-        {/* Editor panel */}
-        {selected ? (
+        {/* Desktop: side editor pane */}
+        {!isMobile && selected ? (
           <View style={styles.editorPane}>
-            <View style={styles.editorHeader}>
-              <Text style={styles.editorTitle}>{selected.id ? 'Editar publicación' : 'Nueva publicación'}</Text>
-              <Pressable onPress={onCancel} style={styles.editorClose}>
-                <X size={18} color={colors.ink[500]} />
-              </Pressable>
-            </View>
-            <ScrollView contentContainerStyle={styles.editorContent}>
-              <Text style={styles.label}>Título *</Text>
-              <TextInput value={selected.title ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, title: v }))} style={styles.input} placeholder="Título..." placeholderTextColor={colors.ink[300]} />
-
-              <Text style={styles.label}>Contenido</Text>
-              <TextInput value={selected.body ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, body: v }))} style={[styles.input, { minHeight: 120 }]} multiline placeholder="Escribe el contenido..." placeholderTextColor={colors.ink[300]} />
-
-              <Text style={styles.label}>URL de portada</Text>
-              <TextInput value={selected.cover_url ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, cover_url: v }))} style={styles.input} placeholder="https://..." placeholderTextColor={colors.ink[300]} autoCapitalize="none" />
-              {selected.cover_url ? <Image source={{ uri: selected.cover_url }} style={styles.previewImg} resizeMode="cover" /> : null}
-
-              <Text style={styles.label}>Categoría</Text>
-              <View style={styles.catRow}>
-                {CATEGORIES.map((c) => (
-                  <Pressable key={c.value} onPress={() => setSelected((s) => ({ ...s, category: c.value }))} style={[styles.chip, selected.category === c.value && styles.chipActive]}>
-                    <Text style={[styles.chipTxt, selected.category === c.value && styles.chipTxtActive]}>{c.label}</Text>
-                  </Pressable>
-                ))}
-              </View>
-
-              <Text style={styles.label}>Autor / Firma</Text>
-              <TextInput value={selected.author_label ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, author_label: v }))} style={styles.input} placeholder="El equipo NFA" placeholderTextColor={colors.ink[300]} />
-
-              <Text style={styles.label}>CTA — Texto</Text>
-              <TextInput value={selected.cta_label ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, cta_label: v }))} style={styles.input} placeholder="Ver más, Inscribirme..." placeholderTextColor={colors.ink[300]} />
-
-              <Text style={styles.label}>CTA — URL</Text>
-              <TextInput value={selected.cta_url ?? ''} onChangeText={(v) => setSelected((s) => ({ ...s, cta_url: v }))} style={styles.input} placeholder="https://..." placeholderTextColor={colors.ink[300]} autoCapitalize="none" />
-
-              <View style={styles.toggleRow}>
-                <Pressable onPress={() => setSelected((s) => ({ ...s, is_pinned: !s?.is_pinned }))} style={[styles.toggleBtn, selected.is_pinned && styles.toggleBtnPin]}>
-                  <Pin size={13} color={selected.is_pinned ? colors.gold[500] : colors.ink[300]} />
-                  <Text style={[styles.toggleTxt, selected.is_pinned && { color: colors.gold[500] }]}>
-                    {selected.is_pinned ? 'Fijada' : 'Fijar arriba'}
-                  </Text>
-                </Pressable>
-                <Pressable onPress={() => setSelected((s) => ({ ...s, is_published: !s?.is_published }))} style={[styles.toggleBtn, selected.is_published && styles.toggleBtnPub]}>
-                  {selected.is_published ? <Eye size={13} color='#3A6B46' /> : <EyeOff size={13} color={colors.ink[300]} />}
-                  <Text style={[styles.toggleTxt, selected.is_published && { color: '#3A6B46' }]}>
-                    {selected.is_published ? 'Publicada' : 'Borrador'}
-                  </Text>
-                </Pressable>
-              </View>
-
-              {feedback ? (
-                <View style={[styles.feedback, feedback.kind === 'ok' ? styles.feedbackOk : styles.feedbackError]}>
-                  <Text style={feedback.kind === 'ok' ? styles.feedbackOkTxt : styles.feedbackErrorTxt}>{feedback.text}</Text>
-                </View>
-              ) : null}
-
-              <View style={styles.editorBtns}>
-                <Pressable onPress={onCancel} style={styles.cancelBtn}>
-                  <Text style={styles.cancelBtnTxt}>Cancelar</Text>
-                </Pressable>
-                <Pressable onPress={onSave} disabled={saving} style={[styles.saveBtn, saving && { opacity: 0.5 }]}>
-                  <Text style={styles.saveBtnTxt}>{saving ? 'Guardando...' : 'Guardar'}</Text>
-                </Pressable>
-              </View>
-            </ScrollView>
+            <EditorForm
+              selected={selected}
+              setSelected={setSelected}
+              feedback={feedback}
+              saving={saving}
+              onSave={onSave}
+              onCancel={onCancel}
+            />
           </View>
         ) : null}
       </View>
+
+      {/* Mobile: modal editor */}
+      {isMobile && (
+        <Modal visible={!!selected} animationType="slide" transparent onRequestClose={onCancel}>
+          <View style={styles.mobileModalOverlay}>
+            <TouchableOpacity style={styles.mobileModalBackdrop} onPress={onCancel} activeOpacity={1} />
+            <View style={[styles.mobileModalSheet, { paddingBottom: insets.bottom }]}>
+              {selected && (
+                <EditorForm
+                  selected={selected}
+                  setSelected={setSelected}
+                  feedback={feedback}
+                  saving={saving}
+                  onSave={onSave}
+                  onCancel={onCancel}
+                />
+              )}
+            </View>
+          </View>
+        </Modal>
+      )}
     </View>
   );
 }
@@ -287,9 +338,14 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap' as any,
     gap: spacing.md,
   },
+  headerMobile: {
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.md,
+  },
   headerLeft: {},
   eyebrow: { fontFamily: fonts.support, color: colors.gold[600], fontSize: 10, letterSpacing: 3, textTransform: 'uppercase' as any },
   title: { fontFamily: fonts.headingBold, color: colors.burgundy[900], fontSize: 24, marginTop: 4 },
+  titleMobile: { fontSize: 18 },
   headerStats: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   statChip: {
     flexDirection: 'row',
@@ -330,7 +386,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     flexDirection: 'row',
   },
-  pubCardDraft: { borderStyle: 'dashed' as any, opacity: 0.7 },
+  pubCardDraft: { opacity: 0.65, borderColor: colors.border.medium },
   catStripe: { width: 4 },
   pubCardInner: {
     flex: 1,
@@ -362,9 +418,24 @@ const styles = StyleSheet.create({
 
   editorPane: {
     width: 400,
+    maxWidth: '45%' as any,
     borderLeftWidth: 1,
     borderLeftColor: colors.border.soft,
     backgroundColor: colors.surface.raised,
+  },
+
+  mobileModalOverlay: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    backgroundColor: 'rgba(48,5,14,0.5)',
+  },
+  mobileModalBackdrop: { flex: 1 },
+  mobileModalSheet: {
+    maxHeight: '92%' as any,
+    backgroundColor: colors.surface.raised,
+    borderTopLeftRadius: radius.xl,
+    borderTopRightRadius: radius.xl,
+    overflow: 'hidden',
   },
   editorHeader: {
     flexDirection: 'row',

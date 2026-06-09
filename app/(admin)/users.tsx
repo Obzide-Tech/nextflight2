@@ -139,13 +139,13 @@ function UserModal({ user, onClose, onUpdated }: UserModalProps) {
               </View>
             ) : (
               <View style={ms.infoGrid}>
-                <InfoRow icon={<MapPin size={13} color={colors.ink[400]} />} label="Ubicación" value={[city, country].filter(Boolean).join(', ') || '—'} />
-                <InfoRow icon={<Clock size={13} color={colors.ink[400]} />} label="Zona horaria" value={user.timezone ?? '—'} />
-                <InfoRow icon={<Globe size={13} color={colors.ink[400]} />} label="Idioma" value={user.language ?? '—'} />
-                <InfoRow icon={<User size={13} color={colors.ink[400]} />} label="Alta" value={fmtDate(user.created_at)} />
-                <InfoRow icon={<Check size={13} color={colors.ink[400]} />} label="Onboarding" value={fmtDate(user.onboarded_at)} />
-                <InfoRow icon={<Check size={13} color={colors.ink[400]} />} label="Términos aceptados" value={fmtDate(user.accepted_terms_at)} />
-                {user.kartra_contact_id ? <InfoRow icon={<Link2 size={13} color={colors.ink[400]} />} label="Kartra ID" value={user.kartra_contact_id} /> : null}
+                <InfoRow icon={<MapPin size={13} color={colors.ink[500]} />} label="Ubicación" value={[city, country].filter(Boolean).join(', ') || '—'} />
+                <InfoRow icon={<Clock size={13} color={colors.ink[500]} />} label="Zona horaria" value={user.timezone ?? '—'} />
+                <InfoRow icon={<Globe size={13} color={colors.ink[500]} />} label="Idioma" value={user.language ?? '—'} />
+                <InfoRow icon={<User size={13} color={colors.ink[500]} />} label="Alta" value={fmtDate(user.created_at)} />
+                <InfoRow icon={<Check size={13} color={colors.ink[500]} />} label="Onboarding" value={fmtDate(user.onboarded_at)} />
+                <InfoRow icon={<Check size={13} color={colors.ink[500]} />} label="Términos aceptados" value={fmtDate(user.accepted_terms_at)} />
+                {user.kartra_contact_id ? <InfoRow icon={<Link2 size={13} color={colors.ink[500]} />} label="Kartra ID" value={user.kartra_contact_id} /> : null}
               </View>
             )}
 
@@ -166,8 +166,8 @@ function UserModal({ user, onClose, onUpdated }: UserModalProps) {
                     {loading
                       ? <ActivityIndicator size="small" color={active ? '#fff' : colors.ink[500]} />
                       : active
-                        ? <Check size={12} color={active ? (isAdmin ? colors.cream[100] : colors.burgundy[700]) : colors.ink[400]} strokeWidth={2.5} />
-                        : <Plus size={12} color={colors.ink[400]} strokeWidth={2.5} />
+                        ? <Check size={12} color={active ? (isAdmin ? colors.cream[100] : colors.burgundy[700]) : colors.ink[300]} strokeWidth={2.5} />
+                        : <Plus size={12} color={colors.ink[300]} strokeWidth={2.5} />
                     }
                     <Text style={[ms.roleChipTxt, active && (isAdmin ? ms.roleChipTxtAdmin : ms.roleChipTxtActive)]}>{role}</Text>
                   </Pressable>
@@ -409,7 +409,7 @@ const styles = StyleSheet.create({
   container: { paddingBottom: 48, maxWidth: 1280, width: '100%', alignSelf: 'center' },
 
   headerBand: {
-    backgroundColor: '#1E0810',
+    backgroundColor: colors.ink[800],
     paddingHorizontal: spacing.xl,
     paddingTop: spacing.xl,
     paddingBottom: spacing.xl,
@@ -463,7 +463,7 @@ const styles = StyleSheet.create({
     paddingVertical: 14, paddingHorizontal: spacing.md,
     borderBottomWidth: 1, borderBottomColor: colors.border.soft,
   },
-  rowAlt: { backgroundColor: '#F8F6EE' },
+  rowAlt: { backgroundColor: colors.cream[100] },
   cell: { minWidth: 0 },
   cellTxt: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.sm, minWidth: 0 },
 
@@ -505,7 +505,7 @@ const ms = StyleSheet.create({
     gap: 14,
     paddingHorizontal: spacing.lg,
     paddingVertical: spacing.md,
-    backgroundColor: '#1E0810',
+    backgroundColor: colors.ink[800],
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(255,255,255,0.08)',
   },
@@ -541,7 +541,7 @@ const ms = StyleSheet.create({
   input: {
     fontFamily: fonts.body, fontSize: fontSize.sm, color: colors.ink[800],
     borderWidth: 1, borderColor: colors.border.medium, borderRadius: radius.sm,
-    paddingHorizontal: spacing.sm, paddingVertical: 8, backgroundColor: '#fff',
+    paddingHorizontal: spacing.sm, paddingVertical: 8, backgroundColor: colors.surface.raised,
     outlineStyle: 'none' as any,
   },
 
@@ -554,7 +554,7 @@ const ms = StyleSheet.create({
   infoLabel: { fontFamily: fonts.support, color: colors.ink[500], fontSize: 11, letterSpacing: 0.5 },
   infoValue: { fontFamily: fonts.body, color: colors.ink[800], fontSize: fontSize.sm, textAlign: 'right' as any, flex: 1, minWidth: 0 },
   infoPill: { paddingHorizontal: 9, paddingVertical: 3, borderRadius: 999, backgroundColor: colors.cream[200], borderWidth: 1, borderColor: colors.border.soft },
-  infoPillTxt: { fontFamily: fonts.bodyMedium, color: colors.ink[600], fontSize: 10 },
+  infoPillTxt: { fontFamily: fonts.bodyMedium, color: colors.ink[500], fontSize: 10 },
 
   rolesGrid: { flexDirection: 'row', flexWrap: 'wrap' as any, gap: 8, marginBottom: spacing.sm },
   roleChip: {
@@ -569,5 +569,5 @@ const ms = StyleSheet.create({
   roleChipTxtActive: { color: colors.burgundy[700] },
   roleChipTxtAdmin: { color: colors.cream[100] },
 
-  emptySection: { fontFamily: fonts.body, color: colors.ink[400], fontSize: fontSize.sm, paddingVertical: 8, fontStyle: 'italic' as any },
+  emptySection: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.sm, paddingVertical: 8, fontStyle: 'italic' as any },
 });

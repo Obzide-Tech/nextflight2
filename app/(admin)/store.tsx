@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import {
   View, Text, StyleSheet, TextInput, Pressable, Image, ScrollView,
-  ActivityIndicator, Platform, useWindowDimensions,
+  ActivityIndicator, Platform, useWindowDimensions, Modal, TouchableOpacity,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import {
   fetchStoreProductsAdmin, upsertStoreProduct, toggleStoreProduct,
   generateAdminCheckoutLink, type StoreProduct,
@@ -33,6 +34,7 @@ const EMPTY: Partial<StoreProduct> = {
 export default function StoreAdmin() {
   const { width } = useWindowDimensions();
   const isMobile = width < 768;
+  const insets = useSafeAreaInsets();
 
   const [products, setProducts] = useState<StoreProduct[]>([]);
   const [loading, setLoading] = useState(true);
@@ -269,12 +271,17 @@ export default function StoreAdmin() {
         ) : null}
       </View>
 
-      {/* Mobile: full-screen editor overlay */}
-      {isMobile && selected ? (
-        <View style={styles.mobileEditorOverlay}>
-          {editorContent}
-        </View>
-      ) : null}
+      {/* Mobile: Modal editor */}
+      {isMobile && (
+        <Modal visible={!!selected} animationType="slide" transparent onRequestClose={onCancel}>
+          <View style={styles.mobileModalOverlay}>
+            <TouchableOpacity style={styles.mobileModalBackdrop} onPress={onCancel} activeOpacity={1} />
+            <View style={[styles.mobileModalSheet, { paddingBottom: insets.bottom }]}>
+              {editorContent}
+            </View>
+          </View>
+        </Modal>
+      )}
     </View>
   );
 }
@@ -369,7 +376,7 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
     borderRadius: radius.sm,
   },
-  linkBtnCopied: { backgroundColor: '#2C5E3C' },
+  linkBtnCopied: { backgroundColor: colors.state.success },
   linkBtnTxt: { fontFamily: fonts.bodySemibold, color: colors.cream[100], fontSize: 11 },
 
   // Desktop side pane
@@ -380,15 +387,19 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface.raised,
   },
 
-  // Mobile full-screen overlay
-  mobileEditorOverlay: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
+  // Mobile modal editor
+  mobileModalOverlay: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    backgroundColor: 'rgba(48,5,14,0.5)',
+  },
+  mobileModalBackdrop: { flex: 1 },
+  mobileModalSheet: {
+    maxHeight: '90%' as any,
     backgroundColor: colors.surface.raised,
-    zIndex: 50,
+    borderTopLeftRadius: radius.xl,
+    borderTopRightRadius: radius.xl,
+    overflow: 'hidden',
   },
 
   editorInner: { flex: 1 },

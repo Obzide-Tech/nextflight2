@@ -108,7 +108,7 @@ export default function Payouts() {
             <Pressable key={f} onPress={() => setFilter(f)} style={[styles.filterTab, filter === f && styles.filterTabActive]}>
               <Text style={[styles.filterTabTxt, filter === f && { color: meta.color }]}>{meta.label}</Text>
               <View style={[styles.filterBadge, filter === f && { backgroundColor: meta.color }]}>
-                <Text style={[styles.filterBadgeTxt, filter === f && { color: '#fff' }]}>{count}</Text>
+                <Text style={[styles.filterBadgeTxt, filter === f && { color: colors.cream[100] }]}>{count}</Text>
               </View>
             </Pressable>
           );
@@ -305,7 +305,7 @@ const styles = StyleSheet.create({
     borderColor: colors.border.soft,
     backgroundColor: colors.surface.raised,
   },
-  filterTabActive: { borderColor: colors.border.medium, backgroundColor: '#fff' },
+  filterTabActive: { borderColor: colors.border.medium, backgroundColor: colors.surface.raised },
   filterTabTxt: { fontFamily: fonts.bodyMedium, color: colors.ink[500], fontSize: fontSize.sm },
   filterBadge: { backgroundColor: colors.cream[200], borderRadius: 999, paddingHorizontal: 7, paddingVertical: 2 },
   filterBadgeTxt: { fontFamily: fonts.bodySemibold, color: colors.ink[500], fontSize: 11 },
@@ -359,7 +359,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: spacing.lg,
     paddingVertical: 10,
     borderRadius: radius.sm,
-    backgroundColor: '#2C5E3C',
+    backgroundColor: colors.state.success,
   },
   confirmOkDanger: { backgroundColor: colors.state.error },
   confirmOkTxt: { fontFamily: fonts.bodySemibold, color: '#fff', fontSize: fontSize.sm },
@@ -419,7 +419,7 @@ const styles = StyleSheet.create({
     borderColor: colors.border.soft,
   },
   payAmountLabel: { fontFamily: fonts.support, color: colors.ink[500], fontSize: 10, letterSpacing: 1.5, textTransform: 'uppercase' as any, flex: 1 },
-  payAmountValue: { fontFamily: fonts.headingBold, color: colors.burgundy[900], fontSize: 28 },
+  payAmountValue: { fontFamily: fonts.headingBold, color: colors.burgundy[900], fontSize: 22 },
   payAmountCurrency: { fontFamily: fonts.support, color: colors.ink[500], fontSize: fontSize.sm },
 
   payRef: { fontFamily: fonts.support, color: colors.ink[500], fontSize: 11 },
@@ -433,8 +433,8 @@ const styles = StyleSheet.create({
     paddingVertical: 9,
     borderRadius: radius.md,
   },
-  actionBtnApprove: { backgroundColor: '#2C5E3C' },
-  actionBtnPaid: { backgroundColor: '#3A547A' },
+  actionBtnApprove: { backgroundColor: colors.state.success },
+  actionBtnPaid: { backgroundColor: colors.state.info },
   actionBtnReject: { backgroundColor: '#FCE3E3', borderWidth: 1, borderColor: '#D89A9A' },
   actionBtnTxt: { fontFamily: fonts.bodySemibold, color: '#fff', fontSize: fontSize.sm },
   actionBtnTxtDanger: { fontFamily: fonts.bodySemibold, color: colors.state.error, fontSize: fontSize.sm },

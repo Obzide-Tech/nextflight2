@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     gap: spacing.lg,
     padding: spacing.xl,
-    backgroundColor: '#12040A',
+    backgroundColor: colors.ink[900],
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(175,137,86,0.2)',
   },
@@ -271,7 +271,7 @@ const styles = StyleSheet.create({
   payloadToggleTxt: { fontFamily: fonts.support, color: colors.ink[500], fontSize: 11 },
 
   payload: {
-    backgroundColor: '#F4F1E4',
+    backgroundColor: colors.cream[200],
     borderRadius: radius.sm,
     padding: spacing.md,
     marginTop: 6,
