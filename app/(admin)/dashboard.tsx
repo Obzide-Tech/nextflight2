@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
 import {
-  View, Text, StyleSheet, ActivityIndicator, ScrollView, Pressable,
-  useWindowDimensions, Platform,
+  View, Text, StyleSheet, ActivityIndicator, ScrollView,
+  useWindowDimensions,
 } from 'react-native';
 import { StatusPill } from '@/components/admin/StatusPill';
 import {
   fetchDashboardKpis, fetchPlatformBreakdown,
   DashboardKpis, PlatformBreakdown, fetchPayouts, PayoutRow,
-  generatePremiumPaymentLink,
 } from '@/lib/admin';
 import { colors, fonts, fontSize, spacing, radius } from '@/theme/tokens';
-import { TrendingUp, Users, Wallet, Star, Link2, TriangleAlert } from 'lucide-react-native';
+import { TrendingUp, Users, Wallet, Star } from 'lucide-react-native';
 
 function formatUsd(n: number) {
   return `$${n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
@@ -32,9 +31,6 @@ export default function Dashboard() {
   const [recentPayouts, setRecentPayouts] = useState<PayoutRow[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const [linkLoading, setLinkLoading] = useState(false);
-  const [linkResult, setLinkResult] = useState<{ url: string | null; error: string | null } | null>(null);
-
   useEffect(() => {
     (async () => {
       const [k, p, pq] = await Promise.all([fetchDashboardKpis(), fetchPlatformBreakdown(), fetchPayouts()]);
@@ -44,18 +40,6 @@ export default function Dashboard() {
       setLoading(false);
     })();
   }, []);
-
-  const onGenerateLink = async () => {
-    setLinkLoading(true);
-    setLinkResult(null);
-    const r = await generatePremiumPaymentLink();
-    setLinkResult(r);
-    setLinkLoading(false);
-
-    if (r.url && Platform.OS === 'web') {
-      try { await (navigator as any).clipboard?.writeText(r.url); } catch {}
-    }
-  };
 
   if (loading || !kpis) {
     return (
@@ -203,48 +187,6 @@ export default function Dashboard() {
         </View>
       </View>
 
-      {/* TEMPORARY: Generate Stripe Payment Link for Premium Program */}
-      <View style={[styles.tempSection, isMobile && styles.tempSectionMobile]}>
-        <View style={styles.tempHeader}>
-          <TriangleAlert size={14} color={colors.gold[600]} strokeWidth={1.8} />
-          <Text style={styles.tempEyebrow}>TEMPORAL — borrar después de usar</Text>
-        </View>
-        <Text style={styles.tempTitle}>Generar Payment Link Premium</Text>
-        <Text style={styles.tempDesc}>
-          Crea el Stripe Payment Link para el programa premium y lo guarda en la base de datos.
-          Solo necesitas hacer esto una vez.
-        </Text>
-
-        {linkResult?.url ? (
-          <View style={styles.linkSuccess}>
-            <Text style={styles.linkSuccessLabel}>
-              Payment Link generado{Platform.OS === 'web' ? ' (copiado al portapapeles)' : ''}:
-            </Text>
-            <Text style={styles.linkUrl} selectable>{linkResult.url}</Text>
-          </View>
-        ) : linkResult?.error ? (
-          <View style={styles.linkError}>
-            <Text style={styles.linkErrorTxt}>Error: {linkResult.error}</Text>
-          </View>
-        ) : null}
-
-        <Pressable
-          onPress={onGenerateLink}
-          disabled={linkLoading || !!linkResult?.url}
-          style={[styles.linkBtn, (linkLoading || !!linkResult?.url) && styles.linkBtnDone]}
-        >
-          {linkLoading ? (
-            <ActivityIndicator size="small" color={colors.cream[100]} />
-          ) : (
-            <>
-              <Link2 size={15} color={colors.cream[100]} strokeWidth={2} />
-              <Text style={styles.linkBtnTxt}>
-                {linkResult?.url ? 'Link generado correctamente' : 'Generar Payment Link Premium'}
-              </Text>
-            </>
-          )}
-        </Pressable>
-      </View>
     </ScrollView>
   );
 }
@@ -473,92 +415,5 @@ const styles = StyleSheet.create({
     minWidth: 72,
     textAlign: 'right' as any,
     flexShrink: 0,
-  },
-
-  tempSection: {
-    margin: spacing.xl,
-    marginTop: 0,
-    padding: spacing.lg,
-    backgroundColor: '#FFFBF0',
-    borderRadius: radius.xl,
-    borderWidth: 1.5,
-    borderColor: colors.gold[400],
-    gap: spacing.sm,
-  },
-  tempSectionMobile: {
-    margin: spacing.md,
-    marginTop: 0,
-  },
-  tempHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-  },
-  tempEyebrow: {
-    fontFamily: fonts.support,
-    color: colors.gold[600],
-    fontSize: 9,
-    letterSpacing: 2.5,
-    textTransform: 'uppercase' as any,
-  },
-  tempTitle: {
-    fontFamily: fonts.headingBold,
-    color: colors.burgundy[900],
-    fontSize: fontSize.lg,
-  },
-  tempDesc: {
-    fontFamily: fonts.body,
-    color: colors.ink[700],
-    fontSize: fontSize.sm,
-    lineHeight: 20,
-  },
-  linkSuccess: {
-    backgroundColor: '#E8F5EC',
-    borderRadius: radius.md,
-    borderWidth: 1,
-    borderColor: '#9DC4A4',
-    padding: spacing.md,
-    gap: 4,
-  },
-  linkSuccessLabel: {
-    fontFamily: fonts.bodySemibold,
-    color: '#2F5E3D',
-    fontSize: fontSize.xs,
-  },
-  linkUrl: {
-    fontFamily: fonts.body,
-    color: '#2F5E3D',
-    fontSize: fontSize.xs,
-    textDecorationLine: 'underline' as any,
-  },
-  linkError: {
-    backgroundColor: '#FCE3E3',
-    borderRadius: radius.md,
-    borderWidth: 1,
-    borderColor: '#D89A9A',
-    padding: spacing.md,
-  },
-  linkErrorTxt: {
-    fontFamily: fonts.bodyMedium,
-    color: '#7A1A2C',
-    fontSize: fontSize.sm,
-  },
-  linkBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-    backgroundColor: colors.gold[600],
-    paddingVertical: 13,
-    borderRadius: radius.md,
-  },
-  linkBtnDone: {
-    backgroundColor: '#2C5E3C',
-    opacity: 0.75,
-  },
-  linkBtnTxt: {
-    fontFamily: fonts.bodySemibold,
-    color: colors.cream[100],
-    fontSize: fontSize.sm,
   },
 });
