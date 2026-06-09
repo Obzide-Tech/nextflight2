@@ -136,24 +136,95 @@ export type AdminUserRow = {
   full_name: string | null;
   country: string | null;
   city: string | null;
+  timezone: string | null;
+  language: string | null;
+  kartra_contact_id: string | null;
+  accepted_terms_at: string | null;
+  onboarded_at: string | null;
   created_at: string;
+  updated_at: string | null;
   roles: string[];
+  subscription?: { status: string; platform: string | null; period_end: string | null } | null;
+  affiliate?: { status: string; payout_provider: string | null; payout_email: string | null; rewardful_id: string | null } | null;
 };
 
 export async function fetchUsers(query: string): Promise<AdminUserRow[]> {
-  let req = supabase.from('user_profiles').select('id, full_name, country, city, created_at').order('created_at', { ascending: false }).limit(100);
+  let req = supabase
+    .from('user_profiles')
+    .select('id, full_name, country, city, timezone, language, kartra_contact_id, accepted_terms_at, onboarded_at, created_at, updated_at')
+    .order('created_at', { ascending: false })
+    .limit(200);
   if (query.trim()) req = req.ilike('full_name', `%${query.trim()}%`);
   const { data } = await req;
   if (!data?.length) return [];
   const ids = data.map((u: any) => u.id);
-  const { data: roles } = await supabase.from('user_roles').select('user_id, role').in('user_id', ids);
+  const [rolesRes, subsRes, affiliatesRes] = await Promise.all([
+    supabase.from('user_roles').select('user_id, role').in('user_id', ids),
+    supabase.from('subscriptions').select('user_id, status, platform, current_period_end').in('user_id', ids).order('created_at', { ascending: false }),
+    supabase.from('affiliate_profiles').select('id, status, payout_provider, payout_email, rewardful_affiliate_id').in('id', ids),
+  ]);
   const roleMap = new Map<string, string[]>();
-  (roles ?? []).forEach((r: any) => {
+  (rolesRes.data ?? []).forEach((r: any) => {
     const arr = roleMap.get(r.user_id) ?? [];
     arr.push(r.role);
     roleMap.set(r.user_id, arr);
   });
-  return data.map((u: any) => ({ ...u, roles: roleMap.get(u.id) ?? [] }));
+  const subMap = new Map<string, any>();
+  (subsRes.data ?? []).forEach((s: any) => {
+    if (!subMap.has(s.user_id)) subMap.set(s.user_id, { status: s.status, platform: s.platform, period_end: s.current_period_end });
+  });
+  const affMap = new Map<string, any>();
+  (affiliatesRes.data ?? []).forEach((a: any) => {
+    affMap.set(a.id, { status: a.status, payout_provider: a.payout_provider, payout_email: a.payout_email, rewardful_id: a.rewardful_affiliate_id });
+  });
+  return data.map((u: any) => ({
+    ...u,
+    roles: roleMap.get(u.id) ?? [],
+    subscription: subMap.get(u.id) ?? null,
+    affiliate: affMap.get(u.id) ?? null,
+  }));
+}
+
+export async function updateUserProfile(
+  userId: string,
+  updates: { full_name?: string; country?: string; city?: string; timezone?: string; language?: string }
+): Promise<{ ok: boolean; error?: string }> {
+  const { error } = await supabase
+    .from('user_profiles')
+    .update({ ...updates, updated_at: new Date().toISOString() })
+    .eq('id', userId);
+  if (error) return { ok: false, error: error.message };
+  const { data: { user } } = await supabase.auth.getUser();
+  if (user) {
+    await supabase.from('admin_audit_log').insert({
+      actor_id: user.id, action: 'user_profile.update', target_table: 'user_profiles', target_id: userId, metadata: updates,
+    });
+  }
+  return { ok: true };
+}
+
+export async function grantUserRole(userId: string, role: string): Promise<{ ok: boolean; error?: string }> {
+  const { error } = await supabase.from('user_roles').upsert({ user_id: userId, role, granted_at: new Date().toISOString() }, { onConflict: 'user_id,role' });
+  if (error) return { ok: false, error: error.message };
+  const { data: { user } } = await supabase.auth.getUser();
+  if (user) {
+    await supabase.from('admin_audit_log').insert({
+      actor_id: user.id, action: 'user_role.grant', target_table: 'user_roles', target_id: userId, metadata: { role },
+    });
+  }
+  return { ok: true };
+}
+
+export async function revokeUserRole(userId: string, role: string): Promise<{ ok: boolean; error?: string }> {
+  const { error } = await supabase.from('user_roles').delete().eq('user_id', userId).eq('role', role);
+  if (error) return { ok: false, error: error.message };
+  const { data: { user } } = await supabase.auth.getUser();
+  if (user) {
+    await supabase.from('admin_audit_log').insert({
+      actor_id: user.id, action: 'user_role.revoke', target_table: 'user_roles', target_id: userId, metadata: { role },
+    });
+  }
+  return { ok: true };
 }
 
 export async function fetchTransactions(filters: { platform?: string; status?: string; limit?: number }) {

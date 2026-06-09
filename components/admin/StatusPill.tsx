@@ -37,7 +37,7 @@ export function StatusPill({ value }: { value: string }) {
 }
 
 const styles = StyleSheet.create({
-  pill: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 999, alignSelf: 'flex-start' },
+  pill: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 999, alignSelf: 'flex-start', flexShrink: 0 },
   text: { fontFamily: fonts.bodyMedium, fontSize: 11, letterSpacing: 0.5, textTransform: 'lowercase' as any },
 });
 
