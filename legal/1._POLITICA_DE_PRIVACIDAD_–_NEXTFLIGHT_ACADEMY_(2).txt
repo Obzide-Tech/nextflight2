@@ -1,0 +1,237 @@
+Version: v.1        	01/19/2026
+
+PRIVACY POLICY
+NEXTFLIGHT ACADEMY 
+
+Last Updated: January 19, 2026
+Controlling Language: English
+Exclusive Venue: Harris County, Texas
+This Privacy Policy ("Policy") describes how NextFlight Academy, operated by Daniela Patino LLC (DBA NextFlight Academy) ("Academy," "we," "us," or "our"), collects, uses, and protects your personal information. By accessing our website, registering for courses, or purchasing digital products, you agree to the terms of this Policy.
+1. SCOPE AND CONSENT
+This Policy applies to all users, including residents of Texas and other jurisdictions. By providing your information, you signify your consent to the processing of your data as described herein. If you do not agree with these terms, you must immediately cease use of our services.
+2. INFORMATION WE COLLECT
+We collect information that identifies, relates to, or could reasonably be linked to you ("Personal Data"):
+● 	2.1. Identifiers: Name, alias, and government ID (if required for certification).
+● 	2.2. Contact Information: Email address, phone number, and billing address.
+● 	2.3. Commercial Information: Records of products or services purchased (processed via secure third parties like Stripe, PayPal, or Kajabi). We do not store full credit card numbers on our servers.
+● 	2.4. Internet/Electronic Activity: IP address, browsing history, and interaction with our website/ads.
+2.5 SENSITIVE DATA NOTICE AND GLOBAL COMPLIANCE: The Academy does not collect or process Sensitive Personal Data except where strictly necessary and only in compliance with applicable privacy and data protection laws. "Sensitive Personal Data" includes, without limitation, precise geolocation data, biometric identifiers, government-issued identification numbers, health-related information, racial or ethnic origin, religious or philosophical beliefs, sexual orientation, trade union membership, and any other data classified as sensitive under applicable law. Where required by applicable law, including without limitation the Texas Data Privacy and Security Act ("TDPSA"), the California Consumer Privacy Act as amended by the CPRA ("CCPA/CPRA"), Regulation (EU) 2016/679 ("GDPR"), and comparable data protection laws in other jurisdictions, the Academy shall process Sensitive Personal Data only upon the user's prior explicit, informed, and unambiguous consent (opt-in), or pursuant to another lawful basis expressly permitted by such law. In the event of any conflict among applicable data protection laws, the Academy shall apply the standard that provides the highest level of protection to the individual, while preserving the enforceability of this Policy under the laws of the State of Texas.
+3. USE OF PERSONAL DATA
+We use your data strictly for the following business purposes:
+● 	To provide and maintain our educational services and digital products.
+● 	To process transactions and send related information (confirmations/invoices).
+●	To communicate via email, SMS, or WhatsApp regarding support and updates.
+● 	To detect, prevent, and address technical issues or fraudulent activity.
+● 	To comply with legal obligations under Texas and Federal law.
+4. DISCLOSURE AND "SALE" OF DATA
+● 4.1. No Sale of Data: NextFlight Academy DOES NOT SELL your personal information to third parties for monetary consideration.
+● 4.2. Targeted Advertising: We may share non-sensitive identifiers with service providers (e.g., Meta, Google) for targeted advertising. You have the right to Opt-Out of this sharing (See Section 6).
+● 4.3. Third-Party Service Providers: We share data with trusted vendors (Kajabi, Zoom, Stripe, etc.) who are contractually obligated to protect your data and use it only for the services we request.
+● 4.4. Affiliate Program Disclosure: NextFlight Academy operates an Affiliate Program through which independent promoters ("Affiliates") refer potential customers in exchange for commissions on completed sales.
+● (a) Data Shared with Affiliates: When you purchase through an affiliate referral link, we share the following information with the referring affiliate: transaction confirmation, purchase amount (for commission calculation), and your first name (for affiliate's record-keeping). We do NOT share your full name, email address, phone number, or payment details with affiliates.
+● (b) Tracking Mechanism: We use cookies and unique tracking links to attribute sales to the correct affiliate. These tracking cookies typically remain active for 30-90 days after you click an affiliate link.
+● (c) CCPA Consideration: Under the broad definition of "sharing" in CCPA, providing transaction data to affiliates who receive compensation may be considered "sharing" for cross-context behavioral purposes. California residents may opt out of this sharing by emailing soporte@nextflightacademy.com with "Opt-Out of Affiliate Sharing" in the subject line.
+● (d) Affiliate Obligations: All affiliates are contractually required to comply with FTC disclosure guidelines and our marketing standards. They must clearly disclose their affiliate relationship when promoting our Products.
+
+5. DATA SECURITY
+
+We implement and maintain reasonable administrative, technical, and physical safeguards to protect your Personal Data from unauthorized access, disclosure, alteration, or destruction, consistent with Tex. Bus. & Com. Code § 521.052, applicable U.S. federal and state laws, the General Data Protection Regulation (GDPR), and other applicable international data protection and privacy laws.
+In the event of a data breach, we will provide notification as required by Texas law and all other applicable laws in the jurisdictions where you reside, including but not limited to GDPR notification requirements in Europe and local privacy laws in Latin American countries.
+Our security measures are continuously reviewed and updated to maintain compliance with the highest standards required by applicable law and industry best practices.
+6. YOUR PRIVACY RIGHTS
+6.1. Texas Residents (TDPSA)
+If you are a resident of Texas, you have the following enforceable rights:
+● Right to Access: Confirm if we are processing your data and receive a copy.
+● Right to Correct: Rectify inaccuracies in your Personal Data.
+● Right to Delete: Request deletion of Personal Data provided by or obtained about you.
+● Right to Data Portability: Obtain a copy of your data in a portable and readily usable format.
+● Right to Opt-Out: Object to the processing of data for targeted advertising or profiling.
+To exercise these rights, email: soporte@nextflightacademy.com.
+RIGHT TO APPEAL: If we decline your request, you may appeal within 45 days. If denied, you may contact the Texas Attorney General.
+6.2. Users Outside Texas
+Residents of other U.S. states, European countries, or Latin American countries may have additional rights under applicable local or international privacy laws, including but not limited to:
+● CCPA/CPRA for California residents,
+● GDPR for EU residents,
+● Local privacy laws in Latin American countries.
+We will process all requests in accordance with the applicable law in your jurisdiction. Contact soporte@nextflightacademy.com to exercise your rights or for more information regarding privacy rights under local law.
+7. LIMITATION OF LIABILITY (IMPORTANT)
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, NEXTFLIGHT ACADEMY AND DANIEL PATINO LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO THIS PRIVACY POLICY. OUR AGGREGATE LIABILITY SHALL NOT EXCEED THE TOTAL AMOUNT PAID BY YOU TO THE ACADEMY DURING THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+8. GOVERNING LAW AND JURY WAIVER
+This Policy is governed by the laws of the State of Texas. THE PARTIES HEREBY IRREVOCABLY WAIVE ANY RIGHT TO A TRIAL BY JURY IN ANY LEGAL PROCEEDING ARISING OUT OF OR RELATING TO THIS POLICY. Any dispute shall be brought exclusively in the state or federal courts located in Harris County, Texas.
+9. CHILDREN'S PRIVACY
+We do not knowingly collect information from individuals under the age of 13 (COPPA) or 18 (Texas). If you are a parent and believe your child has provided us with Personal Data, please contact us for immediate removal.
+10. CHANGES TO THIS POLICY
+We reserve the right to update this Policy. The "Last Updated" date will reflect the most recent version. Continued use of our services constitutes acceptance of the updated Policy.
+ 11. CALIFORNIA CONSUMER PRIVACY RIGHTS (CCPA/CPRA)
+
+If you are a California resident, you have specific rights under the California Consumer Privacy Act of 2018 (CCPA) and the California Privacy Rights Act of 2020 (CPRA).
+11.1. Categories of Personal Information Collected
+We collect the following categories of personal information as defined by CCPA:
+● (a) Identifiers: Name, alias, email address, phone number, IP address, and government ID (if required for certification).
+● (b) Commercial Information: Records of products or services purchased, transaction history, and payment information.
+● (c) Internet or Network Activity: Browsing history, search history, and interaction with our website, advertisements, or emails.
+● (d) Geolocation Data: Approximate location derived from IP address.
+● (e) Inferences: Profiles reflecting preferences, characteristics, or behavior derived from other personal information.
+11.2. Business or Commercial Purposes for Collection
+We use personal information for the following business purposes:
+● (a) To fulfill or meet the reason you provided the information (e.g., course enrollment, transaction processing).
+● (b) To provide customer service and respond to your inquiries.
+● (c) To personalize your experience and deliver content relevant to your interests.
+● (d) For marketing and promotional purposes, including targeted advertising.
+● (e) To detect, prevent, and respond to security incidents, fraud, or illegal activity.
+● (f) To comply with legal obligations and enforce our agreements.
+11.3. Categories of Third Parties with Whom We Share Information
+We may share your personal information with the following categories of third parties:
+● (a) Service Providers: Payment processors (Stripe, PayPal), platform providers (Kajabi), email service providers, analytics providers (Google Analytics), and cloud storage providers.
+● (b) Advertising Networks: Meta (Facebook/Instagram), Google Ads, TikTok Ads for targeted advertising purposes.
+● (c) Affiliates and Partners: Individuals or entities participating in our Affiliate Program who refer customers and earn commissions. We may share transaction data necessary for commission tracking.
+11.4. Sale or Sharing of Personal Information
+We do not sell your personal information for monetary consideration. However, under the broad definition of "sale" in CCPA, the following activities may be considered sharing for cross-context behavioral advertising:
+● (a) Sharing identifiers and internet activity with advertising networks (Meta, Google, TikTok) for targeted advertising.
+● (b) Sharing transaction information with affiliates for commission tracking purposes.
+Categories "sold" or "shared": Identifiers, Commercial Information, Internet/Network Activity.
+11.5. Your California Privacy Rights
+As a California consumer, you have the right to:
+● (a) Right to Know: Request that we disclose what personal information we have collected, used, disclosed, or sold about you in the past 12 months.
+● (b) Right to Delete: Request deletion of your personal information, subject to certain exceptions.
+● (c) Right to Correct: Request correction of inaccurate personal information.
+● (d) Right to Opt-Out of Sale/Sharing: Object to the sale or sharing of your personal information for targeted advertising.
+● (e) Right to Limit Use of Sensitive Personal Information: Limit our use of sensitive personal information to necessary purposes.
+● (f) Right to Non-Discrimination: Not be discriminated against for exercising any of your CCPA rights.
+11.6. How to Exercise Your California Rights
+To exercise your California privacy rights, please submit a verifiable request to: soporte@nextflightacademy.com with the subject line "California Privacy Request."
+We will respond to verifiable requests within forty-five (45) days of receipt. If we require additional time (up to 90 days total), we will inform you of the reason and extension period.
+Identity Verification: To protect your privacy, we will verify your identity before processing requests by asking you to provide:
+1. Your full name.
+2. Email address on file.
+3. Last four digits of payment method used for purchase.
+11.7. Do Not Sell or Share My Personal Information
+California residents may opt out of the "sale" or "sharing" of personal information by clicking the following link available on our website footer: [Do Not Sell or Share My Personal Information]
+Alternatively, email us at: soporte@nextflightacademy.com with "Opt-Out Request" in the subject line.
+11.8. Authorized Agent
+You may designate an authorized agent to make requests on your behalf. The agent must provide proof of authorization, and we may require you to verify your identity directly with us.
+11.9. CCPA Metrics (Annual Disclosure)
+In accordance with CCPA requirements, we will publish annually the following metrics for the preceding calendar year:
+● (a) Number of requests to know received and complied with or denied.
+● (b) Number of requests to delete received and complied with or denied.
+● (c) Number of requests to opt-out received and complied with or denied.
+● (d) Median number of days to respond to requests.
+This information will be available at: www.nextflightacademy.com/ccpa-metrics
+12. COOKIES AND TRACKING TECHNOLOGIES
+
+12.1. What Are Cookies
+Cookies are small text files placed on your device when you visit our website. We use cookies and similar tracking technologies (web beacons, pixels, local storage) to enhance your experience, analyze usage, and deliver personalized content.
+12.2. Types of Cookies We Use
+● (a) Strictly Necessary Cookies: Essential for the website to function properly. These cannot be disabled. Examples: authentication, security, session management.
+● (b) Functional Cookies: Enable enhanced features and personalization. Examples: language preferences, user interface settings.
+● (c) Analytics and Performance Cookies: Help us understand how visitors interact with our website by collecting and reporting information anonymously. Provider: Google Analytics. Duration: Up to 2 years.
+● (d) Advertising and Targeting Cookies: Used to deliver relevant advertisements and track campaign performance. Providers: Meta Pixel (Facebook/Instagram), Google Ads, TikTok Pixel. Duration: Up to 1 year.
+12.3. Third-Party Cookies
+We allow third parties to place cookies on your device for advertising and analytics purposes:
+● (a) Google Analytics: Analyzes website traffic and user behavior. Privacy Policy
+● (b) Meta Pixel (Facebook/Instagram): Tracks conversions and delivers targeted ads. Privacy Policy
+● (c) TikTok Pixel: Tracks user interactions for advertising optimization. Privacy Policy
+● (d) Google Ads: Delivers personalized advertising based on browsing behavior. Privacy Policy
+12.4. Affiliate Tracking
+We use cookies and tracking links to attribute sales to affiliates who refer customers to us. When you click on an affiliate link, a cookie is placed on your device (typically valid for 30-90 days) to track whether you complete a purchase. We share transaction information with the referring affiliate for commission purposes.
+12.5. How to Manage Cookies
+● (a) Cookie Consent Banner: When you first visit our website, you will see a cookie consent banner allowing you to accept or reject non-essential cookies.
+● (b) Browser Settings: You can configure your browser to refuse all cookies or alert you when a cookie is being sent. Instructions:
+○ Chrome: Settings > Privacy and Security > Cookies
+○ Firefox: Settings > Privacy & Security > Cookies and Site Data
+○ Safari: Preferences > Privacy > Cookies and Website Data
+● (c) Opt-Out Tools: For targeted advertising, you may opt out via:
+○ Network Advertising Initiative: [suspicious link removed]
+○ Digital Advertising Alliance: http://www.aboutads.info/choices/
+○ Google Ads Settings: https://adssettings.google.com
+Note: Disabling cookies may affect website functionality and your user experience.
+12.6. Do Not Track Signals
+Some browsers offer a "Do Not Track" (DNT) signal. We do not currently respond to 
+
+
+
+Versión: v.1 | 19/01/2026
+POLÍTICA DE PRIVACIDAD
+NEXTFLIGHT ACADEMY
+
+Última actualización: 19 de enero de 2026 
+Idioma prevaleciente: Inglés (English) 
+Jurisdicción exclusiva: Condado de Harris, Texas
+Esta Política de Privacidad ("Política") describe cómo NextFlight Academy, operada por Daniela Patino LLC (DBA NextFlight Academy) ("Academia", "nosotros", "nos" o "nuestro"), recopila, utiliza y protege su información personal. Al acceder a nuestro sitio web, registrarse en cursos o comprar productos digitales, usted acepta los términos de esta Política.
+1. ALCANCE Y CONSENTIMIENTO
+Esta Política se aplica a todos los usuarios, incluidos los residentes de Texas y otras jurisdicciones. Al proporcionar su información, usted manifiesta su consentimiento para el procesamiento de sus datos según se describe aquí. Si no está de acuerdo con estos términos, debe cesar inmediatamente el uso de nuestros servicios.
+2. INFORMACIÓN QUE RECOPILAMOS
+Recopilamos información que lo identifica, se relaciona con usted o podría vincularse razonablemente con usted ("Datos Personales"):
+● 2.1. Identificadores: Nombre, alias e identificación gubernamental (si se requiere para certificación).
+● 2.2. Información de contacto: Correo electrónico, número de teléfono y dirección de facturación.
+● 2.3. Información comercial: Registros de productos o servicios comprados (procesados a través de terceros seguros como Stripe, PayPal o Kajabi). No almacenamos números completos de tarjetas de crédito en nuestros servidores.
+● 2.4. Actividad electrónica/Internet: Dirección IP, historial de navegación e interacción con nuestro sitio web/anuncios.
+● 2.5. AVISO DE DATOS SENSIBLES Y CUMPLIMIENTO GLOBAL: La Academia no recopila ni procesa Datos Personales Sensibles excepto cuando sea estrictamente necesario y solo en cumplimiento con las leyes de privacidad y protección de datos aplicables. Los "Datos Personales Sensibles" incluyen, sin limitación, datos de geolocalización precisa, identificadores biométricos, números de identificación emitidos por el gobierno, información relacionada con la salud, origen racial o étnico, creencias religiosas o filosóficas, orientación sexual, afiliación sindical y cualquier otro dato clasificado como sensible bajo la ley aplicable. Donde lo exija la ley aplicable, incluyendo sin limitación la Ley de Privacidad y Seguridad de Datos de Texas ("TDPSA"), la Ley de Privacidad del Consumidor de California enmendada por la CPRA ("CCPA/CPRA"), el Reglamento (UE) 2016/679 ("GDPR") y leyes de protección de datos comparables en otras jurisdicciones, la Academia procesará Datos Personales Sensibles solo previo consentimiento explícito, informado e inequívoco del usuario (opt-in), o conforme a otra base legal expresamente permitida por dicha ley. En caso de conflicto entre las leyes de protección de datos aplicables, la Academia aplicará el estándar que proporcione el mayor nivel de protección al individuo, preservando al mismo tiempo la aplicabilidad de esta Política bajo las leyes del Estado de Texas.
+3. USO DE LOS DATOS PERSONALES
+Utilizamos sus datos estrictamente para los siguientes fines comerciales:
+● Proveer y mantener nuestros servicios educativos y productos digitales.
+● Procesar transacciones y enviar información relacionada (confirmaciones/facturas).
+● Comunicarse vía correo electrónico, SMS o WhatsApp con respecto a soporte y actualizaciones.
+● Detectar, prevenir y abordar problemas técnicos o actividades fraudulentas.
+● Cumplir con las obligaciones legales bajo las leyes de Texas y Federales.
+4. DIVULGACIÓN Y "VENTA" DE DATOS
+● 4.1. No venta de datos: NextFlight Academy NO VENDE su información personal a terceros a cambio de una contraprestación monetaria.
+● 4.2. Publicidad dirigida: Podemos compartir identificadores no sensibles con proveedores de servicios (p. ej., Meta, Google) para publicidad dirigida. Usted tiene el derecho de optar por no participar (Opt-Out) en este intercambio (Ver Sección 6).
+● 4.3. Terceros proveedores de servicios: Compartimos datos con proveedores de confianza (Kajabi, Zoom, Stripe, etc.) que están obligados contractualmente a proteger sus datos y utilizarlos solo para los servicios que solicitamos.
+● 4.4. Divulgación del Programa de Afiliados: NextFlight Academy opera un Programa de Afiliados a través del cual promotores independientes ("Afiliados") refieren clientes potenciales a cambio de comisiones sobre ventas completadas.
+○ (a) Datos compartidos con Afiliados: Cuando usted compra a través de un enlace de referencia de afiliado, compartimos la siguiente información con el afiliado referente: confirmación de la transacción, monto de la compra (para el cálculo de la comisión) y su primer nombre (para el registro del afiliado). NO compartimos su nombre completo, dirección de correo electrónico, número de teléfono o detalles de pago con los afiliados.
+○ (b) Mecanismo de seguimiento: Utilizamos cookies y enlaces de seguimiento únicos para atribuir las ventas al afiliado correcto. Estas cookies de seguimiento suelen permanecer activas durante 30-90 días después de que usted hace clic en un enlace de afiliado.
+○ (c) Consideración de la CCPA: Bajo la definición amplia de "compartir" en la CCPA, proporcionar datos de transacciones a afiliados que reciben compensación puede considerarse "compartir" para fines conductuales de contexto cruzado. Los residentes de California pueden optar por no participar en este intercambio enviando un correo electrónico a soporte@nextflightacademy.com con el asunto "Opt-Out of Affiliate Sharing".
+○ (d) Obligaciones del Afiliado: Todos los afiliados están obligados contractualmente a cumplir con las guías de divulgación de la FTC y nuestros estándares de marketing. Deben divulgar claramente su relación de afiliado al promocionar nuestros Productos.
+5. SEGURIDAD DE LOS DATOS
+Implementamos y mantenemos salvaguardas administrativas, técnicas y físicas razonables para proteger sus Datos Personales contra el acceso, divulgación, alteración o destrucción no autorizados, de conformidad con el Código de Negocios y Comercio de Texas § 521.052, las leyes federales y estatales aplicables de los EE. UU., el Reglamento General de Protección de Datos (GDPR) y otras leyes internacionales aplicables de protección de datos y privacidad.
+En caso de una brecha de seguridad de datos, notificaremos según lo exija la ley de Texas y todas las demás leyes aplicables en las jurisdicciones donde usted resida, incluyendo, entre otros, los requisitos de notificación del GDPR en Europa y las leyes de privacidad locales en los países de América Latina.
+Nuestras medidas de seguridad se revisan y actualizan continuamente para mantener el cumplimiento con los estándares más altos exigidos por la ley aplicable y las mejores prácticas de la industria.
+6. SUS DERECHOS DE PRIVACIDAD
+6.1. Residentes de Texas (TDPSA)
+Si usted es residente de Texas, tiene los siguientes derechos exigibles:
+● Derecho de Acceso: Confirmar si estamos procesando sus datos y recibir una copia.
+● Derecho de Rectificación: Corregir inexactitudes en sus Datos Personales.
+● Derecho de Supresión: Solicitar la eliminación de los Datos Personales proporcionados por usted u obtenidos sobre usted.
+● Derecho a la Portabilidad de Datos: Obtener una copia de sus datos en un formato portátil y de uso inmediato.
+● Derecho de Exclusión (Opt-Out): Objetar el procesamiento de datos para publicidad dirigida o perfilado (profiling).
+Para ejercer estos derechos, envíe un correo electrónico a: soporte@nextflightacademy.com. DERECHO DE APELACIÓN: Si rechazamos su solicitud, puede apelar dentro de los 45 días. Si es denegada, puede contactar al Fiscal General de Texas.
+6.2. Usuarios fuera de Texas
+Los residentes de otros estados de EE. UU., países europeos o países de América Latina pueden tener derechos adicionales bajo las leyes de privacidad locales o internacionales aplicables, incluyendo, entre otros:
+● CCPA/CPRA para residentes de California.
+● GDPR para residentes de la UE.
+● Leyes de privacidad locales en países de América Latina.
+Procesaremos todas las solicitudes de acuerdo con la ley aplicable en su jurisdicción. Contacte a soporte@nextflightacademy.com para ejercer sus derechos o para obtener más información sobre los derechos de privacidad bajo la ley local.
+7. LIMITACIÓN DE RESPONSABILIDAD (IMPORTANTE)
+EN LA MEDIDA MÁXIMA PERMITIDA POR LA LEY APLICABLE, NEXTFLIGHT ACADEMY Y DANIELA PATINO LLC NO SERÁN RESPONSABLES POR NINGÚN DAÑO INDIRECTO, INCIDENTAL, ESPECIAL, CONSECUENTE O PUNITIVO QUE SURJA DE O ESTÉ RELACIONADO CON ESTA POLÍTICA DE PRIVACIDAD. NUESTRA RESPONSABILIDAD AGREGADA NO EXCEDERÁ EL MONTO TOTAL PAGADO POR USTED A LA ACADEMIA DURANTE LOS DOCE (12) MESES ANTERIORES A LA RECLAMACIÓN.
+8. LEY APLICABLE Y RENUNCIA A JUICIO POR JURADO
+Esta Política se rige por las leyes del Estado de Texas. LAS PARTES RENUNCIAN IRREVOCABLEMENTE POR LA PRESENTE A CUALQUIER DERECHO A UN JUICIO POR JURADO EN CUALQUIER PROCEDIMIENTO LEGAL QUE SURJA DE O ESTÉ RELACIONADO CON ESTA POLÍTICA. Cualquier disputa se presentará exclusivamente en los tribunales estatales o federales ubicados en el Condado de Harris, Texas.
+9. PRIVACIDAD DE LOS NIÑOS
+No recopilamos deliberadamente información de personas menores de 13 años (COPPA) o 18 años (Texas). Si usted es padre o tutor y cree que su hijo nos ha proporcionado Datos Personales, contáctenos para su eliminación inmediata.
+10. CAMBIOS A ESTA POLÍTICA
+Nos reservamos el derecho de actualizar esta Política. La fecha de "Última actualización" reflejará la versión más reciente. El uso continuado de nuestros servicios constituye la aceptación de la Política actualizada.
+11. DERECHOS DE PRIVACIDAD DEL CONSUMIDOR DE CALIFORNIA (CCPA/CPRA)
+
+Si usted es residente de California, tiene derechos específicos bajo la Ley de Privacidad del Consumidor de California de 2018 (CCPA) y la Ley de Derechos de Privacidad de California de 2020 (CPRA).
+11.1. Categorías de Información Personal Recopilada Recopilamos las siguientes categorías de información personal según lo definido por la CCPA: (a) Identificadores: Nombre, alias, dirección de correo electrónico, número de teléfono, dirección IP e identificación gubernamental (si se requiere para certificación). (b) Información Comercial: Registros de productos o servicios comprados, historial de transacciones e información de pago. (c) Actividad en Internet o en la Red: Historial de navegación, historial de búsqueda e interacción con nuestro sitio web, anuncios o correos electrónicos. (d) Datos de Geolocalización: Ubicación aproximada derivada de la dirección IP. (e) Inferencias: Perfiles que reflejan preferencias, características o comportamiento derivados de otra información personal.
+11.2. Propósitos de Negocio o Comerciales para la Recopilación Utilizamos la información personal para los siguientes propósitos comerciales: (a) Para cumplir o satisfacer el motivo por el cual proporcionó la información. (b) Para proporcionar servicio al cliente y responder a sus consultas. (c) Para personalizar su experiencia y ofrecer contenido relevante a sus intereses. (d) Para fines de marketing y promoción, incluida la publicidad dirigida. (e) Para detectar, prevenir y responder a incidentes de seguridad, fraude o actividad ilegal. (f) Para cumplir con obligaciones legales y hacer cumplir nuestros acuerdos.
+11.3. Categorías de Terceros con Quienes Compartimos Información Podemos compartir su información personal con las siguientes categorías de terceros: (a) Proveedores de Servicios: Procesadores de pago (Stripe, PayPal), proveedores de plataformas (Kajabi), proveedores de servicios de correo electrónico, proveedores de análisis (Google Analytics) y proveedores de almacenamiento en la nube. (b) Redes Publicitarias: Meta (Facebook/Instagram), Google Ads, TikTok Ads para fines de publicidad dirigida. (c) Afiliados y Socios: Personas o entidades que participan en nuestro Programa de Afiliados que refieren clientes y ganan comisiones. Podemos compartir los datos de transacción necesarios para el seguimiento de comisiones.
+11.4. Venta o Intercambio de Información Personal No vendemos su información personal por una contraprestación monetaria. Sin embargo, bajo la definición amplia de "venta" en la CCPA, las siguientes actividades pueden considerarse intercambio para publicidad conductual de contexto cruzado: (a) Compartir identificadores y actividad en Internet con redes publicitarias para publicidad dirigida. (b) Compartir información de transacciones con afiliados para fines de seguimiento de comisiones. Categorías "vendidas" o "compartidas": Identificadores, Información Comercial, Actividad en Internet/Red.
+11.5. Sus Derechos de Privacidad de California Como consumidor de California, tiene derecho a: (a) Derecho a Saber: Solicitar que divulguemos qué información personal hemos recopilado, utilizado, divulgado o vendido sobre usted en los últimos 12 meses. (b) Derecho a Eliminar: Solicitar la eliminación de su información personal, sujeto a ciertas excepciones. (c) Derecho a Corregir: Solicitar la corrección de información personal inexacta. (d) Derecho a Optar por la No Venta/Intercambio: Objetar la venta o el intercambio de su información personal para publicidad dirigida. (e) Derecho a Limitar el Uso de Información Personal Sensible: Limitar nuestro uso de información personal sensible a los propósitos necesarios. (f) Derecho a la No Discriminación: No ser discriminado por ejercer cualquiera de sus derechos de la CCPA.
+11.6. Cómo Ejercer sus Derechos de California Para ejercer sus derechos de privacidad de California, envíe una solicitud verificable a: soporte@nextflightacademy.com con el asunto "California Privacy Request". Responderemos a las solicitudes verificables dentro de los cuarenta y cinco (45) días posteriores a su recepción. Si requerimos tiempo adicional (hasta 90 días en total), le informaremos el motivo y el periodo de extensión.
+Verificación de Identidad: Para proteger su privacidad, verificaremos su identidad antes de procesar las solicitudes pidiéndole que proporcione: su nombre completo, correo electrónico registrado y los últimos cuatro dígitos del método de pago utilizado.
+11.7. No Vender ni Compartir mi Información Personal Los residentes de California pueden optar por no participar en la "venta" o "intercambio" de información personal haciendo clic en el enlace disponible en el pie de página de nuestro sitio web: [No Vender ni Compartir mi Información Personal]. Alternativamente, envíenos un correo electrónico a: soporte@nextflightacademy.com con "Opt-Out Request" en el asunto.
+11.8. Agente Autorizado Puede designar a un agente autorizado para realizar solicitudes en su nombre. El agente debe proporcionar prueba de autorización y es posible que le pidamos que verifique su identidad directamente con nosotros.
+11.9. Métricas de la CCPA (Divulgación Anual) De conformidad con los requisitos de la CCPA, publicaremos anualmente las métricas correspondientes al año calendario anterior sobre el número de solicitudes recibidas, cumplidas y denegadas. Esta información estará disponible en: www.nextflightacademy.com/ccpa-metrics
+
+
+
+12. COOKIES Y TECNOLOGÍAS DE SEGUIMIENTO
+
+12.1. Qué son las Cookies Las cookies son pequeños archivos de texto que se colocan en su dispositivo cuando visita nuestro sitio web. Utilizamos cookies y tecnologías de seguimiento similares (balizas web, píxeles, almacenamiento local) para mejorar su experiencia, analizar el uso y ofrecer contenido personalizado.
+12.2. Tipos de Cookies que Utilizamos (a) Cookies Estrictamente Necesarias: Esenciales para que el sitio web funcione correctamente. No se pueden desactivar. (b) Cookies Funcionales: Permiten funciones mejoradas y personalización (p. ej., preferencias de idioma). (c) Cookies de Análisis y Rendimiento: Nos ayudan a entender cómo interactúan los visitantes con nuestro sitio web de forma anónima. Proveedor: Google Analytics. Duración: Hasta 2 años. (d) Cookies de Publicidad y Segmentación: Se utilizan para ofrecer anuncios relevantes y medir el rendimiento de las campañas. Proveedores: Meta Pixel, Google Ads, TikTok Pixel. Duración: Hasta 1 año.
+12.3. Cookies de Terceros Permitimos que terceros coloquen cookies en su dispositivo para fines publicitarios y de análisis: (a) Google Analytics: Analiza el tráfico y comportamiento del usuario. (b) Meta Pixel: Rastrea conversiones y ofrece anuncios segmentados. (c) TikTok Pixel: Rastrea interacciones para optimización publicitaria.
+12.4. Seguimiento de Afiliados Utilizamos cookies y enlaces de seguimiento para atribuir ventas a los afiliados. Cuando hace clic en un enlace de afiliado, se coloca una cookie en su dispositivo (generalmente válida por 30-90 días). Compartimos información de la transacción con el afiliado referente para fines de comisión.
+12.5. Cómo Administrar las Cookies (a) Banner de Consentimiento de Cookies: Al visitar nuestro sitio por primera vez, verá un banner que le permite aceptar o rechazar las cookies no esenciales. (b) Configuración del Navegador: Puede configurar su navegador para rechazar cookies. Nota: Desactivarlas puede afectar la funcionalidad del sitio. (c) Herramientas de Exclusión: Para publicidad dirigida, puede optar por no participar a través de Network Advertising Initiative o Digital Advertising Alliance.
+12.6. Señales de No Rastreo (Do Not Track) Actualmente no respondemos a las señales DNT de los navegadores, pero respetamos las preferencias de exclusión descritas en la Sección 12.5.
+

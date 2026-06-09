@@ -1,0 +1,106 @@
+NextFlight Academy
+Dónde va cada documento legal en la aplicación
+Enero 2026 - Daniela Patino LLC (DBA NextFlight Academy) - 10 documentos legales
+1Registro / Sign-up
+Cuando el usuario crea su cuenta por primera vez
+El primer punto de contacto legal. El usuario debe aceptar antes de crear su cuenta - sin esta aceptación registrada no hay respaldo legal para ninguna acción posterior.
+
+DocumentoCómo se presentaTipo de aceptaciónTerms of ServiceCheckbox obligatorio antes de crear cuenta. Link al doc completo.OBLIGATORIO - CheckboxPrivacy PolicyLink en el mismo checkbox o en texto inmediatamente debajo.OBLIGATORIO - Link visibleCookie PolicyLink junto a Privacy Policy en el formulario de registro.LINK visible
+Texto exacto del checkbox
+"I agree to the Terms of Service, Privacy Policy and Cookie Policy."
+
+Importante: Sin este checkbox registrado no tienes respaldo ante reclamos GDPR o CCPA.
+Sugerencia: Guarda en base de datos: user_id, timestamp UTC, versión del documento aceptado, IP del usuario.
+
+
+2Checkout / Pago
+Antes de que el usuario presione 'Complete Purchase'
+El momento legalmente más crítico. El Purchase & Enrollment Agreement especifica que el clickwrap en checkout es la evidencia de aceptación ante chargebacks.
+
+DocumentoCómo se presentaTipo de aceptaciónPurchase & Enrollment AgreementCheckbox obligatorio ANTES del botón 'Complete Purchase'.OBLIGATORIO - Checkbox (clickwrap)Refund & Cancellation PolicyPárrafo visible sobre el botón de pago. Resumen 2-3 líneas + link al completo.INFO - Visible antes de pagarResults & Income DisclaimerTexto breve (1-2 líneas) visible + link al documento completo.INFO - Visible antes de pagar
+Texto exacto del checkbox de checkout
+"By clicking "Complete Purchase" I agree to the Purchase & Enrollment Agreement, acknowledge that all sales are final per the No-Refund Policy, and understand that results are not guaranteed per the Results & Income Disclaimer."
+
+Resumen del Refund Policy visible en checkout
+"All digital products are delivered immediately upon purchase. All sales are final - no refunds. Installment plans are binding debt obligations and cannot be cancelled. See full Refund & Cancellation Policy ?"
+
+Importante: El Refund Policy incluye cláusula de aceleración: si el estudiante se atrasa más de 7 días en una cuota, NextFlight Academy puede exigir el saldo total de inmediato.
+
+
+3Primer acceso a la plataforma de cursos
+Justo después de pagar, cuando el estudiante entra por primera vez al contenido
+Este es el momento en que el estudiante pasa de ser un comprador a ser un miembro activo de la comunidad. El Student Code of Conduct debe aceptarse aquí - antes de que pueda ver el primer video, participar en foros o descargar cualquier material.
+
+DocumentoCómo se presentaTipo de aceptaciónStudent Code of ConductModal o pantalla de bienvenida de aceptación obligatoria. El estudiante no puede acceder al contenido hasta aceptar.OBLIGATORIO - Aceptación bloqueanteDMCA & Copyright PolicyResumen de las restricciones de uso (sección 2) visible dentro del mismo modal o en la pantalla de bienvenida.INFO - Resumen visibleTerms of ServiceLink de referencia dentro del modal del Code of Conduct.LINK de referencia
+Texto exacto del checkbox en el modal de bienvenida
+"I have read and agree to the Student Code of Conduct. I understand that violations - including sharing login credentials, recording content, or harassing other students - may result in immediate permanent ban without refund and potential legal action."
+
+Texto del aviso de copyright dentro del modal
+Content Protection Reminder: All course videos, PDFs, and materials are protected by U.S. copyright law. Recording, screenshotting, or sharing any content is strictly prohibited and may result in damages up to $150,000 per work. View DMCA Policy ?
+
+Importante: El Code of Conduct establece 3 niveles de consecuencia: advertencia (primera infracción leve), suspensión 7 días (segunda), ban permanente sin reembolso (tercera o infracción grave). El sistema de la plataforma debe poder ejecutar estas acciones.
+Sugerencia: Si usas Kajabi u otra plataforma, configura este modal como una 'oferta de aceptación de términos' en el flujo de onboarding del estudiante - antes de que acceda al primer módulo.
+Nota: El Code of Conduct también cubre conducta en foros y comunidad (sección 3) y representación pública (sección 5). Estos puntos deben estar visibles en el panel de comunidad o foros de la plataforma.
+
+
+4Email de Confirmación de Compra
+Email automático inmediatamente después de pagar
+Segunda línea de protección legal. Refuerza los términos aceptados en checkout y sirve como evidencia adicional en disputas de chargeback.
+
+DocumentoCómo se presentaTipo de aceptaciónPurchase & Enrollment AgreementLink en el cuerpo: 'Your Purchase & Enrollment Agreement is available here.'LINKStudent Code of ConductLink en el cuerpo: 'Please review our Student Code of Conduct before accessing the platform.'LINK - recordatorioRefund & Cancellation PolicyPárrafo recordatorio + link.LINK + recordatorioDMCA & Copyright PolicyLink en el footer del email: 'Content is protected by copyright. View our DMCA Policy.'LINK - Footer emailPrivacy PolicyLink en el footer del email (junto a Unsubscribe).LINK - Footer email
+Nota: El email debe incluir: nombre del programa, fecha, monto, plan de pago, próximas fechas de cobro (si es cuotas), y links a los documentos.
+
+
+5Sales Page de Cada Curso
+Página de presentación del curso antes de comprar
+Los documentos aquí no requieren aceptación activa, pero deben ser visibles para establecer expectativas claras y proteger a NextFlight Academy de reclamos de publicidad engañosa y piratería.
+
+DocumentoCómo se presentaTipo de aceptaciónResults & Income DisclaimerSección dedicada al final de la sales page, antes del botón de compra. Mínimo 3-4 líneas visibles.INFO - Sección visibleDMCA & Copyright PolicyAviso de copyright al pie. '(c) 2026 Daniela Patino LLC. All rights reserved. Content protected under DMCA.'INFO - Aviso al pieRefund & Cancellation PolicyLink visible cerca del precio o del botón de compra.LINK
+Texto del Results Disclaimer para sales pages (inglés)
+RESULTS DISCLAIMER: The results and income figures shown are individual examples and are not typical. NextFlight Academy makes no guarantee of specific outcomes, employment, or income. Your results will depend on your own effort, experience, and market conditions. This program is for educational purposes only.
+
+Sugerencia: Agrega watermark visible en los videos y PDFs descargables con '(c) NextFlight Academy - Personal Use Only'. El DMCA Policy (sección 2.2) lo respalda.
+
+
+6Onboarding de Afiliados
+Cuando alguien aplica para ser afiliado de NextFlight Academy
+Flujo secuencial y bloqueante: sin completar cada paso, el siguiente no se desbloquea. El portal de afiliados no se activa hasta completar los 4 pasos.
+
+DocumentoCómo se presentaTipo de aceptaciónAffiliate AgreementPaso 1 - Aceptación explícita con checkbox y timestamp.OBLIGATORIO - Firma digital (Paso 1)Marketing Guidelines & Code of ConductPaso 2 - Aceptación explícita separada.OBLIGATORIO - Firma digital (Paso 2)Results & Income DisclaimerPaso 3 - El afiliado confirma que no hará claims de ingresos no fundamentados.OBLIGATORIO - Aceptación (Paso 3)DMCA & Copyright PolicyVisible en el portal. El afiliado debe entender qué contenido puede y no puede usar.LINK - Portal afiliados
+Pasos obligatorios del onboarding de afiliados
+1. Aceptar Affiliate Agreement - checkbox con timestamp en BD
+2. Aceptar Marketing Guidelines & Code of Conduct - checkbox con timestamp en BD
+3. Aceptar Results & Income Disclaimer para afiliados
+4. Subir W-9 (residentes EE.UU.) o W-8BEN (no residentes) - portal bloqueado hasta recibir
+5. Acceso al portal de afiliados desbloqueado
+
+Importante: El Code of Conduct de afiliados prohíbe: registrar dominios o handles con 'NEXTFLIGHT', hacer PPC sobre ese término, y alterar logos o metodologías propietarias.
+
+
+7Banner de Cookies
+Aparece en el primer acceso al sitio - obligatorio por GDPR y CCPA
+El banner debe aparecer antes de que el usuario navegue o interactúe con el sitio, y debe permitir aceptar, rechazar o configurar por categoría.
+
+DocumentoCómo se presentaTipo de aceptaciónCookie PolicyBanner emergente al primer acceso. Botones: Accept All / Reject Non-Essential / Manage Preferences.OBLIGATORIO - Banner (primer acceso)Privacy PolicyLink dentro del banner: 'Learn more in our Privacy Policy.'LINK dentro del banner
+Texto del banner de cookies
+"We use cookies to improve your experience, analyze traffic, manage our affiliate program, and deliver personalized content. Click Accept All to consent, Manage Preferences to choose by category, or Reject Non-Essential. Learn more: Cookie Policy | Privacy Policy."
+
+Categorías de cookies (para 'Manage Preferences')
+Tipo de cookiePropósitoDuraciónStrictly NecessaryAutenticación, seguridad, sesión. No se pueden desactivar.Sesión / 30 díasFunctionalPreferencias de idioma, carrito, personalización.Sesión / 1 añoAnalytics & PerformanceGoogle Analytics / Mixpanel - comportamiento y métricas.2 añosMarketing & AdvertisingMeta Pixel, Google Ads - retargeting y campañas.90 díasAffiliate TrackingAtribución de referidos, comisiones, prevención de fraude.30-90 días
+Importante: GDPR exige consentimiento previo (opt-in) para cookies de analítica, marketing y afiliados. El banner no puede estar pre-marcado en 'Accept All'.
+
+
+8DMCA & Copyright Policy - Puntos de presencia
+Protección de contenido y proceso de reporte de infracciones
+DocumentoCómo se presentaTipo de aceptaciónDMCA & Copyright PolicyFooter de todas las páginas - link 'DMCA / Copyright Policy'.LINK - FooterDMCA & Copyright PolicyPlayer de video / plataforma de cursos - aviso '(c) 2026 Daniela Patino LLC. All rights reserved.'AVISO en plataformaDMCA & Copyright PolicyCentro de Ayuda - sección 'Report Copyright Infringement' con link al formulario o email del DMCA Agent.LINK - Centro de ayudaDMCA & Copyright PolicyModal de primer acceso a la plataforma (sección 3 de este documento).INFO - Modal de bienvenida
+Importante: Para Safe Harbor del DMCA (17 U.S.C. § 512), NextFlight Academy debe tener un DMCA Designated Agent registrado en copyright.gov. Verificar que esté activo.
+
+
+9Footer del Sitio
+Links permanentes accesibles desde cualquier página
+Todos los documentos deben ser públicamente accesibles. Las URLs citadas en el Purchase & Enrollment Agreement (sección 1.2) deben estar activas antes del lanzamiento.
+
+DocumentoCómo se presentaTipo de aceptaciónTerms of Servicenextflightacademy.com/termsLINK - FooterPrivacy Policynextflightacademy.com/privacyLINK - FooterCookie Policynextflightacademy.com/cookie-policyLINK - FooterRefund & Cancellation Policynextflightacademy.com/refund-policyLINK - FooterResults & Income Disclaimernextflightacademy.com/disclaimerLINK - FooterDMCA & Copyright Policynextflightacademy.com/dmcaLINK - FooterStudent Code of Conductnextflightacademy.com/student-code-of-conductLINK - FooterPurchase & Enrollment AgreementAccesible desde página legal central o email de confirmación.LINK - Página legalAffiliate AgreementAccesible desde el portal de afiliados.LINK - Portal afiliadosMarketing Guidelines & Code of ConductAccesible desde el portal de afiliados.LINK - Portal afiliados
+Importante: Agrega la URL nextflightacademy.com/student-code-of-conduct - no estaba en el Purchase & Enrollment Agreement original pero es necesaria para que el footer sea completo.
+
+Uso interno - NextFlight Academy (Daniela Patino LLC) - 10 documentos legales cubiertos

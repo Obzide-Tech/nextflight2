@@ -1,0 +1,4128 @@
+{
+  "total": 458,
+  "pages_fetched": 1,
+  "resources": [
+    {
+      "public_id": "samples/elephants",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1763170206/samples/elephants.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2025-11-15T01:30:06+00:00",
+      "bytes": 38855178,
+      "duration": 48.515182
+    },
+    {
+      "public_id": "samples/cld-sample-video",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1763170206/samples/cld-sample-video.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2025-11-15T01:30:06+00:00",
+      "bytes": 35988643,
+      "duration": 11.771667
+    },
+    {
+      "public_id": "samples/dance-2",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1763170206/samples/dance-2.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2025-11-15T01:30:06+00:00",
+      "bytes": 22373558,
+      "duration": 19.68
+    },
+    {
+      "public_id": "samples/sea-turtle",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1763170206/samples/sea-turtle.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2025-11-15T01:30:06+00:00",
+      "bytes": 27932506,
+      "duration": 15.215215
+    },
+    {
+      "public_id": "video-hero_xbl7uo",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1763170406/video-hero_xbl7uo.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2025-11-15T01:33:26+00:00",
+      "bytes": 78466828,
+      "duration": 8
+    },
+    {
+      "public_id": "text-to-video-c9665e47_1_nphagt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1763353258/text-to-video-c9665e47_1_nphagt.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2025-11-17T04:20:58+00:00",
+      "bytes": 7617094,
+      "duration": 10.041667
+    },
+    {
+      "public_id": "6d43e3bf-bebc-4a57-95a0-cc17ad2f39b4_fgxraa",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774292578/6d43e3bf-bebc-4a57-95a0-cc17ad2f39b4_fgxraa.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-23T19:02:58+00:00",
+      "bytes": 94756794,
+      "duration": 45.233333
+    },
+    {
+      "public_id": "47ce0096-c6ba-4fd4-9218-e584e9ffa7f8_p4fvpg",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774292744/47ce0096-c6ba-4fd4-9218-e584e9ffa7f8_p4fvpg.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-23T19:05:44+00:00",
+      "bytes": 77421989,
+      "duration": 61.1
+    },
+    {
+      "public_id": "IMG_0550_aqmqii",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577454/IMG_0550_aqmqii.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:10:54+00:00",
+      "bytes": 3179031,
+      "duration": 6.933333
+    },
+    {
+      "public_id": "IMG_9614_thgooj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577455/IMG_9614_thgooj.mov",
+      "asset_folder": "",
+      "format": "mov",
+      "created_at": "2026-03-27T02:10:55+00:00",
+      "bytes": 3595456,
+      "duration": 1.978345
+    },
+    {
+      "public_id": "IMG_0292_lpfgw3",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577459/IMG_0292_lpfgw3.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:10:59+00:00",
+      "bytes": 4252609,
+      "duration": 9.233333
+    },
+    {
+      "public_id": "IMG_0301_erekse",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577469/IMG_0301_erekse.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:11:09+00:00",
+      "bytes": 2135917,
+      "duration": 4.733333
+    },
+    {
+      "public_id": "IMG_0551_lfwnbz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577471/IMG_0551_lfwnbz.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:11:11+00:00",
+      "bytes": 4977942,
+      "duration": 11.033333
+    },
+    {
+      "public_id": "IMG_0552_dxsczh",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577474/IMG_0552_dxsczh.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:11:14+00:00",
+      "bytes": 718234,
+      "duration": 1.533333
+    },
+    {
+      "public_id": "IMG_0904_ey4jhv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577492/IMG_0904_ey4jhv.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:11:32+00:00",
+      "bytes": 5887556,
+      "duration": 13.2
+    },
+    {
+      "public_id": "IMG_0908_sycd1u",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577493/IMG_0908_sycd1u.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:11:33+00:00",
+      "bytes": 6109095,
+      "duration": 13.466667
+    },
+    {
+      "public_id": "IMG_0909_ejheir",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577511/IMG_0909_ejheir.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:11:51+00:00",
+      "bytes": 4999612,
+      "duration": 11
+    },
+    {
+      "public_id": "IMG_0913_nwfr8r",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577514/IMG_0913_nwfr8r.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:11:54+00:00",
+      "bytes": 7306304,
+      "duration": 16.066667
+    },
+    {
+      "public_id": "IMG_0919_dtlx1a",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577515/IMG_0919_dtlx1a.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:11:55+00:00",
+      "bytes": 2148334,
+      "duration": 4.633333
+    },
+    {
+      "public_id": "IMG_0922_ckngsm",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577519/IMG_0922_ckngsm.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:11:59+00:00",
+      "bytes": 2533749,
+      "duration": 5.601667
+    },
+    {
+      "public_id": "IMG_0916_mudocn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577520/IMG_0916_mudocn.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:00+00:00",
+      "bytes": 6908820,
+      "duration": 15.2
+    },
+    {
+      "public_id": "IMG_0927_spi2gy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577523/IMG_0927_spi2gy.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:03+00:00",
+      "bytes": 974798,
+      "duration": 2.133333
+    },
+    {
+      "public_id": "IMG_0926_ob8qox",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577535/IMG_0926_ob8qox.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:15+00:00",
+      "bytes": 4994089,
+      "duration": 11
+    },
+    {
+      "public_id": "IMG_0940_mgs2ve",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577540/IMG_0940_mgs2ve.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:20+00:00",
+      "bytes": 5974341,
+      "duration": 12.97
+    },
+    {
+      "public_id": "IMG_0920_hofavx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577547/IMG_0920_hofavx.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:27+00:00",
+      "bytes": 9333027,
+      "duration": 20.108345
+    },
+    {
+      "public_id": "IMG_0974_fpymhd",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577551/IMG_0974_fpymhd.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:31+00:00",
+      "bytes": 918229,
+      "duration": 1.9
+    },
+    {
+      "public_id": "IMG_0923_hxlpsw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577552/IMG_0923_hxlpsw.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:32+00:00",
+      "bytes": 15043627,
+      "duration": 33.2
+    },
+    {
+      "public_id": "IMG_0977_mw4umu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577560/IMG_0977_mw4umu.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:40+00:00",
+      "bytes": 3121825,
+      "duration": 6.566667
+    },
+    {
+      "public_id": "IMG_0979_umbs0r",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577563/IMG_0979_umbs0r.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:43+00:00",
+      "bytes": 2708013,
+      "duration": 6.103333
+    },
+    {
+      "public_id": "IMG_0969_fuw2yz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577564/IMG_0969_fuw2yz.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:44+00:00",
+      "bytes": 7966027,
+      "duration": 17.566667
+    },
+    {
+      "public_id": "IMG_0925_t54wna",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577567/IMG_0925_t54wna.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:47+00:00",
+      "bytes": 17873871,
+      "duration": 39.133333
+    },
+    {
+      "public_id": "IMG_0972_figkph",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577574/IMG_0972_figkph.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:54+00:00",
+      "bytes": 10759875,
+      "duration": 23.343333
+    },
+    {
+      "public_id": "IMG_0996_rwc8n8",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577578/IMG_0996_rwc8n8.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:58+00:00",
+      "bytes": 4114551,
+      "duration": 8.936667
+    },
+    {
+      "public_id": "IMG_0941_vu3xd2",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577579/IMG_0941_vu3xd2.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:12:59+00:00",
+      "bytes": 16927444,
+      "duration": 37.516667
+    },
+    {
+      "public_id": "IMG_0994_wuclcq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577580/IMG_0994_wuclcq.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:00+00:00",
+      "bytes": 7037642,
+      "duration": 15.266667
+    },
+    {
+      "public_id": "IMG_0995_nmo1by",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577585/IMG_0995_nmo1by.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:05+00:00",
+      "bytes": 7481730,
+      "duration": 16.5
+    },
+    {
+      "public_id": "IMG_0998_sv7mpy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577587/IMG_0998_sv7mpy.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:07+00:00",
+      "bytes": 4693118,
+      "duration": 9.933333
+    },
+    {
+      "public_id": "IMG_1001_m8u6dj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577588/IMG_1001_m8u6dj.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:08+00:00",
+      "bytes": 3691332,
+      "duration": 8.166667
+    },
+    {
+      "public_id": "IMG_0999_mzt6v3",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577590/IMG_0999_mzt6v3.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:10+00:00",
+      "bytes": 4729409,
+      "duration": 10.333333
+    },
+    {
+      "public_id": "IMG_1040_sqica2",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577592/IMG_1040_sqica2.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:12+00:00",
+      "bytes": 864702,
+      "duration": 1.8
+    },
+    {
+      "public_id": "IMG_1011_eyp0mt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577594/IMG_1011_eyp0mt.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:14+00:00",
+      "bytes": 4247060,
+      "duration": 9.266667
+    },
+    {
+      "public_id": "IMG_1030_foct2y",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577600/IMG_1030_foct2y.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:20+00:00",
+      "bytes": 3147531,
+      "duration": 6.866667
+    },
+    {
+      "public_id": "IMG_1028_kdm4vy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577601/IMG_1028_kdm4vy.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:21+00:00",
+      "bytes": 4681965,
+      "duration": 10.101678
+    },
+    {
+      "public_id": "IMG_1279_dbojde",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577605/IMG_1279_dbojde.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:25+00:00",
+      "bytes": 2843285,
+      "duration": 6.166667
+    },
+    {
+      "public_id": "IMG_1282_oqo8lk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577614/IMG_1282_oqo8lk.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:34+00:00",
+      "bytes": 3253043,
+      "duration": 7.2
+    },
+    {
+      "public_id": "IMG_1278_udzu5v",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577616/IMG_1278_udzu5v.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:36+00:00",
+      "bytes": 7529575,
+      "duration": 16.266667
+    },
+    {
+      "public_id": "IMG_1634_lhjmfi",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577616/IMG_1634_lhjmfi.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:36+00:00",
+      "bytes": 385195,
+      "duration": 0.766667
+    },
+    {
+      "public_id": "IMG_1285_yq4tgb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577617/IMG_1285_yq4tgb.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:37+00:00",
+      "bytes": 3453150,
+      "duration": 7.366667
+    },
+    {
+      "public_id": "IMG_1636_f7wl3b",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577619/IMG_1636_f7wl3b.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:39+00:00",
+      "bytes": 660299,
+      "duration": 1.266667
+    },
+    {
+      "public_id": "IMG_1294_a42vuf",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577619/IMG_1294_a42vuf.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:39+00:00",
+      "bytes": 2995270,
+      "duration": 6.566667
+    },
+    {
+      "public_id": "IMG_1638_v2e28w",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577624/IMG_1638_v2e28w.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:44+00:00",
+      "bytes": 1799627,
+      "duration": 3.866667
+    },
+    {
+      "public_id": "IMG_1012_mg1xmx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577626/IMG_1012_mg1xmx.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:46+00:00",
+      "bytes": 11868974,
+      "duration": 26.166667
+    },
+    {
+      "public_id": "IMG_1642_boetnd",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577627/IMG_1642_boetnd.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:47+00:00",
+      "bytes": 3012207,
+      "duration": 6.5
+    },
+    {
+      "public_id": "IMG_1041_u8fesk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577632/IMG_1041_u8fesk.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:52+00:00",
+      "bytes": 12552163,
+      "duration": 27.233333
+    },
+    {
+      "public_id": "IMG_1639_ieof4a",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577637/IMG_1639_ieof4a.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:13:57+00:00",
+      "bytes": 7992789,
+      "duration": 17.733333
+    },
+    {
+      "public_id": "IMG_1643_fiivk9",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577646/IMG_1643_fiivk9.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:06+00:00",
+      "bytes": 6302764,
+      "duration": 13.833333
+    },
+    {
+      "public_id": "IMG_1641_vfkywu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577647/IMG_1641_vfkywu.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:07+00:00",
+      "bytes": 9969658,
+      "duration": 22.1
+    },
+    {
+      "public_id": "IMG_1644_abiag5",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577649/IMG_1644_abiag5.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:09+00:00",
+      "bytes": 5847269,
+      "duration": 12.7
+    },
+    {
+      "public_id": "IMG_1650_gqc69j",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577654/IMG_1650_gqc69j.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:14+00:00",
+      "bytes": 2167249,
+      "duration": 4.7
+    },
+    {
+      "public_id": "IMG_1651_tp4rzj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577657/IMG_1651_tp4rzj.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:17+00:00",
+      "bytes": 2218033,
+      "duration": 4.766667
+    },
+    {
+      "public_id": "IMG_1649_we0y94",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577662/IMG_1649_we0y94.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:22+00:00",
+      "bytes": 4347962,
+      "duration": 9.1
+    },
+    {
+      "public_id": "IMG_1648_gzrpnk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577662/IMG_1648_gzrpnk.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:22+00:00",
+      "bytes": 6117953,
+      "duration": 13.466667
+    },
+    {
+      "public_id": "IMG_1655_mtjytz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577665/IMG_1655_mtjytz.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:25+00:00",
+      "bytes": 482170,
+      "duration": 1.07
+    },
+    {
+      "public_id": "IMG_1646_is8dwd",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577668/IMG_1646_is8dwd.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:28+00:00",
+      "bytes": 10769666,
+      "duration": 23.733333
+    },
+    {
+      "public_id": "IMG_1652_twjxhi",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577670/IMG_1652_twjxhi.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:30+00:00",
+      "bytes": 5002444,
+      "duration": 10.833333
+    },
+    {
+      "public_id": "IMG_2008_ivgdpk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577675/IMG_2008_ivgdpk.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:35+00:00",
+      "bytes": 914826,
+      "duration": 1.866667
+    },
+    {
+      "public_id": "IMG_1654_eqtk5k",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577677/IMG_1654_eqtk5k.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:37+00:00",
+      "bytes": 6110047,
+      "duration": 13.433333
+    },
+    {
+      "public_id": "IMG_1949_jaz2ku",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577687/IMG_1949_jaz2ku.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:47+00:00",
+      "bytes": 5214141,
+      "duration": 11.203333
+    },
+    {
+      "public_id": "IMG_3969_o4qesi",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577690/IMG_3969_o4qesi.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:50+00:00",
+      "bytes": 3944844,
+      "duration": 8.536667
+    },
+    {
+      "public_id": "IMG_2009_rzjskq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577691/IMG_2009_rzjskq.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:51+00:00",
+      "bytes": 6129705,
+      "duration": 13.4
+    },
+    {
+      "public_id": "IMG_3970_nesgjl",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577692/IMG_3970_nesgjl.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:52+00:00",
+      "bytes": 1215393,
+      "duration": 2.2
+    },
+    {
+      "public_id": "IMG_3981_p6jymw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577693/IMG_3981_p6jymw.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:14:53+00:00",
+      "bytes": 163275,
+      "duration": 0.203333
+    },
+    {
+      "public_id": "IMG_3971_q3mbux",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577700/IMG_3971_q3mbux.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:00+00:00",
+      "bytes": 3320971,
+      "duration": 6.666667
+    },
+    {
+      "public_id": "IMG_1944_ot2rsd",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577700/IMG_1944_ot2rsd.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:00+00:00",
+      "bytes": 10086449,
+      "duration": 21.703333
+    },
+    {
+      "public_id": "IMG_1947_ivpumq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577708/IMG_1947_ivpumq.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:08+00:00",
+      "bytes": 13151799,
+      "duration": 27.7
+    },
+    {
+      "public_id": "IMG_3973_klyxqe",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577709/IMG_3973_klyxqe.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:09+00:00",
+      "bytes": 5207432,
+      "duration": 10.466667
+    },
+    {
+      "public_id": "IMG_3982_dygmat",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577709/IMG_3982_dygmat.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:09+00:00",
+      "bytes": 4342285,
+      "duration": 9.168333
+    },
+    {
+      "public_id": "IMG_3988_pphq12",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577712/IMG_3988_pphq12.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:12+00:00",
+      "bytes": 3961282,
+      "duration": 8.535
+    },
+    {
+      "public_id": "IMG_3989_toxdyj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577712/IMG_3989_toxdyj.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:12+00:00",
+      "bytes": 3018721,
+      "duration": 6.3
+    },
+    {
+      "public_id": "IMG_9794_begtss",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577716/IMG_9794_begtss.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:16+00:00",
+      "bytes": 2378583,
+      "duration": 5.166667
+    },
+    {
+      "public_id": "IMG_3972_xwbjzr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577717/IMG_3972_xwbjzr.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:17+00:00",
+      "bytes": 9409519,
+      "duration": 19.6
+    },
+    {
+      "public_id": "IMG_3990_ae8mxp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577717/IMG_3990_ae8mxp.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:17+00:00",
+      "bytes": 2601992,
+      "duration": 5.633333
+    },
+    {
+      "public_id": "IMG_9742_etbp4k",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577723/IMG_9742_etbp4k.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:23+00:00",
+      "bytes": 4051874,
+      "duration": 9.233333
+    },
+    {
+      "public_id": "IMG_9797_snziyi",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577726/IMG_9797_snziyi.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:26+00:00",
+      "bytes": 3199625,
+      "duration": 7
+    },
+    {
+      "public_id": "IMG_9798_q6vmp5",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577727/IMG_9798_q6vmp5.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:27+00:00",
+      "bytes": 3608221,
+      "duration": 7.933333
+    },
+    {
+      "public_id": "IMG_9796_derbsk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577727/IMG_9796_derbsk.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:27+00:00",
+      "bytes": 4955182,
+      "duration": 10.866667
+    },
+    {
+      "public_id": "IMG_9840_pin6vh",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577732/IMG_9840_pin6vh.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:32+00:00",
+      "bytes": 1934013,
+      "duration": 4.333333
+    },
+    {
+      "public_id": "IMG_9795_qh8tfo",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577734/IMG_9795_qh8tfo.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:34+00:00",
+      "bytes": 5958919,
+      "duration": 12.966667
+    },
+    {
+      "public_id": "IMG_9841_baslia",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577735/IMG_9841_baslia.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:35+00:00",
+      "bytes": 2719126,
+      "duration": 6.033333
+    },
+    {
+      "public_id": "IMG_9868_qarblv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577737/IMG_9868_qarblv.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:37+00:00",
+      "bytes": 3766152,
+      "duration": 8.2
+    },
+    {
+      "public_id": "IMG_9870_mns9ha",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577738/IMG_9870_mns9ha.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:38+00:00",
+      "bytes": 4404560,
+      "duration": 9.666667
+    },
+    {
+      "public_id": "IMG_9876_ur8kvl",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577740/IMG_9876_ur8kvl.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:40+00:00",
+      "bytes": 1625439,
+      "duration": 3.5
+    },
+    {
+      "public_id": "IMG_9799_be0ng7",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577741/IMG_9799_be0ng7.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:41+00:00",
+      "bytes": 7959774,
+      "duration": 17.1
+    },
+    {
+      "public_id": "IMG_9877_nyxsjb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577742/IMG_9877_nyxsjb.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:42+00:00",
+      "bytes": 2343088,
+      "duration": 5.066667
+    },
+    {
+      "public_id": "IMG_9871_sgkvcq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577743/IMG_9871_sgkvcq.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:43+00:00",
+      "bytes": 3019436,
+      "duration": 6.5
+    },
+    {
+      "public_id": "od_video-1703_singular_display_qknawi",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577755/od_video-1703_singular_display_qknawi.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:15:55+00:00",
+      "bytes": 5440841,
+      "duration": 9.233333
+    },
+    {
+      "public_id": "video-1736_singular_display_uzecff",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577805/video-1736_singular_display_uzecff.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:16:45+00:00",
+      "bytes": 19901065,
+      "duration": 35.125
+    },
+    {
+      "public_id": "video-1830_singular_display_mymamy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577835/video-1830_singular_display_mymamy.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:17:15+00:00",
+      "bytes": 8089796,
+      "duration": 14.13
+    },
+    {
+      "public_id": "video-1828_singular_display_r3jjek",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577841/video-1828_singular_display_r3jjek.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:17:21+00:00",
+      "bytes": 9656869,
+      "duration": 16.988333
+    },
+    {
+      "public_id": "video-1832_singular_display_rwq3sv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577867/video-1832_singular_display_rwq3sv.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:17:47+00:00",
+      "bytes": 17512120,
+      "duration": 27.696667
+    },
+    {
+      "public_id": "IMG_1647_oqbfwg",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577883/IMG_1647_oqbfwg.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:18:03+00:00",
+      "bytes": 23241628,
+      "duration": 51.166667
+    },
+    {
+      "public_id": "IMG_3974_xjpryl",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577901/IMG_3974_xjpryl.mov",
+      "asset_folder": "",
+      "format": "mov",
+      "created_at": "2026-03-27T02:18:21+00:00",
+      "bytes": 34093528,
+      "duration": 19.3
+    },
+    {
+      "public_id": "video-1743_singular_display_wneyqw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577926/video-1743_singular_display_wneyqw.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:18:46+00:00",
+      "bytes": 36882359,
+      "duration": 64.6
+    },
+    {
+      "public_id": "video-1748_singular_display_blivsl",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577936/video-1748_singular_display_blivsl.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:18:56+00:00",
+      "bytes": 37207164,
+      "duration": 64.566667
+    },
+    {
+      "public_id": "video-1834_singular_display_p2ekgr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577948/video-1834_singular_display_p2ekgr.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:19:08+00:00",
+      "bytes": 25143274,
+      "duration": 43.701667
+    },
+    {
+      "public_id": "video-1752_singular_display_z4alfg",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577952/video-1752_singular_display_z4alfg.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:19:12+00:00",
+      "bytes": 38173181,
+      "duration": 66.3
+    },
+    {
+      "public_id": "IMG_3975_qmqpqd",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774577992/IMG_3975_qmqpqd.mov",
+      "asset_folder": "",
+      "format": "mov",
+      "created_at": "2026-03-27T02:19:52+00:00",
+      "bytes": 56747515,
+      "duration": 32.066667
+    },
+    {
+      "public_id": "video-1755_singular_display_vq50nf",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774578004/video-1755_singular_display_vq50nf.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:20:04+00:00",
+      "bytes": 53678289,
+      "duration": 93.785
+    },
+    {
+      "public_id": "video-1757_singular_display_hid6hb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774578037/video-1757_singular_display_hid6hb.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:20:37+00:00",
+      "bytes": 69108778,
+      "duration": 120.513333
+    },
+    {
+      "public_id": "IMG_3976_k0lqlc",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774578054/IMG_3976_k0lqlc.mov",
+      "asset_folder": "",
+      "format": "mov",
+      "created_at": "2026-03-27T02:20:54+00:00",
+      "bytes": 78436030,
+      "duration": 44.533333
+    },
+    {
+      "public_id": "IMG_3977_qmh8lw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774578060/IMG_3977_qmh8lw.mov",
+      "asset_folder": "",
+      "format": "mov",
+      "created_at": "2026-03-27T02:21:00+00:00",
+      "bytes": 91034110,
+      "duration": 51.6
+    },
+    {
+      "public_id": "video-1759_singular_display_seb846",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1774578079/video-1759_singular_display_seb846.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-03-27T02:21:19+00:00",
+      "bytes": 102575866,
+      "duration": 180.066667
+    },
+    {
+      "public_id": "NEXT_2.2_LOGISTIC_INSTITUCIONAL_2026_mxqed1",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1777367134/NEXT_2.2_LOGISTIC_INSTITUCIONAL_2026_mxqed1.mp4",
+      "asset_folder": "",
+      "format": "mp4",
+      "created_at": "2026-04-28T09:05:34+00:00",
+      "bytes": 908618274,
+      "duration": 162.112
+    },
+    {
+      "public_id": "gthdsvblnkqhnl6svksa",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778738283/gthdsvblnkqhnl6svksa.mov",
+      "asset_folder": "NextFLGHTs/24-CENTRO DE CONTROL MANYCHAT/03-C\u00f3mo crear una cuenta en ManyChat",
+      "format": "mov",
+      "created_at": "2026-05-14T05:58:03+00:00",
+      "bytes": 10526657,
+      "duration": 58.866667
+    },
+    {
+      "public_id": "axdxrv4hl3kceybxopk8",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778738359/axdxrv4hl3kceybxopk8.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/16-Automatizaciones y pruebas",
+      "format": "mp4",
+      "created_at": "2026-05-14T05:59:19+00:00",
+      "bytes": 3296837,
+      "duration": 26.1
+    },
+    {
+      "public_id": "dlikabt54vs4gyqcuyol",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778738486/dlikabt54vs4gyqcuyol.mov",
+      "asset_folder": "NextFLGHTs/24-CENTRO DE CONTROL MANYCHAT/05-C\u00f3mo crear una automatizaci\u00f3n desde cero",
+      "format": "mov",
+      "created_at": "2026-05-14T06:01:26+00:00",
+      "bytes": 54234091,
+      "duration": 386.867007
+    },
+    {
+      "public_id": "hz9kuirwlq5ikezmjeee",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778738504/hz9kuirwlq5ikezmjeee.mov",
+      "asset_folder": "NextFLGHTs/05-RUTA DE BEACONS/05-C\u00f3mo ubicar tu link",
+      "format": "mov",
+      "created_at": "2026-05-14T06:01:44+00:00",
+      "bytes": 32428158,
+      "duration": 105.534694
+    },
+    {
+      "public_id": "ljjn98kqroapb0krwsye",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778738594/ljjn98kqroapb0krwsye.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/03-C\u00d3MO INICIAR EN TIKTOK LIVE",
+      "format": "mov",
+      "created_at": "2026-05-14T06:03:14+00:00",
+      "bytes": 62512295,
+      "duration": 57.9
+    },
+    {
+      "public_id": "ayp8opdb0tdzwiudsnb3",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778738806/ayp8opdb0tdzwiudsnb3.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/09-INFORMACI\u00d3N DE PAGO LATINOAMERICA",
+      "format": "mov",
+      "created_at": "2026-05-14T06:06:46+00:00",
+      "bytes": 50595747,
+      "duration": 211.324807
+    },
+    {
+      "public_id": "lsirc5wcgf4ocbqtkxq8",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778739205/lsirc5wcgf4ocbqtkxq8.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/05-Plantilla de funnel de ventas",
+      "format": "mp4",
+      "created_at": "2026-05-14T06:13:25+00:00",
+      "bytes": 45906306,
+      "duration": 166.566666
+    },
+    {
+      "public_id": "wd2papj0ysiogdljg8wh",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778739308/wd2papj0ysiogdljg8wh.mov",
+      "asset_folder": "NextFLGHTs/39-INTELIGENCIA ARTIFICIAL 2.0/05-TE PRESENTO A AIRON",
+      "format": "mov",
+      "created_at": "2026-05-14T06:15:08+00:00",
+      "bytes": 73544561,
+      "duration": 59.8
+    },
+    {
+      "public_id": "qztotugqtxqjpdhvvyav",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778739367/qztotugqtxqjpdhvvyav.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/23-CIERRE DEL M\u00d3DULO",
+      "format": "mov",
+      "created_at": "2026-05-14T06:16:07+00:00",
+      "bytes": 67736531,
+      "duration": 60.766621
+    },
+    {
+      "public_id": "cy9ydtc6xb00fia34bvq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778739463/cy9ydtc6xb00fia34bvq.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/01-Introducci\u00f3n",
+      "format": "mov",
+      "created_at": "2026-05-14T06:17:43+00:00",
+      "bytes": 102193482,
+      "duration": 111.1
+    },
+    {
+      "public_id": "scatne4kqwoswvmsl9vu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778739631/scatne4kqwoswvmsl9vu.mov",
+      "asset_folder": "NextFLGHTs/24-CENTRO DE CONTROL MANYCHAT/01-Introducci\u00f3n a ManyChat",
+      "format": "mov",
+      "created_at": "2026-05-14T06:20:31+00:00",
+      "bytes": 13153578,
+      "duration": 67.2
+    },
+    {
+      "public_id": "olj7csfsao9ize22nl1w",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778739701/olj7csfsao9ize22nl1w.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/03-M\u00d3DULO 2",
+      "format": "mov",
+      "created_at": "2026-05-14T06:21:41+00:00",
+      "bytes": 36391461,
+      "duration": 99.915465
+    },
+    {
+      "public_id": "mme0rrlzf4rfdsp7rd0t",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778739802/mme0rrlzf4rfdsp7rd0t.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/21-CAMPA\u00d1AS DE COLABORACI\u00d3N CON LAS MARCAS",
+      "format": "mov",
+      "created_at": "2026-05-14T06:23:22+00:00",
+      "bytes": 127161211,
+      "duration": 288.415057
+    },
+    {
+      "public_id": "mtxeostznue8itrhvqgm",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778739880/mtxeostznue8itrhvqgm.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/08-Herramientas de Vuelo para un Community Manager Pro",
+      "format": "mp4",
+      "created_at": "2026-05-14T06:24:40+00:00",
+      "bytes": 160731503,
+      "duration": 132.233333
+    },
+    {
+      "public_id": "amzvtkl9scrwpkfxc3l0",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778740216/amzvtkl9scrwpkfxc3l0.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/20-TUS VIDEOS EN LAS P\u00c1GINAS DE AMAZON",
+      "format": "mov",
+      "created_at": "2026-05-14T06:30:16+00:00",
+      "bytes": 167949517,
+      "duration": 156.920454
+    },
+    {
+      "public_id": "mx3uxzszcazqvmdy9gtt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778740432/mx3uxzszcazqvmdy9gtt.mp4",
+      "asset_folder": "NextFLGHTs/18-COMO FUNCIONAN LAS REDES SOCIALES/01-\u00bfQu\u00e9 es realmente el algoritmo y c\u00f3mo se activa",
+      "format": "mp4",
+      "created_at": "2026-05-14T06:33:52+00:00",
+      "bytes": 206153449,
+      "duration": 168.866666
+    },
+    {
+      "public_id": "uaatunz5wz2wykwoemqa",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778740671/uaatunz5wz2wykwoemqa.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/11-Transiciones que suman (no marean)",
+      "format": "mp4",
+      "created_at": "2026-05-14T06:37:51+00:00",
+      "bytes": 227231697,
+      "duration": 326.433333
+    },
+    {
+      "public_id": "yl8k0kz2mrzjti3pzsry",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778740723/yl8k0kz2mrzjti3pzsry.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/22-COMO MANDAR TUS CAMPA\u00d1AS COMPLETAS",
+      "format": "mov",
+      "created_at": "2026-05-14T06:38:43+00:00",
+      "bytes": 70808547,
+      "duration": 169.227029
+    },
+    {
+      "public_id": "nqtgweb2bekfvbiwkibv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778740728/nqtgweb2bekfvbiwkibv.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/02-Despega tu historia con UGC",
+      "format": "mov",
+      "created_at": "2026-05-14T06:38:48+00:00",
+      "bytes": 197766950,
+      "duration": 130.635465
+    },
+    {
+      "public_id": "yw2yuoopgraj87sftboj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778741055/yw2yuoopgraj87sftboj.mp4",
+      "asset_folder": "NextFLGHTs/22-TORRE DE INFLUENCIA INVISIBLE/03-Energ\u00eda de liderazgo",
+      "format": "mp4",
+      "created_at": "2026-05-14T06:44:15+00:00",
+      "bytes": 225937579,
+      "duration": 185.933333
+    },
+    {
+      "public_id": "vlyfhs7aunpbkw9apiiw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778741760/vlyfhs7aunpbkw9apiiw.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/11-Conecta stripe y PayPal",
+      "format": "mp4",
+      "created_at": "2026-05-14T06:56:00+00:00",
+      "bytes": 61196088,
+      "duration": 132.666666
+    },
+    {
+      "public_id": "x4vojud6puxawlmtu3jp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778742731/x4vojud6puxawlmtu3jp.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/10-Elige tu nueva identidad con intenci\u00f3n",
+      "format": "mov",
+      "created_at": "2026-05-14T07:12:11+00:00",
+      "bytes": 237561197,
+      "duration": 231.4
+    },
+    {
+      "public_id": "omlhv4htaqixzxv5uzcz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778742840/omlhv4htaqixzxv5uzcz.mp4",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/14-C\u00f3mo hacer tu portafolio PARTE 3",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:14:00+00:00",
+      "bytes": 259991155,
+      "duration": 354.546009
+    },
+    {
+      "public_id": "pndabsaylmh4vjdivke4",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778742855/pndabsaylmh4vjdivke4.mp4",
+      "asset_folder": "NextFLGHTs/34-TORRE DE EMBUDOS ESTRAT\u00c9GICOS/06-C\u00f3mo combinar Instagram, ManyChat y email para automatizar tu proceso",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:14:15+00:00",
+      "bytes": 265626490,
+      "duration": 218.639002
+    },
+    {
+      "public_id": "d4zrmnm7i6wblsjeiwhy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778742906/d4zrmnm7i6wblsjeiwhy.mp4",
+      "asset_folder": "NextFLGHTs/04-CABINA DE H\u00c1BITOS PODEROSOS/06-Torre de organizaci\u00f3n semanal con disciplina",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:15:06+00:00",
+      "bytes": 257370090,
+      "duration": 211.733333
+    },
+    {
+      "public_id": "is348dwztsivn3fz2wit",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778742964/is348dwztsivn3fz2wit.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/25-C\u00f3mo trabajar con una marca",
+      "format": "mov",
+      "created_at": "2026-05-14T07:16:04+00:00",
+      "bytes": 288376398,
+      "duration": 191.262766
+    },
+    {
+      "public_id": "uzkr1g1p4oqj08zoxjm7",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778743033/uzkr1g1p4oqj08zoxjm7.mp4",
+      "asset_folder": "NextFLGHTs/33-PUERTA DE EMBARQUE A LA FACTURACI\u00d3N CON RETOS/03-El efecto comunidad haz que se queden y recomienden",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:17:13+00:00",
+      "bytes": 307135474,
+      "duration": 252.633991
+    },
+    {
+      "public_id": "gyhj7ckgmfkzmgqof68o",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778743057/gyhj7ckgmfkzmgqof68o.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/04-COMPLETA TU PERFIL DE ASOCIADO",
+      "format": "mov",
+      "created_at": "2026-05-14T07:17:37+00:00",
+      "bytes": 32972370,
+      "duration": 106.300952
+    },
+    {
+      "public_id": "knj3qhhbbn0cja9kodvs",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778743275/knj3qhhbbn0cja9kodvs.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/04-UGC vs Micro Influencer",
+      "format": "mov",
+      "created_at": "2026-05-14T07:21:15+00:00",
+      "bytes": 329739769,
+      "duration": 217.756735
+    },
+    {
+      "public_id": "odkim2krl7da9nyfc2zl",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778743345/odkim2krl7da9nyfc2zl.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/02-M\u00d3DULO 1",
+      "format": "mov",
+      "created_at": "2026-05-14T07:22:25+00:00",
+      "bytes": 49769065,
+      "duration": 107.996009
+    },
+    {
+      "public_id": "gdye49cpclvjnalydfqm",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778743550/gdye49cpclvjnalydfqm.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/14-Crear campa\u00f1as",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:25:50+00:00",
+      "bytes": 310865400,
+      "duration": 727.833333
+    },
+    {
+      "public_id": "fdqwfcyiovxkesh9kkid",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778743565/fdqwfcyiovxkesh9kkid.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/05-INFORMACI\u00d3N FISCAL USA",
+      "format": "mov",
+      "created_at": "2026-05-14T07:26:05+00:00",
+      "bytes": 38580743,
+      "duration": 134.397098
+    },
+    {
+      "public_id": "wfazn0i0t3w8ttb2xosy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778743731/wfazn0i0t3w8ttb2xosy.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/10-Zona de Aterrizaje de Clientes",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:28:51+00:00",
+      "bytes": 136240697,
+      "duration": 112.106009
+    },
+    {
+      "public_id": "tb60m4ltyo5ozcrd1mu8",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778744126/tb60m4ltyo5ozcrd1mu8.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/07-Integra el UGC en tu vida diaria",
+      "format": "mov",
+      "created_at": "2026-05-14T07:35:26+00:00",
+      "bytes": 206252479,
+      "duration": 135.256236
+    },
+    {
+      "public_id": "w8v1cylfu23imlkkpunp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778744411/w8v1cylfu23imlkkpunp.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/01-Qu\u00e9 es una marca personal y por qu\u00e9 necesitas una",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:40:11+00:00",
+      "bytes": 276222236,
+      "duration": 227.333333
+    },
+    {
+      "public_id": "baothy25opb2r3hnnolh",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778744678/baothy25opb2r3hnnolh.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/09-Domina las Objeciones",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:44:38+00:00",
+      "bytes": 295301797,
+      "duration": 242.973991
+    },
+    {
+      "public_id": "lgfv5jzj9tfuo3ouo9ke",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778744696/lgfv5jzj9tfuo3ouo9ke.mp4",
+      "asset_folder": "NextFLGHTs/22-TORRE DE INFLUENCIA INVISIBLE/08-Torre de precio invisible",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:44:56+00:00",
+      "bytes": 237440704,
+      "duration": 195.745011
+    },
+    {
+      "public_id": "cv9tzfrgrjxtnbvlj9iy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778744758/cv9tzfrgrjxtnbvlj9iy.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/01-Torre de Control del Community Manager",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:45:58+00:00",
+      "bytes": 219633173,
+      "duration": 182.266666
+    },
+    {
+      "public_id": "tutf1wncvugflt4pybgh",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778744911/tutf1wncvugflt4pybgh.mp4",
+      "asset_folder": "NextFLGHTs/18-COMO FUNCIONAN LAS REDES SOCIALES/04-Filtro 550",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:48:31+00:00",
+      "bytes": 654783669,
+      "duration": 536.866666
+    },
+    {
+      "public_id": "baiozey6whv4xircp2bq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778744995/baiozey6whv4xircp2bq.mp4",
+      "asset_folder": "NextFLGHTs/33-PUERTA DE EMBARQUE A LA FACTURACI\u00d3N CON RETOS/02-Plan de vuelo diario",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:49:55+00:00",
+      "bytes": 214862082,
+      "duration": 176.733333
+    },
+    {
+      "public_id": "vathpcf2juittjvqfahq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778745170/vathpcf2juittjvqfahq.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/04-Acci\u00f3n sin emoci\u00f3n",
+      "format": "mov",
+      "created_at": "2026-05-14T07:52:50+00:00",
+      "bytes": 188893125,
+      "duration": 196.766667
+    },
+    {
+      "public_id": "y59wfsunde1xwa8cfjw0",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778745198/y59wfsunde1xwa8cfjw0.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/11-Estructura de tu primer video UGC",
+      "format": "mov",
+      "created_at": "2026-05-14T07:53:18+00:00",
+      "bytes": 449770567,
+      "duration": 294.823764
+    },
+    {
+      "public_id": "h2mldooxi0ufjdysfmdc",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778745357/h2mldooxi0ufjdysfmdc.mp4",
+      "asset_folder": "NextFLGHTs/04-CABINA DE H\u00c1BITOS PODEROSOS/04-Plan de vuelo de tu futuro yo",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:55:57+00:00",
+      "bytes": 174114050,
+      "duration": 143.313991
+    },
+    {
+      "public_id": "nvmimxxzbr1sxmjbfwak",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778745478/nvmimxxzbr1sxmjbfwak.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/15-COMPLETA TUS GANANCIAS INTERNACIONALES",
+      "format": "mov",
+      "created_at": "2026-05-14T07:57:58+00:00",
+      "bytes": 65019514,
+      "duration": 142.500862
+    },
+    {
+      "public_id": "n9xja06bgdthzg4dyxbz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778745581/n9xja06bgdthzg4dyxbz.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/04-Crea tu primer funnel",
+      "format": "mp4",
+      "created_at": "2026-05-14T07:59:41+00:00",
+      "bytes": 160887496,
+      "duration": 406.866666
+    },
+    {
+      "public_id": "wnhq7jkbeqeg81vnt80k",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778745702/wnhq7jkbeqeg81vnt80k.mp4",
+      "asset_folder": "NextFLGHTs/33-PUERTA DE EMBARQUE A LA FACTURACI\u00d3N CON RETOS/04-Cierre camuflado, impacto directo",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:01:42+00:00",
+      "bytes": 373173604,
+      "duration": 307.108005
+    },
+    {
+      "public_id": "yx6ir3b9nwmy5vi6zciy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778745705/yx6ir3b9nwmy5vi6zciy.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/06-Zona de Turbulencias Errores Comunes del Community Manager",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:01:45+00:00",
+      "bytes": 174648267,
+      "duration": 143.766666
+    },
+    {
+      "public_id": "kxvzgloirk1d4hxfrple",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778745777/kxvzgloirk1d4hxfrple.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/15-Crear newsletter",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:02:57+00:00",
+      "bytes": 70375391,
+      "duration": 190.833333
+    },
+    {
+      "public_id": "q1xkpjljxvv2ifmh6qwy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778745974/q1xkpjljxvv2ifmh6qwy.mp4",
+      "asset_folder": "NextFLGHTs/32-TORRE DE CONTROL DE TU MARCA EN INSTAGRAM/09-Instagram no es el negocio. Es tu escenario",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:06:14+00:00",
+      "bytes": 193120205,
+      "duration": 159.102993
+    },
+    {
+      "public_id": "aea0bbk7i8cgvrvbk0xn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778746096/aea0bbk7i8cgvrvbk0xn.mov",
+      "asset_folder": "NextFLGHTs/06-SALA DE EMBARQUE STAN STORE/02-Edita tu p\u00e1gina",
+      "format": "mov",
+      "created_at": "2026-05-14T08:08:16+00:00",
+      "bytes": 21027184,
+      "duration": 107.833333
+    },
+    {
+      "public_id": "bqidndolymj7ogcu097b",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778746281/bqidndolymj7ogcu097b.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/08-C\u00d3MO CERRAR UN LIVE",
+      "format": "mov",
+      "created_at": "2026-05-14T08:11:21+00:00",
+      "bytes": 36531694,
+      "duration": 37.1
+    },
+    {
+      "public_id": "mpwubqbe2dgbqk0krjnw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778746721/mpwubqbe2dgbqk0krjnw.mp4",
+      "asset_folder": "NextFLGHTs/36-TORRE DE CONTROL CREATIVA/04-\u00bfCu\u00e1l es tu trabajo como experto en viralidad",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:18:41+00:00",
+      "bytes": 381871595,
+      "duration": 313.9
+    },
+    {
+      "public_id": "jzvslhpetwezlderp82j",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778746877/jzvslhpetwezlderp82j.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/06-M\u00c9TODO DE PAGO USA",
+      "format": "mov",
+      "created_at": "2026-05-14T08:21:17+00:00",
+      "bytes": 26597874,
+      "duration": 103.166259
+    },
+    {
+      "public_id": "b3qoga884gkhrkreckf5",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778746975/b3qoga884gkhrkreckf5.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/12-Uso de m\u00e1scara para efectos pro",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:22:55+00:00",
+      "bytes": 210761342,
+      "duration": 300.233333
+    },
+    {
+      "public_id": "nuocei26lb6842dyj1eg",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778747387/nuocei26lb6842dyj1eg.mp4",
+      "asset_folder": "NextFLGHTs/20-SALA VIP DE LAS VENTAS ESTRAT\u00c9GICAS/08-La Ruta del Cliente",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:29:47+00:00",
+      "bytes": 377393948,
+      "duration": 310.846009
+    },
+    {
+      "public_id": "hdewadz0xezqezvltiot",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778747626/hdewadz0xezqezvltiot.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/22-C\u00f3mo cobrar tu contenido UGC",
+      "format": "mov",
+      "created_at": "2026-05-14T08:33:46+00:00",
+      "bytes": 459707119,
+      "duration": 303.090068
+    },
+    {
+      "public_id": "le1ktcicetdwrqws1kkk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778747815/le1ktcicetdwrqws1kkk.mp4",
+      "asset_folder": "NextFLGHTs/04-CABINA DE H\u00c1BITOS PODEROSOS/01-Control de equipaje emocional",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:36:55+00:00",
+      "bytes": 363098454,
+      "duration": 299.003991
+    },
+    {
+      "public_id": "tb11k8q5hmp6gxehqvb5",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778748167/tb11k8q5hmp6gxehqvb5.mov",
+      "asset_folder": "NextFLGHTs/17-RUTINAS EN CASA/03-Dia 3 Core + cardio HIT",
+      "format": "mov",
+      "created_at": "2026-05-14T08:42:47+00:00",
+      "bytes": 249604319,
+      "duration": 242.369887
+    },
+    {
+      "public_id": "x81xkdw2w3re6fntl9hj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778748517/x81xkdw2w3re6fntl9hj.mov",
+      "asset_folder": "NextFLGHTs/08-VUELA M\u00c1S R\u00c1PIDO CON IA/01-Introducci\u00f3n a la IA",
+      "format": "mov",
+      "created_at": "2026-05-14T08:48:37+00:00",
+      "bytes": 397675413,
+      "duration": 149.511995
+    },
+    {
+      "public_id": "ikzusspn61qfrxiimbbf",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778748546/ikzusspn61qfrxiimbbf.mp4",
+      "asset_folder": "NextFLGHTs/28-UN MILLON DE VISTAS/05-C\u00f3mo crear un llamado a la acci\u00f3n",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:49:06+00:00",
+      "bytes": 274545235,
+      "duration": 225.001995
+    },
+    {
+      "public_id": "fhearwg5ggujovk5rg33",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778748725/fhearwg5ggujovk5rg33.mp4",
+      "asset_folder": "NextFLGHTs/15-CABINA DE IMAGEN ESTRAT\u00c9GICA/04-Hangar de maquillaje para redes sociales",
+      "format": "mp4",
+      "created_at": "2026-05-14T08:52:05+00:00",
+      "bytes": 1293349849,
+      "duration": 1065.217007
+    },
+    {
+      "public_id": "xvovmdkdarcotsvzxdk3",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778749186/xvovmdkdarcotsvzxdk3.mov",
+      "asset_folder": "NextFLGHTs/40-DA VIDA A TU CLON/07-RESULTADO HIPER REALISTA",
+      "format": "mov",
+      "created_at": "2026-05-14T08:59:46+00:00",
+      "bytes": 605064586,
+      "duration": 599.516009
+    },
+    {
+      "public_id": "sfpsqnlpnd45djg9qemw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778749200/sfpsqnlpnd45djg9qemw.mp4",
+      "asset_folder": "NextFLGHTs/30-MULTINIVEL EN LA TORRE CON PRESENCIA REAL/06-Duplica sin que te desgastes",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:00:00+00:00",
+      "bytes": 244523490,
+      "duration": 201.1
+    },
+    {
+      "public_id": "s3fizwmrnhtpwkejfzea",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778749232/s3fizwmrnhtpwkejfzea.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/01-Bienvenida al m\u00f3dulo",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:00:32+00:00",
+      "bytes": 129491932,
+      "duration": 106.633333
+    },
+    {
+      "public_id": "wx2acj3mapqsgarvwxim",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778749265/wx2acj3mapqsgarvwxim.mp4",
+      "asset_folder": "NextFLGHTs/36-TORRE DE CONTROL CREATIVA/05-\u00bfC\u00f3mo funciona este negocio",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:01:05+00:00",
+      "bytes": 326627640,
+      "duration": 267.5
+    },
+    {
+      "public_id": "qwau6joymcnnzpum9efr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778749486/qwau6joymcnnzpum9efr.mp4",
+      "asset_folder": "NextFLGHTs/32-TORRE DE CONTROL DE TU MARCA EN INSTAGRAM/04-Historias que conectan y educan sin esfuerzo",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:04:46+00:00",
+      "bytes": 353243087,
+      "duration": 290.566666
+    },
+    {
+      "public_id": "ymqb6xt4oovvnfflv7xm",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778749486/ymqb6xt4oovvnfflv7xm.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/18-Correo despu\u00e9s de la compra",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:04:46+00:00",
+      "bytes": 47853511,
+      "duration": 247.966666
+    },
+    {
+      "public_id": "cnrdhcncnswrsr4i5zqr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778749499/cnrdhcncnswrsr4i5zqr.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/09-Tarifas de Vuelo \u00bfCu\u00e1nto cobra un Community Manager",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:04:59+00:00",
+      "bytes": 157390069,
+      "duration": 129.4
+    },
+    {
+      "public_id": "wrgeelxtun0ibd2kpr1y",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778749744/wrgeelxtun0ibd2kpr1y.mp4",
+      "asset_folder": "NextFLGHTs/19-TORRE DE RESISTENCIA F\u00cdSICA/06-Full body cardio rutina completa",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:09:04+00:00",
+      "bytes": 286760081,
+      "duration": 3105.111655
+    },
+    {
+      "public_id": "pihed0dwuwt3wkin7abz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778749990/pihed0dwuwt3wkin7abz.mp4",
+      "asset_folder": "NextFLGHTs/12-DESPEGA DISE\u00d1ANDO EN CANVA/03-Dise\u00f1os que posicionan tu marca",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:13:10+00:00",
+      "bytes": 792386902,
+      "duration": 1765.766666
+    },
+    {
+      "public_id": "ujjwdrj4hzt5lzfaxpfx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778750116/ujjwdrj4hzt5lzfaxpfx.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/23-Crea tu media kit",
+      "format": "mov",
+      "created_at": "2026-05-14T09:15:16+00:00",
+      "bytes": 173537668,
+      "duration": 115.194195
+    },
+    {
+      "public_id": "w3p4fkz5l6dwujhlz5iy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778750439/w3p4fkz5l6dwujhlz5iy.mp4",
+      "asset_folder": "NextFLGHTs/35-FORMATOS DE GRABACI\u00d3N/03-Formato voz en off",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:20:39+00:00",
+      "bytes": 295614041,
+      "duration": 270.133333
+    },
+    {
+      "public_id": "engxtnjgjn6wwora7cn6",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778750586/engxtnjgjn6wwora7cn6.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/05-Cierre Psicol\u00f3gico",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:23:06+00:00",
+      "bytes": 186528247,
+      "duration": 153.368005
+    },
+    {
+      "public_id": "ehm2ymxb0l5jtskbarph",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778750666/ehm2ymxb0l5jtskbarph.mp4",
+      "asset_folder": "NextFLGHTs/32-TORRE DE CONTROL DE TU MARCA EN INSTAGRAM/07-Contenido que vende sin que se note",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:24:26+00:00",
+      "bytes": 265959536,
+      "duration": 218.801995
+    },
+    {
+      "public_id": "qiunofwlzlwbgdvfnonc",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778750815/qiunofwlzlwbgdvfnonc.mp4",
+      "asset_folder": "NextFLGHTs/03-RUTA DE GPS INTERNO/07-Dejar de procrastinar",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:26:55+00:00",
+      "bytes": 251181270,
+      "duration": 206.680998
+    },
+    {
+      "public_id": "ujkvmvhqoyfkqksqoref",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778751040/ujkvmvhqoyfkqksqoref.mp4",
+      "asset_folder": "NextFLGHTs/27-TORRE DE CONTROL DE EMAIL MARKETING/01-Zona de Embarque Digital",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:30:40+00:00",
+      "bytes": 296370038,
+      "duration": 243.787007
+    },
+    {
+      "public_id": "tlftggkjxbpgu1uzprje",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778751195/tlftggkjxbpgu1uzprje.mp4",
+      "asset_folder": "NextFLGHTs/01-\u00a1BIENVENIDOS A BORDO!/04-\u00bfPor qu\u00e9 Next Flight",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:33:15+00:00",
+      "bytes": 202726020,
+      "duration": 171.133333
+    },
+    {
+      "public_id": "fdp3iwrfwq8is2pv3d91",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778751669/fdp3iwrfwq8is2pv3d91.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/02-ENTENDIENDO TIKTOK LIVE",
+      "format": "mov",
+      "created_at": "2026-05-14T09:41:09+00:00",
+      "bytes": 78236314,
+      "duration": 73.746576
+    },
+    {
+      "public_id": "txzqdpi3up5jtod6zngw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778751742/txzqdpi3up5jtod6zngw.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/03-Posicionamiento claro y memorable",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:42:22+00:00",
+      "bytes": 343834304,
+      "duration": 283.2
+    },
+    {
+      "public_id": "mmavmuxoexopc10plolu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778751964/mmavmuxoexopc10plolu.mp4",
+      "asset_folder": "NextFLGHTs/30-MULTINIVEL EN LA TORRE CON PRESENCIA REAL/03-Invita con postura, no con presi\u00f3n",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:46:04+00:00",
+      "bytes": 242855643,
+      "duration": 199.808005
+    },
+    {
+      "public_id": "bfkfi4ihy9bey53nc4ki",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752038/bfkfi4ihy9bey53nc4ki.mp4",
+      "asset_folder": "NextFLGHTs/20-SALA VIP DE LAS VENTAS ESTRAT\u00c9GICAS/07-Vende desde historias",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:47:18+00:00",
+      "bytes": 489547695,
+      "duration": 403.166666
+    },
+    {
+      "public_id": "lhfdfjoueoa64wmza5us",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752048/lhfdfjoueoa64wmza5us.mp4",
+      "asset_folder": "NextFLGHTs/03-RUTA DE GPS INTERNO/06-El camino de las 5 P para encontrarte",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:47:28+00:00",
+      "bytes": 178719955,
+      "duration": 147.266666
+    },
+    {
+      "public_id": "l24p7jqhav2zxspfe7o2",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752140/l24p7jqhav2zxspfe7o2.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/18-ELIMINAR MARCA DE AGUA",
+      "format": "mov",
+      "created_at": "2026-05-14T09:49:00+00:00",
+      "bytes": 32823736,
+      "duration": 44.233333
+    },
+    {
+      "public_id": "kj2h0hrfzzppkbuqy1xh",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752230/kj2h0hrfzzppkbuqy1xh.mp4",
+      "asset_folder": "NextFLGHTs/27-TORRE DE CONTROL DE EMAIL MARKETING/07-Panel de Monitoreo Comercial",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:50:30+00:00",
+      "bytes": 327209112,
+      "duration": 269.266666
+    },
+    {
+      "public_id": "g5o7gyi0bgc86yivyy7n",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752302/g5o7gyi0bgc86yivyy7n.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/10-CIERRE DEL M\u00d3DULO",
+      "format": "mov",
+      "created_at": "2026-05-14T09:51:42+00:00",
+      "bytes": 45195237,
+      "duration": 44.4
+    },
+    {
+      "public_id": "lzwhvatpomk0khn9chyc",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752321/lzwhvatpomk0khn9chyc.mp4",
+      "asset_folder": "NextFLGHTs/26-TORRE DE CREACI\u00d3N DE PRODUCTOS DIGITALES/07-Lanza y Vende con Seguridad",
+      "format": "mp4",
+      "created_at": "2026-05-14T09:52:01+00:00",
+      "bytes": 307140475,
+      "duration": 252.61
+    },
+    {
+      "public_id": "skc0d2al8tqbfrwijjkt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752361/skc0d2al8tqbfrwijjkt.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/09-FEED vs ADS",
+      "format": "mov",
+      "created_at": "2026-05-14T09:52:41+00:00",
+      "bytes": 294356641,
+      "duration": 193.886621
+    },
+    {
+      "public_id": "qmpwz0j6fhe4mt4s7dkn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752535/qmpwz0j6fhe4mt4s7dkn.mov",
+      "asset_folder": "NextFLGHTs/17-RUTINAS EN CASA/01-Dia 1 Full body + cardio",
+      "format": "mov",
+      "created_at": "2026-05-14T09:55:35+00:00",
+      "bytes": 1241909669,
+      "duration": 314.373991
+    },
+    {
+      "public_id": "r4ue22gav0qj9ppsphms",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752931/r4ue22gav0qj9ppsphms.mov",
+      "asset_folder": "NextFLGHTs/08-VUELA M\u00c1S R\u00c1PIDO CON IA/04-ChatGPT como tu asistente profesional 247",
+      "format": "mov",
+      "created_at": "2026-05-14T10:02:11+00:00",
+      "bytes": 512790556,
+      "duration": 1047.734
+    },
+    {
+      "public_id": "ncj40ezv2rcofliyas3c",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778752972/ncj40ezv2rcofliyas3c.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/10-Cierre de m\u00f3dulo",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:02:52+00:00",
+      "bytes": 166379230,
+      "duration": 136.835011
+    },
+    {
+      "public_id": "izojlsr447zkgsxpjecn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778753100/izojlsr447zkgsxpjecn.mov",
+      "asset_folder": "NextFLGHTs/06-SALA DE EMBARQUE STAN STORE/04-Configura tu gu\u00eda gratis",
+      "format": "mov",
+      "created_at": "2026-05-14T10:05:00+00:00",
+      "bytes": 22963365,
+      "duration": 176.3
+    },
+    {
+      "public_id": "qu7zldizbp4jdhb9gcp8",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778753150/qu7zldizbp4jdhb9gcp8.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/19-Crea tu firma digital",
+      "format": "mov",
+      "created_at": "2026-05-14T10:05:50+00:00",
+      "bytes": 201370169,
+      "duration": 482.348118
+    },
+    {
+      "public_id": "rpoywu8fud1hoj8qirld",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778753190/rpoywu8fud1hoj8qirld.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/07-Venta Indirecta con Prueba Social",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:06:30+00:00",
+      "bytes": 286212419,
+      "duration": 235.133333
+    },
+    {
+      "public_id": "hx0mgwtrasqouljkyiah",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778753290/hx0mgwtrasqouljkyiah.mp4",
+      "asset_folder": "NextFLGHTs/35-FORMATOS DE GRABACI\u00d3N/01-Formato POV",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:08:10+00:00",
+      "bytes": 177766393,
+      "duration": 145.751995
+    },
+    {
+      "public_id": "yxmadg59doremsea4iao",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778753315/yxmadg59doremsea4iao.mp4",
+      "asset_folder": "NextFLGHTs/04-CABINA DE H\u00c1BITOS PODEROSOS/07-Torre de resistencia f\u00edsica",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:08:35+00:00",
+      "bytes": 284581418,
+      "duration": 234.103991
+    },
+    {
+      "public_id": "ng3fhdgc4agvxqtvmdqh",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778753430/ng3fhdgc4agvxqtvmdqh.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/07-M\u00d3DULO 6",
+      "format": "mov",
+      "created_at": "2026-05-14T10:10:30+00:00",
+      "bytes": 42000786,
+      "duration": 104.652336
+    },
+    {
+      "public_id": "afokyxzjuh7azku9jkzw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778753645/afokyxzjuh7azku9jkzw.mp4",
+      "asset_folder": "NextFLGHTs/36-TORRE DE CONTROL CREATIVA/08-\u00bfC\u00f3mo ganar dinero en redes sin invertir",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:14:05+00:00",
+      "bytes": 243071306,
+      "duration": 198.933333
+    },
+    {
+      "public_id": "mjumgyxuverrtfdzhaxr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778753990/mjumgyxuverrtfdzhaxr.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/03-Dise\u00f1o de Ofertas Irresistibles",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:19:50+00:00",
+      "bytes": 313885649,
+      "duration": 258.133333
+    },
+    {
+      "public_id": "z9udfhygdljhwyevje4o",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778754064/z9udfhygdljhwyevje4o.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/06-C\u00f3mo manejar tus redes",
+      "format": "mov",
+      "created_at": "2026-05-14T10:21:04+00:00",
+      "bytes": 252024973,
+      "duration": 166.556735
+    },
+    {
+      "public_id": "zfyfc0c8jcxgyd0td3y9",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778754516/zfyfc0c8jcxgyd0td3y9.mov",
+      "asset_folder": "NextFLGHTs/40-DA VIDA A TU CLON/05-NUESTRO AVATAR SE MUEVE Y HABLA",
+      "format": "mov",
+      "created_at": "2026-05-14T10:28:36+00:00",
+      "bytes": 155862236,
+      "duration": 186.479456
+    },
+    {
+      "public_id": "ucyhkraomsnr9ee0nbqk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778754635/ucyhkraomsnr9ee0nbqk.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/03-Conecta dominio y correo",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:30:35+00:00",
+      "bytes": 287196396,
+      "duration": 689.401995
+    },
+    {
+      "public_id": "kvh5p43vydysbl2s3oz1",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778754731/kvh5p43vydysbl2s3oz1.mov",
+      "asset_folder": "NextFLGHTs/40-DA VIDA A TU CLON/03-CREA LA IMAGEN DE TU CLON ULTRA REAL",
+      "format": "mov",
+      "created_at": "2026-05-14T10:32:11+00:00",
+      "bytes": 440454411,
+      "duration": 404.189751
+    },
+    {
+      "public_id": "g1uuody2bvxirsfhnvdp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778754734/g1uuody2bvxirsfhnvdp.mp4",
+      "asset_folder": "NextFLGHTs/31-CABINA DE ORATORIA/02-La base en la teoria",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:32:14+00:00",
+      "bytes": 300077340,
+      "duration": 246.666666
+    },
+    {
+      "public_id": "obzzj8ldw8cw1jfhi9pj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778754735/obzzj8ldw8cw1jfhi9pj.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/21-C\u00f3mo reconocer correos spam",
+      "format": "mov",
+      "created_at": "2026-05-14T10:32:15+00:00",
+      "bytes": 334116473,
+      "duration": 221.355828
+    },
+    {
+      "public_id": "arpoghjqowosue6bvvcp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778754926/arpoghjqowosue6bvvcp.mp4",
+      "asset_folder": "NextFLGHTs/36-TORRE DE CONTROL CREATIVA/02-\u00bfPor qu\u00e9 llamar la atenci\u00f3n en las redes sociales",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:35:26+00:00",
+      "bytes": 294773066,
+      "duration": 242.300998
+    },
+    {
+      "public_id": "ie40pcbeqwcs35tb08ec",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778755121/ie40pcbeqwcs35tb08ec.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/29-CIERRE DEL M\u00d3DULO",
+      "format": "mov",
+      "created_at": "2026-05-14T10:38:41+00:00",
+      "bytes": 84699074,
+      "duration": 55.4
+    },
+    {
+      "public_id": "iabbq4jskj5q9e3m22js",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778755240/iabbq4jskj5q9e3m22js.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/04-Subt\u00edtulos y textos que impactan",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:40:40+00:00",
+      "bytes": 235189334,
+      "duration": 339.8
+    },
+    {
+      "public_id": "qzvk1xjqzcfdz4vlaqtb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778755325/qzvk1xjqzcfdz4vlaqtb.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/12-C\u00f3mo alojar Next Flight en Hotmart",
+      "format": "mov",
+      "created_at": "2026-05-14T10:42:05+00:00",
+      "bytes": 376207999,
+      "duration": 1366.98195
+    },
+    {
+      "public_id": "yug3ekr3uldizynmdkhz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778755348/yug3ekr3uldizynmdkhz.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/12-M\u00d3DULO 11",
+      "format": "mov",
+      "created_at": "2026-05-14T10:42:28+00:00",
+      "bytes": 35864877,
+      "duration": 101.982041
+    },
+    {
+      "public_id": "nhxphskjmxjcyexdzkiw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778755425/nhxphskjmxjcyexdzkiw.mov",
+      "asset_folder": "NextFLGHTs/05-RUTA DE BEACONS/01-Presentaci\u00f3n de la plataforma",
+      "format": "mov",
+      "created_at": "2026-05-14T10:43:45+00:00",
+      "bytes": 10268309,
+      "duration": 65.1
+    },
+    {
+      "public_id": "ztasjyz2cprmm9f8mljt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778755621/ztasjyz2cprmm9f8mljt.mp4",
+      "asset_folder": "NextFLGHTs/20-SALA VIP DE LAS VENTAS ESTRAT\u00c9GICAS/04-Torre de Control Mental",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:47:01+00:00",
+      "bytes": 409988787,
+      "duration": 337.3
+    },
+    {
+      "public_id": "rrtj0vujkcu6sl2jv35w",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778755775/rrtj0vujkcu6sl2jv35w.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/17-Gu\u00eda gratis + correo de marketing",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:49:35+00:00",
+      "bytes": 137781138,
+      "duration": 426.5
+    },
+    {
+      "public_id": "i5pom0pbu5mde3pu2rub",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756157/i5pom0pbu5mde3pu2rub.mp4",
+      "asset_folder": "NextFLGHTs/36-TORRE DE CONTROL CREATIVA/01-Introducci\u00f3n al m\u00f3dulo",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:55:57+00:00",
+      "bytes": 150868384,
+      "duration": 128.666666
+    },
+    {
+      "public_id": "jbhtroux2je9hqyfg862",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756210/jbhtroux2je9hqyfg862.mp4",
+      "asset_folder": "NextFLGHTs/20-SALA VIP DE LAS VENTAS ESTRAT\u00c9GICAS/01-Mentalidad de Vendedora",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:56:50+00:00",
+      "bytes": 247521282,
+      "duration": 203.5
+    },
+    {
+      "public_id": "ykfk3y9k8r0qyylctu2l",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756245/ykfk3y9k8r0qyylctu2l.mp4",
+      "asset_folder": "NextFLGHTs/30-MULTINIVEL EN LA TORRE CON PRESENCIA REAL/08-Red con cultura, no con caos",
+      "format": "mp4",
+      "created_at": "2026-05-14T10:57:25+00:00",
+      "bytes": 148311957,
+      "duration": 121.966666
+    },
+    {
+      "public_id": "qc2silqrgbua28lh31m7",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756492/qc2silqrgbua28lh31m7.mp4",
+      "asset_folder": "NextFLGHTs/32-TORRE DE CONTROL DE TU MARCA EN INSTAGRAM/01-Tu perfil no es un CV. Es tu vitrina de poder",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:01:32+00:00",
+      "bytes": 175713165,
+      "duration": 144.5
+    },
+    {
+      "public_id": "mqrydsrzesbmgsingx19",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756538/mqrydsrzesbmgsingx19.mov",
+      "asset_folder": "NextFLGHTs/05-RUTA DE BEACONS/02-Crea tu cuenta y edita tu tienda",
+      "format": "mov",
+      "created_at": "2026-05-14T11:02:18+00:00",
+      "bytes": 308200612,
+      "duration": 966.484172
+    },
+    {
+      "public_id": "gfuwmpidftpqgzdbvxxx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756677/gfuwmpidftpqgzdbvxxx.mp4",
+      "asset_folder": "NextFLGHTs/31-CABINA DE ORATORIA/03-La respiraci\u00f3n como un todo",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:04:37+00:00",
+      "bytes": 312407020,
+      "duration": 256.866666
+    },
+    {
+      "public_id": "f9htnrsqkozdbfwjlwzs",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756697/f9htnrsqkozdbfwjlwzs.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/01-Bienvenida al m\u00f3dulo",
+      "format": "mov",
+      "created_at": "2026-05-14T11:04:57+00:00",
+      "bytes": 24356319,
+      "duration": 20.9
+    },
+    {
+      "public_id": "d7jucacmgnh49msfwaiy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756718/d7jucacmgnh49msfwaiy.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/07-INFORMACI\u00d3N FISCAL LATINOAM\u00c9RICA",
+      "format": "mov",
+      "created_at": "2026-05-14T11:05:18+00:00",
+      "bytes": 78314663,
+      "duration": 261.526349
+    },
+    {
+      "public_id": "okh643qxmgupkkrscbdx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756749/okh643qxmgupkkrscbdx.mp4",
+      "asset_folder": "NextFLGHTs/19-TORRE DE RESISTENCIA F\u00cdSICA/04-Rutina de espalda",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:05:49+00:00",
+      "bytes": 84706427,
+      "duration": 837.775964
+    },
+    {
+      "public_id": "lknvnubs1l24j5npiyf1",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778756784/lknvnubs1l24j5npiyf1.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/05-Soft Skills en Altitud",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:06:24+00:00",
+      "bytes": 170702959,
+      "duration": 140.5
+    },
+    {
+      "public_id": "vrkv8lzbet4e0mvvyfck",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778757059/vrkv8lzbet4e0mvvyfck.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/04-Precio con Poder",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:10:59+00:00",
+      "bytes": 225151610,
+      "duration": 185.166666
+    },
+    {
+      "public_id": "p7xadjn0x4vp31ijlzt4",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778757200/p7xadjn0x4vp31ijlzt4.mp4",
+      "asset_folder": "NextFLGHTs/26-TORRE DE CREACI\u00d3N DE PRODUCTOS DIGITALES/03-Elecci\u00f3n de Formato Crea algo que s\u00ed puedas sostener",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:13:20+00:00",
+      "bytes": 442263918,
+      "duration": 364.112993
+    },
+    {
+      "public_id": "bmydvhick3fgq01yfiy7",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778757280/bmydvhick3fgq01yfiy7.mp4",
+      "asset_folder": "NextFLGHTs/19-TORRE DE RESISTENCIA F\u00cdSICA/03-Ejercicios para TONIFICAR BRAZOS sin peso",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:14:40+00:00",
+      "bytes": 76464379,
+      "duration": 784.950567
+    },
+    {
+      "public_id": "ktveq7jfaafkvjzoi10f",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778757559/ktveq7jfaafkvjzoi10f.mov",
+      "asset_folder": "NextFLGHTs/08-VUELA M\u00c1S R\u00c1PIDO CON IA/05-Cierre Pon en pr\u00e1ctica con inteligencia",
+      "format": "mov",
+      "created_at": "2026-05-14T11:19:19+00:00",
+      "bytes": 575688292,
+      "duration": 213.855011
+    },
+    {
+      "public_id": "xymgfey7frv8at44kek5",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778757771/xymgfey7frv8at44kek5.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/06-PSICOLOG\u00cdA DEL ESPECTADOR",
+      "format": "mov",
+      "created_at": "2026-05-14T11:22:51+00:00",
+      "bytes": 29470769,
+      "duration": 31.7
+    },
+    {
+      "public_id": "cyta1olfsydr3zwsdkbj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778758119/cyta1olfsydr3zwsdkbj.mp4",
+      "asset_folder": "NextFLGHTs/26-TORRE DE CREACI\u00d3N DE PRODUCTOS DIGITALES/08-Validaci\u00f3n Previa No crees a ciegas",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:28:39+00:00",
+      "bytes": 305047909,
+      "duration": 251.033333
+    },
+    {
+      "public_id": "hbmblts2zxzy7qvuaxb1",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778758624/hbmblts2zxzy7qvuaxb1.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/09-El duelo de tu vieja versi\u00f3n",
+      "format": "mov",
+      "created_at": "2026-05-14T11:37:04+00:00",
+      "bytes": 253766362,
+      "duration": 261.4
+    },
+    {
+      "public_id": "p5g5zikct8gqe7n1xhe6",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778758803/p5g5zikct8gqe7n1xhe6.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/16-Aplicaciones para creadores UGC",
+      "format": "mov",
+      "created_at": "2026-05-14T11:40:03+00:00",
+      "bytes": 352978464,
+      "duration": 254.955102
+    },
+    {
+      "public_id": "sudpgbrpl5fnsvokeu5r",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778758808/sudpgbrpl5fnsvokeu5r.mov",
+      "asset_folder": "NextFLGHTs/24-CENTRO DE CONTROL MANYCHAT/02-C\u00f3mo crear una p\u00e1gina en Facebook",
+      "format": "mov",
+      "created_at": "2026-05-14T11:40:08+00:00",
+      "bytes": 14369135,
+      "duration": 104.558005
+    },
+    {
+      "public_id": "mgakkzoqvryomrfsjpta",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778758899/mgakkzoqvryomrfsjpta.mp4",
+      "asset_folder": "NextFLGHTs/27-TORRE DE CONTROL DE EMAIL MARKETING/04-Cabina de Persuasi\u00f3n Escrita",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:41:39+00:00",
+      "bytes": 357624689,
+      "duration": 294.220998
+    },
+    {
+      "public_id": "zdvykflpxybo2j7rnhh6",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778758945/zdvykflpxybo2j7rnhh6.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/10-M\u00d3DULO 9",
+      "format": "mov",
+      "created_at": "2026-05-14T11:42:25+00:00",
+      "bytes": 23566051,
+      "duration": 77.531429
+    },
+    {
+      "public_id": "sbbsoafpd2t2gxewywte",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778759062/sbbsoafpd2t2gxewywte.mp4",
+      "asset_folder": "NextFLGHTs/22-TORRE DE INFLUENCIA INVISIBLE/01-Torre del poder silencioso",
+      "format": "mp4",
+      "created_at": "2026-05-14T11:44:22+00:00",
+      "bytes": 210461776,
+      "duration": 173.175011
+    },
+    {
+      "public_id": "f12w2nbeevixq3vrxb0o",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778762878/f12w2nbeevixq3vrxb0o.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/04-M\u00d3DULO 3",
+      "format": "mov",
+      "created_at": "2026-05-14T12:47:58+00:00",
+      "bytes": 25465758,
+      "duration": 80.457143
+    },
+    {
+      "public_id": "jmivoakdnijpqf4drmf0",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778763091/jmivoakdnijpqf4drmf0.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/10-CONVI\u00c9RTETE EN INFLUENCER DE AMAZON",
+      "format": "mov",
+      "created_at": "2026-05-14T12:51:31+00:00",
+      "bytes": 62468088,
+      "duration": 184.598639
+    },
+    {
+      "public_id": "suztza9hea1fkweigrko",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778763143/suztza9hea1fkweigrko.mp4",
+      "asset_folder": "NextFLGHTs/19-TORRE DE RESISTENCIA F\u00cdSICA/05-Eliminar el vientre bajo abultado",
+      "format": "mp4",
+      "created_at": "2026-05-14T12:52:23+00:00",
+      "bytes": 70752764,
+      "duration": 735.422404
+    },
+    {
+      "public_id": "yleyh2uutdjas7vjreud",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778763235/yleyh2uutdjas7vjreud.mp4",
+      "asset_folder": "NextFLGHTs/35-FORMATOS DE GRABACI\u00d3N/04-Formato entrevista",
+      "format": "mp4",
+      "created_at": "2026-05-14T12:53:55+00:00",
+      "bytes": 100400177,
+      "duration": 82.233333
+    },
+    {
+      "public_id": "gkn7javvxh6jsqheero6",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778763489/gkn7javvxh6jsqheero6.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/16-ON SITE COMMISSION DE AMAZON",
+      "format": "mov",
+      "created_at": "2026-05-14T12:58:09+00:00",
+      "bytes": 116588483,
+      "duration": 94.667755
+    },
+    {
+      "public_id": "t6qp1q9lpayfa14up8px",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778763545/t6qp1q9lpayfa14up8px.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/02-QU\u00c9 ES AMAZON AFILIADOS DIFERENCIAS",
+      "format": "mov",
+      "created_at": "2026-05-14T12:59:05+00:00",
+      "bytes": 151923251,
+      "duration": 123.715918
+    },
+    {
+      "public_id": "ty3hgfgd9p0pnl5qa7d2",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778763705/ty3hgfgd9p0pnl5qa7d2.mov",
+      "asset_folder": "NextFLGHTs/39-INTELIGENCIA ARTIFICIAL 2.0/01-DESPEGA CON LA IA",
+      "format": "mov",
+      "created_at": "2026-05-14T13:01:45+00:00",
+      "bytes": 87886398,
+      "duration": 71.51746
+    },
+    {
+      "public_id": "navhxjyv2zwcs0vjizat",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778763812/navhxjyv2zwcs0vjizat.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/09-Creaci\u00f3n de contenido",
+      "format": "mov",
+      "created_at": "2026-05-14T13:03:32+00:00",
+      "bytes": 209073757,
+      "duration": 464.979592
+    },
+    {
+      "public_id": "miguj1nlr8eek8byjuvu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778763881/miguj1nlr8eek8byjuvu.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/12-C\u00f3mo hacer tu portafolio PARTE 1",
+      "format": "mov",
+      "created_at": "2026-05-14T13:04:41+00:00",
+      "bytes": 204340934,
+      "duration": 436.790567
+    },
+    {
+      "public_id": "wi1cofn2uo18a4juigua",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778763888/wi1cofn2uo18a4juigua.mov",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/20-Klarna y Afterpay",
+      "format": "mov",
+      "created_at": "2026-05-14T13:04:48+00:00",
+      "bytes": 63461210,
+      "duration": 379.766667
+    },
+    {
+      "public_id": "qqdfqunnoxveffvqghuj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778764188/qqdfqunnoxveffvqghuj.mp4",
+      "asset_folder": "NextFLGHTs/20-SALA VIP DE LAS VENTAS ESTRAT\u00c9GICAS/02-Posici\u00f3nate para que te Compren",
+      "format": "mp4",
+      "created_at": "2026-05-14T13:09:48+00:00",
+      "bytes": 278537970,
+      "duration": 229.066666
+    },
+    {
+      "public_id": "h7a8dqbzxou3waioxxkb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778764227/h7a8dqbzxou3waioxxkb.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/06-Reescribe tu relaci\u00f3n con el error",
+      "format": "mov",
+      "created_at": "2026-05-14T13:10:27+00:00",
+      "bytes": 269678141,
+      "duration": 254.815011
+    },
+    {
+      "public_id": "d3yavdyuo3a0bi059opu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778764422/d3yavdyuo3a0bi059opu.mp4",
+      "asset_folder": "NextFLGHTs/27-TORRE DE CONTROL DE EMAIL MARKETING/05-Turbulencias del Correo Mal Enviado",
+      "format": "mp4",
+      "created_at": "2026-05-14T13:13:42+00:00",
+      "bytes": 336781394,
+      "duration": 277.233333
+    },
+    {
+      "public_id": "o95gdvxxfevzvjjdzaz3",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778764428/o95gdvxxfevzvjjdzaz3.mp4",
+      "asset_folder": "NextFLGHTs/30-MULTINIVEL EN LA TORRE CON PRESENCIA REAL/02-Tu marca es tu filtro",
+      "format": "mp4",
+      "created_at": "2026-05-14T13:13:48+00:00",
+      "bytes": 233926626,
+      "duration": 192.378005
+    },
+    {
+      "public_id": "gbfwd26kigumte5olnli",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778764873/gbfwd26kigumte5olnli.mp4",
+      "asset_folder": "NextFLGHTs/30-MULTINIVEL EN LA TORRE CON PRESENCIA REAL/07-Energ\u00eda de l\u00edder, no de gerente estresada",
+      "format": "mp4",
+      "created_at": "2026-05-14T13:21:13+00:00",
+      "bytes": 208894656,
+      "duration": 171.873991
+    },
+    {
+      "public_id": "qqh1ajlsti4be9gqjxqt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778765086/qqh1ajlsti4be9gqjxqt.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/03-Agregar y cortar clips",
+      "format": "mp4",
+      "created_at": "2026-05-14T13:24:46+00:00",
+      "bytes": 211223021,
+      "duration": 307.366667
+    },
+    {
+      "public_id": "q2wl8grw1meezpfcelaj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778765136/q2wl8grw1meezpfcelaj.mov",
+      "asset_folder": "NextFLGHTs/06-SALA DE EMBARQUE STAN STORE/07-Tu link de Stan store",
+      "format": "mov",
+      "created_at": "2026-05-14T13:25:36+00:00",
+      "bytes": 6383106,
+      "duration": 50.133333
+    },
+    {
+      "public_id": "hdk5jfasy4gdzr6ton4n",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778765145/hdk5jfasy4gdzr6ton4n.mp4",
+      "asset_folder": "NextFLGHTs/34-TORRE DE EMBUDOS ESTRAT\u00c9GICOS/04-Embudo con retos crea comunidad y deseo en 7 d\u00edas",
+      "format": "mp4",
+      "created_at": "2026-05-14T13:25:45+00:00",
+      "bytes": 279749704,
+      "duration": 230.133333
+    },
+    {
+      "public_id": "a2u31spg8czi331ojfyr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778765401/a2u31spg8czi331ojfyr.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/26-\u00c9tica en el mundo del UGC",
+      "format": "mov",
+      "created_at": "2026-05-14T13:30:01+00:00",
+      "bytes": 200983296,
+      "duration": 133.25932
+    },
+    {
+      "public_id": "j9kc4aiqydxu1ph0jefr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778765410/j9kc4aiqydxu1ph0jefr.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/15-Colaboraciones pagas vs Intercambios",
+      "format": "mov",
+      "created_at": "2026-05-14T13:30:10+00:00",
+      "bytes": 304329034,
+      "duration": 199.62195
+    },
+    {
+      "public_id": "hrvds0unflyzus4pcbnp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778765481/hrvds0unflyzus4pcbnp.mp4",
+      "asset_folder": "NextFLGHTs/26-TORRE DE CREACI\u00d3N DE PRODUCTOS DIGITALES/01-Puerta de Embarque Tu primer producto digital",
+      "format": "mp4",
+      "created_at": "2026-05-14T13:31:21+00:00",
+      "bytes": 252041757,
+      "duration": 207.266666
+    },
+    {
+      "public_id": "piaudl4mikrtd5c3fz1t",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778765555/piaudl4mikrtd5c3fz1t.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/07-Donde encontrar los productos a los que soy afiliado",
+      "format": "mov",
+      "created_at": "2026-05-14T13:32:35+00:00",
+      "bytes": 25918565,
+      "duration": 66.827029
+    },
+    {
+      "public_id": "zs8uenhmcpzht8orhw5t",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778765911/zs8uenhmcpzht8orhw5t.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/03-La regla de los 5 segundos",
+      "format": "mov",
+      "created_at": "2026-05-14T13:38:31+00:00",
+      "bytes": 203723517,
+      "duration": 205.937007
+    },
+    {
+      "public_id": "vqqxwzmyk12uwnoeyb0o",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778765932/vqqxwzmyk12uwnoeyb0o.mov",
+      "asset_folder": "NextFLGHTs/40-DA VIDA A TU CLON/02-BUSCA EL AMBIENTE PARA TU CLON",
+      "format": "mov",
+      "created_at": "2026-05-14T13:38:52+00:00",
+      "bytes": 265433552,
+      "duration": 221.146848
+    },
+    {
+      "public_id": "o7dmyxuqpt3ekcalup3z",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778766101/o7dmyxuqpt3ekcalup3z.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/07-Panel de Indicadores de \u00c9xito (KPIs)",
+      "format": "mp4",
+      "created_at": "2026-05-14T13:41:41+00:00",
+      "bytes": 170603230,
+      "duration": 140.433991
+    },
+    {
+      "public_id": "g8rgg5tps0tytyqd1jk2",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778766107/g8rgg5tps0tytyqd1jk2.mov",
+      "asset_folder": "NextFLGHTs/09-VENDE M\u00c1S CON IA/01-Busca tu producto",
+      "format": "mov",
+      "created_at": "2026-05-14T13:41:47+00:00",
+      "bytes": 554401378,
+      "duration": 477.216508
+    },
+    {
+      "public_id": "wuxqsnszkg83gv1udlii",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778766760/wuxqsnszkg83gv1udlii.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/11-C\u00f3mo se genera la venta",
+      "format": "mov",
+      "created_at": "2026-05-14T13:52:40+00:00",
+      "bytes": 145176352,
+      "duration": 121.881542
+    },
+    {
+      "public_id": "ffuqupvbthsjlb1thqlr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767021/ffuqupvbthsjlb1thqlr.mov",
+      "asset_folder": "NextFLGHTs/09-VENDE M\u00c1S CON IA/06-Producci\u00f3n del anuncio animado parte 1",
+      "format": "mov",
+      "created_at": "2026-05-14T13:57:01+00:00",
+      "bytes": 504575555,
+      "duration": 747.38068
+    },
+    {
+      "public_id": "pkfm5nch5mrm4nq6z7lo",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767077/pkfm5nch5mrm4nq6z7lo.mp4",
+      "asset_folder": "NextFLGHTs/15-CABINA DE IMAGEN ESTRAT\u00c9GICA/02-Lenguaje visual de marca",
+      "format": "mp4",
+      "created_at": "2026-05-14T13:57:57+00:00",
+      "bytes": 169132577,
+      "duration": 139.1
+    },
+    {
+      "public_id": "z3xubno5s9gjfei1un2r",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767146/z3xubno5s9gjfei1un2r.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/08-Desbloquea tu creatividad",
+      "format": "mov",
+      "created_at": "2026-05-14T13:59:06+00:00",
+      "bytes": 370941220,
+      "duration": 242.834286
+    },
+    {
+      "public_id": "kjkhh1vatgpjkkkedsdb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767255/kjkhh1vatgpjkkkedsdb.mp4",
+      "asset_folder": "NextFLGHTs/27-TORRE DE CONTROL DE EMAIL MARKETING/06-Modo Piloto Automatizado",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:00:55+00:00",
+      "bytes": 357264751,
+      "duration": 294.3
+    },
+    {
+      "public_id": "odsikjstzya49lb5xsrc",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767390/odsikjstzya49lb5xsrc.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/09-P\u00e1gina de agradecimiento",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:03:10+00:00",
+      "bytes": 40239320,
+      "duration": 98.267007
+    },
+    {
+      "public_id": "kuvj2kdpuqcyfy6jm84e",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767608/kuvj2kdpuqcyfy6jm84e.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/19-SUBE TUS 3 PRIMEROS VIDEOS",
+      "format": "mov",
+      "created_at": "2026-05-14T14:06:48+00:00",
+      "bytes": 95773929,
+      "duration": 256.882358
+    },
+    {
+      "public_id": "wmgngboc3dfjqcx30ynl",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767619/wmgngboc3dfjqcx30ynl.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/01-BIENVENIDA",
+      "format": "mov",
+      "created_at": "2026-05-14T14:06:59+00:00",
+      "bytes": 64119096,
+      "duration": 52.2
+    },
+    {
+      "public_id": "jnjzjfsnau8r06a1bu4v",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767658/jnjzjfsnau8r06a1bu4v.mp4",
+      "asset_folder": "NextFLGHTs/04-CABINA DE H\u00c1BITOS PODEROSOS/05-Puerta de embarque familiar",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:07:38+00:00",
+      "bytes": 164825155,
+      "duration": 135.266666
+    },
+    {
+      "public_id": "voswolhgmgnlrpjv8nsp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767751/voswolhgmgnlrpjv8nsp.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/20-C\u00f3mo escribir correos",
+      "format": "mov",
+      "created_at": "2026-05-14T14:09:11+00:00",
+      "bytes": 427228264,
+      "duration": 311.495692
+    },
+    {
+      "public_id": "mg1adxxbproe4l9zybn3",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778767822/mg1adxxbproe4l9zybn3.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/10-Crea una cuenta en stripe",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:10:22+00:00",
+      "bytes": 81890482,
+      "duration": 264.666666
+    },
+    {
+      "public_id": "wdfhacm4tapmvbe8lxoi",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778768004/wdfhacm4tapmvbe8lxoi.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/08-PAYONEER BANCO AMERICANO EN LATINOAM\u00c9RICA",
+      "format": "mov",
+      "created_at": "2026-05-14T14:13:24+00:00",
+      "bytes": 58736362,
+      "duration": 202.501224
+    },
+    {
+      "public_id": "ctrd6jefmqa4gdkndiuy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778768073/ctrd6jefmqa4gdkndiuy.mp4",
+      "asset_folder": "NextFLGHTs/03-RUTA DE GPS INTERNO/02-C\u00f3mo pasar del deseo a la ejecuci\u00f3n real",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:14:33+00:00",
+      "bytes": 406215987,
+      "duration": 334.266666
+    },
+    {
+      "public_id": "z3jemfmbjlri65esf0c3",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778768179/z3jemfmbjlri65esf0c3.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/11-M\u00d3DULO 10",
+      "format": "mov",
+      "created_at": "2026-05-14T14:16:19+00:00",
+      "bytes": 15272392,
+      "duration": 62.995737
+    },
+    {
+      "public_id": "ofyyygvfatjwrddoa1cz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778768326/ofyyygvfatjwrddoa1cz.mov",
+      "asset_folder": "NextFLGHTs/24-CENTRO DE CONTROL MANYCHAT/04-C\u00f3mo conectar Instagram con ManyChat",
+      "format": "mov",
+      "created_at": "2026-05-14T14:18:46+00:00",
+      "bytes": 27120957,
+      "duration": 223.305011
+    },
+    {
+      "public_id": "pu5cx78jis8wqzg0h3rn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778768337/pu5cx78jis8wqzg0h3rn.mov",
+      "asset_folder": "NextFLGHTs/40-DA VIDA A TU CLON/01-INTRODUCCI\u00d3N",
+      "format": "mov",
+      "created_at": "2026-05-14T14:18:57+00:00",
+      "bytes": 239983011,
+      "duration": 200.248889
+    },
+    {
+      "public_id": "xezlxyla5ac6i2x1ygmp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778768828/xezlxyla5ac6i2x1ygmp.mov",
+      "asset_folder": "NextFLGHTs/08-VUELA M\u00c1S R\u00c1PIDO CON IA/03-C\u00f3mo la IA ya est\u00e1 en tu vida diaria (sin que lo sepas)",
+      "format": "mov",
+      "created_at": "2026-05-14T14:27:08+00:00",
+      "bytes": 191895909,
+      "duration": 75.116667
+    },
+    {
+      "public_id": "stpj2ukabelomuexhrfc",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769099/stpj2ukabelomuexhrfc.mp4",
+      "asset_folder": "NextFLGHTs/32-TORRE DE CONTROL DE TU MARCA EN INSTAGRAM/06-El algoritmo no es tu enemigo. Es tu espejo",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:31:39+00:00",
+      "bytes": 158866034,
+      "duration": 130.681995
+    },
+    {
+      "public_id": "byslpsfhh78r890sfguo",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769106/byslpsfhh78r890sfguo.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/08-P\u00e1gina de ventas",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:31:46+00:00",
+      "bytes": 682984075,
+      "duration": 1053.533333
+    },
+    {
+      "public_id": "qz8iv6qvrmkvi1xtp7kl",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769232/qz8iv6qvrmkvi1xtp7kl.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/05-Animaciones para dar vida a tu contenido",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:33:52+00:00",
+      "bytes": 163399098,
+      "duration": 234.3
+    },
+    {
+      "public_id": "gkyezbdpc82wehifhqak",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769315/gkyezbdpc82wehifhqak.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/08-Investigaci\u00f3n de mercado",
+      "format": "mov",
+      "created_at": "2026-05-14T14:35:15+00:00",
+      "bytes": 316082319,
+      "duration": 455.69161
+    },
+    {
+      "public_id": "ayno8itpqmnajjofta0l",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769539/ayno8itpqmnajjofta0l.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/05-M\u00d3DULO 4",
+      "format": "mov",
+      "created_at": "2026-05-14T14:38:59+00:00",
+      "bytes": 34651647,
+      "duration": 111.525442
+    },
+    {
+      "public_id": "bkauobxl8dhhw3h6bigb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769689/bkauobxl8dhhw3h6bigb.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/02-Crea tu cuenta en systeme",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:41:29+00:00",
+      "bytes": 103587401,
+      "duration": 192.1
+    },
+    {
+      "public_id": "lpw206rjk4mtc9ainltv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769725/lpw206rjk4mtc9ainltv.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/06-M\u00d3DULO 5",
+      "format": "mov",
+      "created_at": "2026-05-14T14:42:05+00:00",
+      "bytes": 32534807,
+      "duration": 80.689342
+    },
+    {
+      "public_id": "e1jvb3mo5bquduokglky",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769742/e1jvb3mo5bquduokglky.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/06-P\u00e1gina de captura",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:42:22+00:00",
+      "bytes": 360667092,
+      "duration": 912.566666
+    },
+    {
+      "public_id": "ilsvlqbjkc1jotpq4bxt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769844/ilsvlqbjkc1jotpq4bxt.mov",
+      "asset_folder": "NextFLGHTs/09-VENDE M\u00c1S CON IA/05-Efectos de audio que transmiten",
+      "format": "mov",
+      "created_at": "2026-05-14T14:44:04+00:00",
+      "bytes": 752292383,
+      "duration": 636.714376
+    },
+    {
+      "public_id": "yooexmvx0dhdnypzixeg",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778769891/yooexmvx0dhdnypzixeg.mov",
+      "asset_folder": "NextFLGHTs/09-VENDE M\u00c1S CON IA/08-Crea anuncios con avatars en HeyGen",
+      "format": "mov",
+      "created_at": "2026-05-14T14:44:51+00:00",
+      "bytes": 132348255,
+      "duration": 323.802268
+    },
+    {
+      "public_id": "peipauooybvxs3e8axsg",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778770059/peipauooybvxs3e8axsg.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/09-HERRAMIENTAS DE TIKTOK LIVE",
+      "format": "mov",
+      "created_at": "2026-05-14T14:47:39+00:00",
+      "bytes": 185709731,
+      "duration": 686.730159
+    },
+    {
+      "public_id": "zx7jltuvhvk5jcon3xla",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778770254/zx7jltuvhvk5jcon3xla.mp4",
+      "asset_folder": "NextFLGHTs/32-TORRE DE CONTROL DE TU MARCA EN INSTAGRAM/03-Reels que posicionan, no que entretienen",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:50:54+00:00",
+      "bytes": 419498599,
+      "duration": 345.071995
+    },
+    {
+      "public_id": "lwfoty5tbqfszqftyq7x",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778770324/lwfoty5tbqfszqftyq7x.mp4",
+      "asset_folder": "NextFLGHTs/03-RUTA DE GPS INTERNO/05-Elevar la autoconfianza (conviertete en tu propio respaldo)",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:52:04+00:00",
+      "bytes": 284526555,
+      "duration": 233.9
+    },
+    {
+      "public_id": "x5325y60nreqxfmisqqa",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778770331/x5325y60nreqxfmisqqa.mov",
+      "asset_folder": "NextFLGHTs/15-CABINA DE IMAGEN ESTRAT\u00c9GICA/05-Torre de cuidado facial",
+      "format": "mov",
+      "created_at": "2026-05-14T14:52:11+00:00",
+      "bytes": 503305990,
+      "duration": 320.968005
+    },
+    {
+      "public_id": "drers18rgohesh8fy6q2",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778770602/drers18rgohesh8fy6q2.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/12-P\u00e1gina de pagos",
+      "format": "mp4",
+      "created_at": "2026-05-14T14:56:42+00:00",
+      "bytes": 136623278,
+      "duration": 445.966666
+    },
+    {
+      "public_id": "bo0obxrtwayhbjjrkcnw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778770869/bo0obxrtwayhbjjrkcnw.mov",
+      "asset_folder": "NextFLGHTs/15-CABINA DE IMAGEN ESTRAT\u00c9GICA/01-Imagen estr\u00e1tegica para vender sin hablar",
+      "format": "mov",
+      "created_at": "2026-05-14T15:01:09+00:00",
+      "bytes": 192552393,
+      "duration": 125.780998
+    },
+    {
+      "public_id": "uy7smtuehgljgzozd7ch",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778770873/uy7smtuehgljgzozd7ch.mp4",
+      "asset_folder": "NextFLGHTs/31-CABINA DE ORATORIA/06-Dejar huella con tu voz",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:01:13+00:00",
+      "bytes": 206394549,
+      "duration": 169.633333
+    },
+    {
+      "public_id": "ug2hov2pzw3h0hrxkcjy",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778770983/ug2hov2pzw3h0hrxkcjy.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/05-Tipos de contenido UGC",
+      "format": "mov",
+      "created_at": "2026-05-14T15:03:03+00:00",
+      "bytes": 222343413,
+      "duration": 146.192834
+    },
+    {
+      "public_id": "cxqg7ekrxqagm7z6dggb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778771065/cxqg7ekrxqagm7z6dggb.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/18-C\u00f3mo crear tu correo",
+      "format": "mov",
+      "created_at": "2026-05-14T15:04:25+00:00",
+      "bytes": 267918026,
+      "duration": 178.050612
+    },
+    {
+      "public_id": "zqsk00kjj8aw4wt2o7iv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778771137/zqsk00kjj8aw4wt2o7iv.mp4",
+      "asset_folder": "NextFLGHTs/30-MULTINIVEL EN LA TORRE CON PRESENCIA REAL/05-Sost\u00e9n lo que inspiras",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:05:37+00:00",
+      "bytes": 211926361,
+      "duration": 174.381995
+    },
+    {
+      "public_id": "nc8rwsy9qwx54curkfgj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778771215/nc8rwsy9qwx54curkfgj.mov",
+      "asset_folder": "NextFLGHTs/37-CALCULADORA VIRAL/01-Calculadora viral",
+      "format": "mov",
+      "created_at": "2026-05-14T15:06:55+00:00",
+      "bytes": 157835058,
+      "duration": 512.417959
+    },
+    {
+      "public_id": "ovtsno7rcdtulx4rba9v",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778771220/ovtsno7rcdtulx4rba9v.mov",
+      "asset_folder": "NextFLGHTs/39-INTELIGENCIA ARTIFICIAL 2.0/04-RADAR DE IDEAS",
+      "format": "mov",
+      "created_at": "2026-05-14T15:07:00+00:00",
+      "bytes": 181768881,
+      "duration": 207.632834
+    },
+    {
+      "public_id": "f6kvjwxfdon76fxhsxwp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778771538/f6kvjwxfdon76fxhsxwp.mp4",
+      "asset_folder": "NextFLGHTs/33-PUERTA DE EMBARQUE A LA FACTURACI\u00d3N CON RETOS/01-Puerta de embarque a la facturaci\u00f3n con retos",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:12:18+00:00",
+      "bytes": 170853535,
+      "duration": 140.533333
+    },
+    {
+      "public_id": "hbhpsehbxi9vhe7n7dg0",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778771755/hbhpsehbxi9vhe7n7dg0.mov",
+      "asset_folder": "NextFLGHTs/06-SALA DE EMBARQUE STAN STORE/03-Crea tu primer producto",
+      "format": "mov",
+      "created_at": "2026-05-14T15:15:55+00:00",
+      "bytes": 34877076,
+      "duration": 212.266667
+    },
+    {
+      "public_id": "e62yp5s8h9eb3j0l3opo",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778771851/e62yp5s8h9eb3j0l3opo.mov",
+      "asset_folder": "NextFLGHTs/06-SALA DE EMBARQUE STAN STORE/06-C\u00f3mo obtener tus pagos",
+      "format": "mov",
+      "created_at": "2026-05-14T15:17:31+00:00",
+      "bytes": 14304736,
+      "duration": 135.186009
+    },
+    {
+      "public_id": "mr9s7kane64lgj5nibbr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778771972/mr9s7kane64lgj5nibbr.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/02-Introducci\u00f3n a CapCut",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:19:32+00:00",
+      "bytes": 138791374,
+      "duration": 199.4
+    },
+    {
+      "public_id": "wz3bkbumaae881mfpztg",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778771991/wz3bkbumaae881mfpztg.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/24-C\u00f3mo negociar con las marcas",
+      "format": "mov",
+      "created_at": "2026-05-14T15:19:51+00:00",
+      "bytes": 323339879,
+      "duration": 212.555465
+    },
+    {
+      "public_id": "mowqizffhr0yd5wo0ulz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778772103/mowqizffhr0yd5wo0ulz.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/01-Compra dominio y correo",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:21:43+00:00",
+      "bytes": 179339034,
+      "duration": 551.666666
+    },
+    {
+      "public_id": "j2cafimy5olp78npy5uu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778772268/j2cafimy5olp78npy5uu.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/06-Capas y superposiciones",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:24:28+00:00",
+      "bytes": 262399354,
+      "duration": 375.466667
+    },
+    {
+      "public_id": "rcm1kpfy0cqt6zpwrg30",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778772364/rcm1kpfy0cqt6zpwrg30.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/12-TUS FAVORTIOS DE AMAZON",
+      "format": "mov",
+      "created_at": "2026-05-14T15:26:04+00:00",
+      "bytes": 68348869,
+      "duration": 206.448617
+    },
+    {
+      "public_id": "huamh3ug1lkazxxgfbtv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778772418/huamh3ug1lkazxxgfbtv.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/06-Escalera de Valor",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:26:58+00:00",
+      "bytes": 229307802,
+      "duration": 188.616009
+    },
+    {
+      "public_id": "fzzraxn1r9bg8p2vugiw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778772652/fzzraxn1r9bg8p2vugiw.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/17-EDITA TUS VIDEOS EN INGLES CON IA",
+      "format": "mov",
+      "created_at": "2026-05-14T15:30:52+00:00",
+      "bytes": 93233893,
+      "duration": 233.755283
+    },
+    {
+      "public_id": "cfh9xpwkwjguawbetepj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778772944/cfh9xpwkwjguawbetepj.mov",
+      "asset_folder": "NextFLGHTs/15-CABINA DE IMAGEN ESTRAT\u00c9GICA/03-Pista de skincare",
+      "format": "mov",
+      "created_at": "2026-05-14T15:35:44+00:00",
+      "bytes": 51063456,
+      "duration": 47.766667
+    },
+    {
+      "public_id": "fc5pfhvljzjlefvwhkzx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778773096/fc5pfhvljzjlefvwhkzx.mp4",
+      "asset_folder": "NextFLGHTs/04-CABINA DE H\u00c1BITOS PODEROSOS/02-Torre de control interna",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:38:16+00:00",
+      "bytes": 328907360,
+      "duration": 270.5
+    },
+    {
+      "public_id": "uefjvm1ocftxvh2rvack",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778773250/uefjvm1ocftxvh2rvack.mov",
+      "asset_folder": "NextFLGHTs/29-RUTINAS EN GYM/01-Dia 1 Glutens y femorales",
+      "format": "mov",
+      "created_at": "2026-05-14T15:40:50+00:00",
+      "bytes": 1855024878,
+      "duration": 479.683333
+    },
+    {
+      "public_id": "qehbvayj62t6nbboxboi",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778773293/qehbvayj62t6nbboxboi.mov",
+      "asset_folder": "NextFLGHTs/40-DA VIDA A TU CLON/04-DAMOS VIDA A NUESTRO CLON",
+      "format": "mov",
+      "created_at": "2026-05-14T15:41:33+00:00",
+      "bytes": 407168784,
+      "duration": 469.995102
+    },
+    {
+      "public_id": "mxozonmrukvjyn9t1plu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778773822/mxozonmrukvjyn9t1plu.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/05-Construcci\u00f3n de confianza con tu comunidad",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:50:22+00:00",
+      "bytes": 291941571,
+      "duration": 240.066666
+    },
+    {
+      "public_id": "oorjqhtftghszs4unehd",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778773878/oorjqhtftghszs4unehd.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/02-Mapa de Tipos de Community Manager",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:51:18+00:00",
+      "bytes": 142352234,
+      "duration": 117.075011
+    },
+    {
+      "public_id": "fqrlcsb34u7xk9faz6kr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774133/fqrlcsb34u7xk9faz6kr.mp4",
+      "asset_folder": "NextFLGHTs/30-MULTINIVEL EN LA TORRE CON PRESENCIA REAL/04-No expliques. Posici\u00f3nate",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:55:33+00:00",
+      "bytes": 209420024,
+      "duration": 172.3
+    },
+    {
+      "public_id": "sx7frft0gjv6sextr8vp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774162/sx7frft0gjv6sextr8vp.mp4",
+      "asset_folder": "NextFLGHTs/18-COMO FUNCIONAN LAS REDES SOCIALES/03-M\u00ednimo necesario para alcanzar la viralidad",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:56:02+00:00",
+      "bytes": 587942145,
+      "duration": 481.6
+    },
+    {
+      "public_id": "totfyvmcj4girikdjr28",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774213/totfyvmcj4girikdjr28.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/04-Radar de Posicionamiento de Marca",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:56:53+00:00",
+      "bytes": 165816284,
+      "duration": 136.533333
+    },
+    {
+      "public_id": "lnvwju1s0dlhhq023wsm",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774234/lnvwju1s0dlhhq023wsm.mp4",
+      "asset_folder": "NextFLGHTs/20-SALA VIP DE LAS VENTAS ESTRAT\u00c9GICAS/05-Cierre con Prop\u00f3sito",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:57:14+00:00",
+      "bytes": 359568236,
+      "duration": 296.266666
+    },
+    {
+      "public_id": "lk2jpvh4p3hqdnlxqavx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774291/lk2jpvh4p3hqdnlxqavx.mp4",
+      "asset_folder": "NextFLGHTs/03-RUTA DE GPS INTERNO/03-C\u00f3mo te hablas puede hacerte millonario",
+      "format": "mp4",
+      "created_at": "2026-05-14T15:58:11+00:00",
+      "bytes": 357223578,
+      "duration": 293.9
+    },
+    {
+      "public_id": "pgfq0kqye9dxhrwcnr1q",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774432/pgfq0kqye9dxhrwcnr1q.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/11-De seguidores a comunidad",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:00:32+00:00",
+      "bytes": 481112104,
+      "duration": 395.866666
+    },
+    {
+      "public_id": "lqammfqbs3h4kmvgqquv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774647/lqammfqbs3h4kmvgqquv.mov",
+      "asset_folder": "NextFLGHTs/05-RUTA DE BEACONS/03-C\u00f3mo recibir pagos",
+      "format": "mov",
+      "created_at": "2026-05-14T16:04:07+00:00",
+      "bytes": 82573577,
+      "duration": 349.599637
+    },
+    {
+      "public_id": "wffoosvysw5uipyifben",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774657/wffoosvysw5uipyifben.mp4",
+      "asset_folder": "NextFLGHTs/23-DESPEGA EN META ADS/02-Configuremos tu primera campa\u00f1a",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:04:17+00:00",
+      "bytes": 149580257,
+      "duration": 1135.201995
+    },
+    {
+      "public_id": "d9vqvyeulnewwgrqpors",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774664/d9vqvyeulnewwgrqpors.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/08-M\u00d3DULO 7",
+      "format": "mov",
+      "created_at": "2026-05-14T16:04:24+00:00",
+      "bytes": 64106833,
+      "duration": 181.858685
+    },
+    {
+      "public_id": "x3eeti4xrkhbperyzgfz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778774922/x3eeti4xrkhbperyzgfz.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/03-REGISTRATE COMO ASOCIADO AMAZON",
+      "format": "mov",
+      "created_at": "2026-05-14T16:08:42+00:00",
+      "bytes": 92855295,
+      "duration": 259.715193
+    },
+    {
+      "public_id": "i6jv3kqh0zyuzs3klht6",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778775452/i6jv3kqh0zyuzs3klht6.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/09-M\u00d3DULO 8",
+      "format": "mov",
+      "created_at": "2026-05-14T16:17:32+00:00",
+      "bytes": 23785482,
+      "duration": 69.381224
+    },
+    {
+      "public_id": "q3joua5rohdfbymtpwsn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778775711/q3joua5rohdfbymtpwsn.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/13-LOS M\u00c1S VENDIDOS DE AMAZON",
+      "format": "mov",
+      "created_at": "2026-05-14T16:21:51+00:00",
+      "bytes": 62922678,
+      "duration": 104.280816
+    },
+    {
+      "public_id": "ffkqkslkr077hxmyohzl",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778775997/ffkqkslkr077hxmyohzl.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/01-BIENVENIDA",
+      "format": "mov",
+      "created_at": "2026-05-14T16:26:37+00:00",
+      "bytes": 97945566,
+      "duration": 105.093515
+    },
+    {
+      "public_id": "avdcdvdc6gphqli2ocvz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778776195/avdcdvdc6gphqli2ocvz.mp4",
+      "asset_folder": "NextFLGHTs/18-COMO FUNCIONAN LAS REDES SOCIALES/05-Explicando nicho SSDD",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:29:55+00:00",
+      "bytes": 127869797,
+      "duration": 104.745011
+    },
+    {
+      "public_id": "zsoxewypm9xcsgqmztlr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778776347/zsoxewypm9xcsgqmztlr.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/01-Monetiza con UGC",
+      "format": "mov",
+      "created_at": "2026-05-14T16:32:27+00:00",
+      "bytes": 159504682,
+      "duration": 105.697234
+    },
+    {
+      "public_id": "cjcmdelhtosvmwlm7jlc",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778776797/cjcmdelhtosvmwlm7jlc.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/02-Identidad y prop\u00f3sito de tu marca",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:39:57+00:00",
+      "bytes": 228463221,
+      "duration": 188
+    },
+    {
+      "public_id": "ljsduiwmj0yxsqgtbj9k",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778776887/ljsduiwmj0yxsqgtbj9k.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/09-M\u00fasica, efectos de sonido y control de audio",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:41:27+00:00",
+      "bytes": 242174921,
+      "duration": 344.033333
+    },
+    {
+      "public_id": "dft8um5tbsn6gnt9d5pv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778777065/dft8um5tbsn6gnt9d5pv.mp4",
+      "asset_folder": "NextFLGHTs/32-TORRE DE CONTROL DE TU MARCA EN INSTAGRAM/05-Feed que habla por ti",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:44:25+00:00",
+      "bytes": 264071688,
+      "duration": 217.177007
+    },
+    {
+      "public_id": "jvt4d8xabmzbxnqxgfih",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778777144/jvt4d8xabmzbxnqxgfih.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/11-Puerta de Presentaci\u00f3n de Servicios",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:45:44+00:00",
+      "bytes": 143006933,
+      "duration": 117.633333
+    },
+    {
+      "public_id": "gd6ltibsqlanpbqdepdz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778777291/gd6ltibsqlanpbqdepdz.mp4",
+      "asset_folder": "NextFLGHTs/34-TORRE DE EMBUDOS ESTRAT\u00c9GICOS/03-Embudo con lead magnet gu\u00eda, clase o checklist",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:48:11+00:00",
+      "bytes": 305770945,
+      "duration": 251.6
+    },
+    {
+      "public_id": "zqkesuaeyq6zy4nr8tah",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778777297/zqkesuaeyq6zy4nr8tah.mp4",
+      "asset_folder": "NextFLGHTs/36-TORRE DE CONTROL CREATIVA/06-Qu\u00e9 debes dominar para ser exitoso en el mundo de la viralidad",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:48:17+00:00",
+      "bytes": 195029418,
+      "duration": 159.666666
+    },
+    {
+      "public_id": "jauhs8auao8oygsdmy7h",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778777354/jauhs8auao8oygsdmy7h.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/03-Mitos sobre UGC",
+      "format": "mov",
+      "created_at": "2026-05-14T16:49:14+00:00",
+      "bytes": 305772267,
+      "duration": 203.290703
+    },
+    {
+      "public_id": "jjounbsnoqs4uaiff7eq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778777484/jjounbsnoqs4uaiff7eq.mp4",
+      "asset_folder": "NextFLGHTs/27-TORRE DE CONTROL DE EMAIL MARKETING/03-Ruta de Vuelo Emocional",
+      "format": "mp4",
+      "created_at": "2026-05-14T16:51:24+00:00",
+      "bytes": 322565850,
+      "duration": 265.5
+    },
+    {
+      "public_id": "bhk5asoxyodpeg9myrpx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778777994/bhk5asoxyodpeg9myrpx.mov",
+      "asset_folder": "NextFLGHTs/17-RUTINAS EN CASA/02-Dia 2 Gluteos y piernas",
+      "format": "mov",
+      "created_at": "2026-05-14T16:59:54+00:00",
+      "bytes": 407468530,
+      "duration": 396.550998
+    },
+    {
+      "public_id": "qgp43yd3uawqfelxnbqu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778778426/qgp43yd3uawqfelxnbqu.mov",
+      "asset_folder": "NextFLGHTs/40-DA VIDA A TU CLON/06-VOZ PROFESIONAL PARA NUESTRO AVATAR",
+      "format": "mov",
+      "created_at": "2026-05-14T17:07:06+00:00",
+      "bytes": 314277081,
+      "duration": 411.480816
+    },
+    {
+      "public_id": "cqov8fux5pqhgqbkk9cr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778778453/cqov8fux5pqhgqbkk9cr.mp4",
+      "asset_folder": "NextFLGHTs/32-TORRE DE CONTROL DE TU MARCA EN INSTAGRAM/02-Tu bio no es un resumen. Es un embudo",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:07:33+00:00",
+      "bytes": 168000182,
+      "duration": 138.166666
+    },
+    {
+      "public_id": "kq7ku1c03hcu6lt3uxcn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778778841/kq7ku1c03hcu6lt3uxcn.mp4",
+      "asset_folder": "NextFLGHTs/22-TORRE DE INFLUENCIA INVISIBLE/05-Cierres con dignidad",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:14:01+00:00",
+      "bytes": 292471853,
+      "duration": 240.606009
+    },
+    {
+      "public_id": "osvog4tyzi8ytwp40s97",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778778937/osvog4tyzi8ytwp40s97.mov",
+      "asset_folder": "NextFLGHTs/39-INTELIGENCIA ARTIFICIAL 2.0/06-\u00bfC\u00d3MO FUNCIONA AIRON",
+      "format": "mov",
+      "created_at": "2026-05-14T17:15:37+00:00",
+      "bytes": 241277258,
+      "duration": 534.500136
+    },
+    {
+      "public_id": "mpljwqanzw5dywrouvfq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779027/mpljwqanzw5dywrouvfq.mp4",
+      "asset_folder": "NextFLGHTs/28-UN MILLON DE VISTAS/03-C\u00f3mo crear la historia que conecta y retiene",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:17:07+00:00",
+      "bytes": 277873929,
+      "duration": 227.466666
+    },
+    {
+      "public_id": "u8awhpwsaauas2zc2fsz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779077/u8awhpwsaauas2zc2fsz.mp4",
+      "asset_folder": "NextFLGHTs/03-RUTA DE GPS INTERNO/08-Fin del GPS interno",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:17:57+00:00",
+      "bytes": 93940570,
+      "duration": 77.346009
+    },
+    {
+      "public_id": "naorsrb92wdi3usvehtw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779166/naorsrb92wdi3usvehtw.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/06-Lista de productos validados",
+      "format": "mov",
+      "created_at": "2026-05-14T17:19:26+00:00",
+      "bytes": 20510005,
+      "duration": 20.633333
+    },
+    {
+      "public_id": "n49xgklwuesuilnlvywn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779271/n49xgklwuesuilnlvywn.mp4",
+      "asset_folder": "NextFLGHTs/04-CABINA DE H\u00c1BITOS PODEROSOS/03-Frecuencia de vuelo energ\u00e9tica",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:21:11+00:00",
+      "bytes": 322796023,
+      "duration": 265.473991
+    },
+    {
+      "public_id": "ceni3aswyozo3amauhkh",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779398/ceni3aswyozo3amauhkh.mp4",
+      "asset_folder": "NextFLGHTs/19-TORRE DE RESISTENCIA F\u00cdSICA/02-Rutina para aumentar y tener unos glu\u0301teos grandes y bonitos",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:23:18+00:00",
+      "bytes": 74536509,
+      "duration": 781.839093
+    },
+    {
+      "public_id": "jauq3xsszqitbja0dwr5",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779453/jauq3xsszqitbja0dwr5.mp4",
+      "asset_folder": "NextFLGHTs/12-DESPEGA DISE\u00d1ANDO EN CANVA/04-Dise\u00f1a tu branding y exporta tus archivos",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:24:13+00:00",
+      "bytes": 592893818,
+      "duration": 1790.285011
+    },
+    {
+      "public_id": "xc4ulmbcrpy85dhlxqlw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779498/xc4ulmbcrpy85dhlxqlw.mp4",
+      "asset_folder": "NextFLGHTs/26-TORRE DE CREACI\u00d3N DE PRODUCTOS DIGITALES/05-Cabina de Creaci\u00f3n Manos a la obra",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:24:58+00:00",
+      "bytes": 394141811,
+      "duration": 324.433333
+    },
+    {
+      "public_id": "zdw89o9ifrllgqesnl5r",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779592/zdw89o9ifrllgqesnl5r.mov",
+      "asset_folder": "NextFLGHTs/39-INTELIGENCIA ARTIFICIAL 2.0/03-SALA DE IDEAS",
+      "format": "mov",
+      "created_at": "2026-05-14T17:26:32+00:00",
+      "bytes": 14554345,
+      "duration": 11.833333
+    },
+    {
+      "public_id": "yqcmycpgdhi7wtcph8zd",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779803/yqcmycpgdhi7wtcph8zd.mp4",
+      "asset_folder": "NextFLGHTs/22-TORRE DE INFLUENCIA INVISIBLE/02-Tu cuerpo tambi\u00e9n vende",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:30:03+00:00",
+      "bytes": 199801509,
+      "duration": 164.4
+    },
+    {
+      "public_id": "sp9knm8xpyczgebmnflm",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778779976/sp9knm8xpyczgebmnflm.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/11-PERSONALIZA TU TIENDA DE INFLUENCER",
+      "format": "mov",
+      "created_at": "2026-05-14T17:32:56+00:00",
+      "bytes": 22960671,
+      "duration": 67.314649
+    },
+    {
+      "public_id": "ujyl24xz4anpkd47bqra",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778780095/ujyl24xz4anpkd47bqra.mp4",
+      "asset_folder": "NextFLGHTs/12-DESPEGA DISE\u00d1ANDO EN CANVA/02-Formatos digitales y plantillas",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:34:55+00:00",
+      "bytes": 757386729,
+      "duration": 1595.966666
+    },
+    {
+      "public_id": "pvque3w1vxginyqzeshj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778780165/pvque3w1vxginyqzeshj.mp4",
+      "asset_folder": "NextFLGHTs/36-TORRE DE CONTROL CREATIVA/03-Nichos para ser viral",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:36:05+00:00",
+      "bytes": 470218971,
+      "duration": 258.23
+    },
+    {
+      "public_id": "smoi5ch0x3ogx4x4quhv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778780595/smoi5ch0x3ogx4x4quhv.mp4",
+      "asset_folder": "NextFLGHTs/26-TORRE DE CREACI\u00d3N DE PRODUCTOS DIGITALES/04-Organiza tu Producto como una Pro",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:43:15+00:00",
+      "bytes": 392050627,
+      "duration": 323.4
+    },
+    {
+      "public_id": "g1mzrmg1640gip4y2usp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778780614/g1mzrmg1640gip4y2usp.mp4",
+      "asset_folder": "NextFLGHTs/31-CABINA DE ORATORIA/05-La estructura del poder",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:43:34+00:00",
+      "bytes": 263699516,
+      "duration": 216.735011
+    },
+    {
+      "public_id": "x0jw2gyao5gaiqmdpntk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778780884/x0jw2gyao5gaiqmdpntk.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/02-Lectura Invisible",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:48:04+00:00",
+      "bytes": 281980755,
+      "duration": 232.333333
+    },
+    {
+      "public_id": "sthwbvuoe3itbnaeuc2d",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781031/sthwbvuoe3itbnaeuc2d.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/04-C\u00d3MO MANTENER LA CONVERSACI\u00d3N",
+      "format": "mov",
+      "created_at": "2026-05-14T17:50:31+00:00",
+      "bytes": 61900526,
+      "duration": 57.933333
+    },
+    {
+      "public_id": "edpu3i0htngd401t7rxj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781175/edpu3i0htngd401t7rxj.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/07-Reemplaza tu fondo",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:52:55+00:00",
+      "bytes": 182197022,
+      "duration": 262.233333
+    },
+    {
+      "public_id": "zrfcqzauqt4uacrbibtv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781258/zrfcqzauqt4uacrbibtv.mov",
+      "asset_folder": "NextFLGHTs/09-VENDE M\u00c1S CON IA/04-Efectos disruptivos",
+      "format": "mov",
+      "created_at": "2026-05-14T17:54:18+00:00",
+      "bytes": 606003146,
+      "duration": 611.961905
+    },
+    {
+      "public_id": "pg0sl1gtor6h9iftqfzp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781306/pg0sl1gtor6h9iftqfzp.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/05-Qu\u00e9 tipo de mente tienes",
+      "format": "mov",
+      "created_at": "2026-05-14T17:55:06+00:00",
+      "bytes": 280471585,
+      "duration": 247.2
+    },
+    {
+      "public_id": "ecgjzohmnff8sijxutv1",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781310/ecgjzohmnff8sijxutv1.mov",
+      "asset_folder": "NextFLGHTs/17-RUTINAS EN CASA/05-Dia 5 Booty + Core",
+      "format": "mov",
+      "created_at": "2026-05-14T17:55:10+00:00",
+      "bytes": 341981722,
+      "duration": 329.166667
+    },
+    {
+      "public_id": "xrukejcc591pchrt6tdx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781502/xrukejcc591pchrt6tdx.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/10-Nicho y Subnicho",
+      "format": "mov",
+      "created_at": "2026-05-14T17:58:22+00:00",
+      "bytes": 72345812,
+      "duration": 61.091701
+    },
+    {
+      "public_id": "cos6lcrbfrtr30blyje8",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781553/cos6lcrbfrtr30blyje8.mp4",
+      "asset_folder": "NextFLGHTs/30-MULTINIVEL EN LA TORRE CON PRESENCIA REAL/01-Tu historia es tu sistema",
+      "format": "mp4",
+      "created_at": "2026-05-14T17:59:13+00:00",
+      "bytes": 339220038,
+      "duration": 279.133333
+    },
+    {
+      "public_id": "qxzau4ixxkoh7hjul0zk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781615/qxzau4ixxkoh7hjul0zk.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/05-EL CAMINO DEL H\u00c9ROE",
+      "format": "mov",
+      "created_at": "2026-05-14T18:00:15+00:00",
+      "bytes": 42081662,
+      "duration": 47.166667
+    },
+    {
+      "public_id": "dwq3rqgzjhazf192skmt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781736/dwq3rqgzjhazf192skmt.mp4",
+      "asset_folder": "NextFLGHTs/33-PUERTA DE EMBARQUE A LA FACTURACI\u00d3N CON RETOS/05-Post-reto donde realmente se factura",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:02:16+00:00",
+      "bytes": 236935410,
+      "duration": 194.966666
+    },
+    {
+      "public_id": "zdulapbywd7rhtvghqvc",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781832/zdulapbywd7rhtvghqvc.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/08-Encuentra tu nicho sin perder tu esencia",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:03:52+00:00",
+      "bytes": 338633946,
+      "duration": 278.64
+    },
+    {
+      "public_id": "u7w8ffjva9rcbllu1jrn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778781888/u7w8ffjva9rcbllu1jrn.mp4",
+      "asset_folder": "NextFLGHTs/25-TU RUTA DE VUELO COMO COMMUNITY MANAGER AZ/03-Hangar de Crecimiento de Marca",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:04:48+00:00",
+      "bytes": 158095746,
+      "duration": 130.148005
+    },
+    {
+      "public_id": "wb1c3ofpqbwqxovxkccr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778782127/wb1c3ofpqbwqxovxkccr.mp4",
+      "asset_folder": "NextFLGHTs/27-TORRE DE CONTROL DE EMAIL MARKETING/08-Fin de m\u00f3dulo",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:08:47+00:00",
+      "bytes": 39442654,
+      "duration": 35.109002
+    },
+    {
+      "public_id": "hzggncnrzpytdb1rqseq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778782201/hzggncnrzpytdb1rqseq.mp4",
+      "asset_folder": "NextFLGHTs/23-DESPEGA EN META ADS/01-La base para empezar",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:10:01+00:00",
+      "bytes": 104600706,
+      "duration": 661.211995
+    },
+    {
+      "public_id": "elppar8nfgajqgrilaui",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778782314/elppar8nfgajqgrilaui.mov",
+      "asset_folder": "NextFLGHTs/05-RUTA DE BEACONS/04-Beacons Pro",
+      "format": "mov",
+      "created_at": "2026-05-14T18:11:54+00:00",
+      "bytes": 26403470,
+      "duration": 137.1
+    },
+    {
+      "public_id": "zup7wirdul5vkrhbfwcx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778782574/zup7wirdul5vkrhbfwcx.mp4",
+      "asset_folder": "NextFLGHTs/22-TORRE DE INFLUENCIA INVISIBLE/04-Presencia digital",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:16:14+00:00",
+      "bytes": 207618987,
+      "duration": 170.866666
+    },
+    {
+      "public_id": "of2qstlosoo6sqifi2ww",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778782629/of2qstlosoo6sqifi2ww.mov",
+      "asset_folder": "NextFLGHTs/09-VENDE M\u00c1S CON IA/07-Producci\u00f3n del anuncio animado parte 2",
+      "format": "mov",
+      "created_at": "2026-05-14T18:17:09+00:00",
+      "bytes": 505483610,
+      "duration": 585.932336
+    },
+    {
+      "public_id": "uitmhuoe13xy2funpnfk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778782643/uitmhuoe13xy2funpnfk.mp4",
+      "asset_folder": "NextFLGHTs/21-TORRE ESTRAT\u00c9GICA DE LA VENTA PROFESIONAL/08-Tu Energ\u00eda es tu Precio",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:17:23+00:00",
+      "bytes": 326026819,
+      "duration": 268.2
+    },
+    {
+      "public_id": "nnwwfjl0ris9dzyhowjx",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778782957/nnwwfjl0ris9dzyhowjx.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/01-BIENVENIDA",
+      "format": "mov",
+      "created_at": "2026-05-14T18:22:37+00:00",
+      "bytes": 95360757,
+      "duration": 79.667664
+    },
+    {
+      "public_id": "shle0ak7iamksbfsfuac",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778782971/shle0ak7iamksbfsfuac.mp4",
+      "asset_folder": "NextFLGHTs/18-COMO FUNCIONAN LAS REDES SOCIALES/02-\u00bfSeguidor o cliente",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:22:51+00:00",
+      "bytes": 409814908,
+      "duration": 335.466666
+    },
+    {
+      "public_id": "ctmqh74tmhhvzlyeer1x",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778783148/ctmqh74tmhhvzlyeer1x.mov",
+      "asset_folder": "NextFLGHTs/24-CENTRO DE CONTROL MANYCHAT/07-Planes de pago",
+      "format": "mov",
+      "created_at": "2026-05-14T18:25:48+00:00",
+      "bytes": 23019960,
+      "duration": 152.333333
+    },
+    {
+      "public_id": "z5koyfsqj9wbvm4saaxs",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778783282/z5koyfsqj9wbvm4saaxs.mov",
+      "asset_folder": "NextFLGHTs/39-INTELIGENCIA ARTIFICIAL 2.0/02-PRE-VUELO DE TU CLON",
+      "format": "mov",
+      "created_at": "2026-05-14T18:28:02+00:00",
+      "bytes": 259403715,
+      "duration": 211.324807
+    },
+    {
+      "public_id": "ahd3skodc2mlgml83bv4",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778783441/ahd3skodc2mlgml83bv4.mov",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/01-Bienvenida",
+      "format": "mov",
+      "created_at": "2026-05-14T18:30:41+00:00",
+      "bytes": 129394160,
+      "duration": 104.033333
+    },
+    {
+      "public_id": "yecg9fcwiywg4vwqdfwr",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778783681/yecg9fcwiywg4vwqdfwr.mp4",
+      "asset_folder": "NextFLGHTs/36-TORRE DE CONTROL CREATIVA/07-Tomar responsabilidad real",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:34:41+00:00",
+      "bytes": 321624602,
+      "duration": 263.533333
+    },
+    {
+      "public_id": "uins0wicv2btfu5zixw6",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778783743/uins0wicv2btfu5zixw6.mp4",
+      "asset_folder": "NextFLGHTs/20-SALA VIP DE LAS VENTAS ESTRAT\u00c9GICAS/06-Seducci\u00f3n de Marca",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:35:43+00:00",
+      "bytes": 307374963,
+      "duration": 256.233333
+    },
+    {
+      "public_id": "kjkkzdoyrdpxulh96sih",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778783788/kjkkzdoyrdpxulh96sih.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/10-Videos de stock c\u00f3mo usarlos bien",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:36:28+00:00",
+      "bytes": 122915426,
+      "duration": 177.033333
+    },
+    {
+      "public_id": "tsyscofkkwckc7pj6m1z",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778783921/tsyscofkkwckc7pj6m1z.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/10-C\u00f3mo hablar en c\u00e1mara con confianza",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:38:41+00:00",
+      "bytes": 388208467,
+      "duration": 319.4
+    },
+    {
+      "public_id": "pbz7fuq3rnmciz4udsaz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778783972/pbz7fuq3rnmciz4udsaz.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/10-Tu primer video UGC",
+      "format": "mov",
+      "created_at": "2026-05-14T18:39:32+00:00",
+      "bytes": 211193916,
+      "duration": 140.527166
+    },
+    {
+      "public_id": "plvmsx50v90wu0dyjea4",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778783976/plvmsx50v90wu0dyjea4.mov",
+      "asset_folder": "NextFLGHTs/43-CONECTA Y VENDE CON TIKTOK LIVE/07-PRESENCIA FRENTE A C\u00c1MARA",
+      "format": "mov",
+      "created_at": "2026-05-14T18:39:36+00:00",
+      "bytes": 27848276,
+      "duration": 30.166667
+    },
+    {
+      "public_id": "arydc2myedbykel9tdsq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778784011/arydc2myedbykel9tdsq.mp4",
+      "asset_folder": "NextFLGHTs/23-DESPEGA EN META ADS/03-Midamos los resultados y optimicemos",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:40:11+00:00",
+      "bytes": 46703677,
+      "duration": 489.383991
+    },
+    {
+      "public_id": "foqxnvzlvdlwmnj1o0ys",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778784073/foqxnvzlvdlwmnj1o0ys.mp4",
+      "asset_folder": "NextFLGHTs/34-TORRE DE EMBUDOS ESTRAT\u00c9GICOS/02-El recorrido de un cliente desde que te ve hasta que compra",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:41:13+00:00",
+      "bytes": 347611324,
+      "duration": 286.000998
+    },
+    {
+      "public_id": "mkr2gr0whn8wdjcuzcdz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778784077/mkr2gr0whn8wdjcuzcdz.mov",
+      "asset_folder": "NextFLGHTs/06-SALA DE EMBARQUE STAN STORE/01-Crea una cuenta en Stan store",
+      "format": "mov",
+      "created_at": "2026-05-14T18:41:17+00:00",
+      "bytes": 14797678,
+      "duration": 133.908005
+    },
+    {
+      "public_id": "j4ly23nplpjclohiaro8",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778784774/j4ly23nplpjclohiaro8.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/19-Compra de prueba",
+      "format": "mp4",
+      "created_at": "2026-05-14T18:52:54+00:00",
+      "bytes": 49968795,
+      "duration": 158.3
+    },
+    {
+      "public_id": "zoebtz50botzzk31zum2",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778785512/zoebtz50botzzk31zum2.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/03-Creaci\u00f3n de cuenta y datos personales",
+      "format": "mov",
+      "created_at": "2026-05-14T19:05:12+00:00",
+      "bytes": 127760089,
+      "duration": 368.89542
+    },
+    {
+      "public_id": "vlxaha0thkzkldf05lkt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778785584/vlxaha0thkzkldf05lkt.mp4",
+      "asset_folder": "NextFLGHTs/31-CABINA DE ORATORIA/01-Introducci\u00f3n",
+      "format": "mp4",
+      "created_at": "2026-05-14T19:06:24+00:00",
+      "bytes": 130826414,
+      "duration": 112
+    },
+    {
+      "public_id": "voourtpftmlysqcdnvs0",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778785695/voourtpftmlysqcdnvs0.mp4",
+      "asset_folder": "NextFLGHTs/01-\u00a1BIENVENIDOS A BORDO!/02-Introduccion",
+      "format": "mp4",
+      "created_at": "2026-05-14T19:08:15+00:00",
+      "bytes": 168234911,
+      "duration": 142.9
+    },
+    {
+      "public_id": "kp4patdxhmznjt2wfvtw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778785988/kp4patdxhmznjt2wfvtw.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/08-\u00bfQui\u00e9n te dijeron que eres",
+      "format": "mov",
+      "created_at": "2026-05-14T19:13:08+00:00",
+      "bytes": 207930110,
+      "duration": 199.366667
+    },
+    {
+      "public_id": "txt0mdcllskpql6pfhnw",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778786373/txt0mdcllskpql6pfhnw.mp4",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/13-C\u00f3mo hacer tu portafolio PARTE 2",
+      "format": "mp4",
+      "created_at": "2026-05-14T19:19:33+00:00",
+      "bytes": 241778080,
+      "duration": 427.689002
+    },
+    {
+      "public_id": "wdro3rdonxui3dj8yllz",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778786415/wdro3rdonxui3dj8yllz.mov",
+      "asset_folder": "NextFLGHTs/11-EDICI\u00d3N EN CAPCUT AVANZADO/13-CIERRE",
+      "format": "mov",
+      "created_at": "2026-05-14T19:20:15+00:00",
+      "bytes": 70073128,
+      "duration": 65.201633
+    },
+    {
+      "public_id": "nxgqny9oemgrrwmlioxb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778786481/nxgqny9oemgrrwmlioxb.mov",
+      "asset_folder": "NextFLGHTs/06-SALA DE EMBARQUE STAN STORE/05-Klarna y Afterpay",
+      "format": "mov",
+      "created_at": "2026-05-14T19:21:21+00:00",
+      "bytes": 10676981,
+      "duration": 87.266667
+    },
+    {
+      "public_id": "esdhnw3m7lngjvvanczj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778786793/esdhnw3m7lngjvvanczj.mp4",
+      "asset_folder": "NextFLGHTs/36-TORRE DE CONTROL CREATIVA/09-Deja de prepararte y empieza a vender hoy",
+      "format": "mp4",
+      "created_at": "2026-05-14T19:26:33+00:00",
+      "bytes": 309105282,
+      "duration": 252.935011
+    },
+    {
+      "public_id": "vqe9iu2fgm1wsnuq1wcu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778787126/vqe9iu2fgm1wsnuq1wcu.mov",
+      "asset_folder": "NextFLGHTs/42-MONETIZA CON AMAZON/14-ACTIVA TUS GANANCIAS INTERNACIONALES",
+      "format": "mov",
+      "created_at": "2026-05-14T19:32:06+00:00",
+      "bytes": 38684268,
+      "duration": 96.687891
+    },
+    {
+      "public_id": "czuf6lbshftzaxabjwld",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778787290/czuf6lbshftzaxabjwld.mp4",
+      "asset_folder": "NextFLGHTs/28-UN MILLON DE VISTAS/02-Los ganchos y tipos de ganchos",
+      "format": "mp4",
+      "created_at": "2026-05-14T19:34:50+00:00",
+      "bytes": 355149395,
+      "duration": 290.97
+    },
+    {
+      "public_id": "lu42diklofbbhdjjsedt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778787456/lu42diklofbbhdjjsedt.mp4",
+      "asset_folder": "NextFLGHTs/32-TORRE DE CONTROL DE TU MARCA EN INSTAGRAM/08-Mensajes que convierten en conversaciones reales",
+      "format": "mp4",
+      "created_at": "2026-05-14T19:37:36+00:00",
+      "bytes": 230622970,
+      "duration": 189.7
+    },
+    {
+      "public_id": "vscfy3cjsndwgeyf0mhs",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778787488/vscfy3cjsndwgeyf0mhs.mp4",
+      "asset_folder": "NextFLGHTs/26-TORRE DE CREACI\u00d3N DE PRODUCTOS DIGITALES/06-Activa tu Sistema de Ventas",
+      "format": "mp4",
+      "created_at": "2026-05-14T19:38:08+00:00",
+      "bytes": 382467501,
+      "duration": 314.608005
+    },
+    {
+      "public_id": "lnottu2kxgc1wh4ivsgs",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778787773/lnottu2kxgc1wh4ivsgs.mov",
+      "asset_folder": "NextFLGHTs/17-RUTINAS EN CASA/04-Dia 4 Upper Body",
+      "format": "mov",
+      "created_at": "2026-05-14T19:42:53+00:00",
+      "bytes": 413125385,
+      "duration": 398.548005
+    },
+    {
+      "public_id": "qhcm1l6q9ijtltdcgudf",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778787818/qhcm1l6q9ijtltdcgudf.mp4",
+      "asset_folder": "NextFLGHTs/35-FORMATOS DE GRABACI\u00d3N/02-Formato hablando a c\u00e1mara",
+      "format": "mp4",
+      "created_at": "2026-05-14T19:43:38+00:00",
+      "bytes": 176772859,
+      "duration": 144.8
+    },
+    {
+      "public_id": "iuvsqdoowvdthfjdyekv",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778788001/iuvsqdoowvdthfjdyekv.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/02-\u00bfQu\u00e9 es Hotmart",
+      "format": "mov",
+      "created_at": "2026-05-14T19:46:41+00:00",
+      "bytes": 112489122,
+      "duration": 95.782313
+    },
+    {
+      "public_id": "wvytdqebxgpnk13idtr7",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778788096/wvytdqebxgpnk13idtr7.mp4",
+      "asset_folder": "NextFLGHTs/12-DESPEGA DISE\u00d1ANDO EN CANVA/01-Pimeros pasos en Canva",
+      "format": "mp4",
+      "created_at": "2026-05-14T19:48:16+00:00",
+      "bytes": 476332010,
+      "duration": 1443.933333
+    },
+    {
+      "public_id": "jowm9jp1htjvddtdizpb",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778788956/jowm9jp1htjvddtdizpb.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/13-Correos en systeme",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:02:36+00:00",
+      "bytes": 51520701,
+      "duration": 87.733333
+    },
+    {
+      "public_id": "xelba0bsbxczbzielm2r",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778789068/xelba0bsbxczbzielm2r.mp4",
+      "asset_folder": "NextFLGHTs/07-PASARELA DE SYSTEM.IO/07-Crea tu gu\u00eda gratis",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:04:28+00:00",
+      "bytes": 64986968,
+      "duration": 178.566666
+    },
+    {
+      "public_id": "wprjm0znvi2epk72im3g",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778790370/wprjm0znvi2epk72im3g.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/28-UGC sin limites",
+      "format": "mov",
+      "created_at": "2026-05-14T20:26:10+00:00",
+      "bytes": 227139810,
+      "duration": 148.886349
+    },
+    {
+      "public_id": "xshhbkleqckabcf0n5zk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778790393/xshhbkleqckabcf0n5zk.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/07-Reemplaza la critica por curiosidad",
+      "format": "mov",
+      "created_at": "2026-05-14T20:26:33+00:00",
+      "bytes": 220877620,
+      "duration": 209.9
+    },
+    {
+      "public_id": "zgwyr6q6lkmsbhfh5nsn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778790615/zgwyr6q6lkmsbhfh5nsn.mp4",
+      "asset_folder": "NextFLGHTs/01-\u00a1BIENVENIDOS A BORDO!/03-Mi historia",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:30:15+00:00",
+      "bytes": 224603742,
+      "duration": 189.366666
+    },
+    {
+      "public_id": "wclhu3ewbt0sphgsfjow",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778790871/wclhu3ewbt0sphgsfjow.mp4",
+      "asset_folder": "NextFLGHTs/22-TORRE DE INFLUENCIA INVISIBLE/06-Reprogramaci\u00f3n de autoridad interna",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:34:31+00:00",
+      "bytes": 288897348,
+      "duration": 237.833333
+    },
+    {
+      "public_id": "ejof3kd5xsdjvtov6z8d",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778790930/ejof3kd5xsdjvtov6z8d.mov",
+      "asset_folder": "NextFLGHTs/40-DA VIDA A TU CLON/08-EMPIEZA A GENERAR",
+      "format": "mov",
+      "created_at": "2026-05-14T20:35:30+00:00",
+      "bytes": 289515335,
+      "duration": 269.119274
+    },
+    {
+      "public_id": "kgbnhqeuywme2efbcp4s",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778790968/kgbnhqeuywme2efbcp4s.mov",
+      "asset_folder": "NextFLGHTs/09-VENDE M\u00c1S CON IA/03-Tu anuncio listo",
+      "format": "mov",
+      "created_at": "2026-05-14T20:36:08+00:00",
+      "bytes": 312192850,
+      "duration": 302.16127
+    },
+    {
+      "public_id": "xcdyz4h8exdboupbah6o",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778791010/xcdyz4h8exdboupbah6o.mp4",
+      "asset_folder": "NextFLGHTs/20-SALA VIP DE LAS VENTAS ESTRAT\u00c9GICAS/03-Vende sin Vender en Primera Clase",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:36:50+00:00",
+      "bytes": 313112916,
+      "duration": 258
+    },
+    {
+      "public_id": "oxigetjsitbf9tsot3gs",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778791048/oxigetjsitbf9tsot3gs.mp4",
+      "asset_folder": "NextFLGHTs/34-TORRE DE EMBUDOS ESTRAT\u00c9GICOS/05-Qu\u00e9 decir en cada etapa del embudo",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:37:28+00:00",
+      "bytes": 305747940,
+      "duration": 251.541995
+    },
+    {
+      "public_id": "btpv27nbkawuwxofd8un",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778791142/btpv27nbkawuwxofd8un.mov",
+      "asset_folder": "NextFLGHTs/24-CENTRO DE CONTROL MANYCHAT/06-Plantillas en ManyChat",
+      "format": "mov",
+      "created_at": "2026-05-14T20:39:02+00:00",
+      "bytes": 19399502,
+      "duration": 104.933333
+    },
+    {
+      "public_id": "y3lgy9qt89p15esnpgmd",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778791332/y3lgy9qt89p15esnpgmd.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/04-Elementos visuales y energ\u00e9ticos de tu marca",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:42:12+00:00",
+      "bytes": 321783372,
+      "duration": 264.7
+    },
+    {
+      "public_id": "ai6thfz9y7j2gznaoqnt",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778791342/ai6thfz9y7j2gznaoqnt.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/09-Organiza tu contenido semanal",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:42:22+00:00",
+      "bytes": 343928375,
+      "duration": 282.936009
+    },
+    {
+      "public_id": "scnutqusuoe9s2bi8go7",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778791504/scnutqusuoe9s2bi8go7.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/17-C\u00f3mo encontrar marcas",
+      "format": "mov",
+      "created_at": "2026-05-14T20:45:04+00:00",
+      "bytes": 361851583,
+      "duration": 356.681723
+    },
+    {
+      "public_id": "qkssn4j8akuth3n4cgbj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778791578/qkssn4j8akuth3n4cgbj.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/04-Asi se ve la APP en tu celular",
+      "format": "mov",
+      "created_at": "2026-05-14T20:46:18+00:00",
+      "bytes": 35810409,
+      "duration": 104.025397
+    },
+    {
+      "public_id": "mczdrezvokqqcavjpbfj",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778791902/mczdrezvokqqcavjpbfj.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/07-Hangar de Errores Fatales de Marca",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:51:42+00:00",
+      "bytes": 431063570,
+      "duration": 354.733333
+    },
+    {
+      "public_id": "f5cmrni1xsvcgnxh9khh",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778791964/f5cmrni1xsvcgnxh9khh.mov",
+      "asset_folder": "NextFLGHTs/41-MONETIZA CON HOTMART/05-Conoce el mercado de afiliaci\u00f3n, selecci\u00f3n de productos y Hotlinks de divulgaci\u00f3",
+      "format": "mov",
+      "created_at": "2026-05-14T20:52:44+00:00",
+      "bytes": 390337391,
+      "duration": 974.657596
+    },
+    {
+      "public_id": "orw5exk4r8r26ebunecq",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778792116/orw5exk4r8r26ebunecq.mp4",
+      "asset_folder": "NextFLGHTs/19-TORRE DE RESISTENCIA F\u00cdSICA/01-Ejercicios para Bajar de Peso y Tonificar R\u00e1pido en Casa",
+      "format": "mp4",
+      "created_at": "2026-05-14T20:55:16+00:00",
+      "bytes": 92458986,
+      "duration": 769.068118
+    },
+    {
+      "public_id": "invpuonagea6svo2fo0g",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778792578/invpuonagea6svo2fo0g.mov",
+      "asset_folder": "NextFLGHTs/39-INTELIGENCIA ARTIFICIAL 2.0/07-VUELA M\u00c1S ALTO CON FREEPIK",
+      "format": "mov",
+      "created_at": "2026-05-14T21:02:58+00:00",
+      "bytes": 441505624,
+      "duration": 1036.190476
+    },
+    {
+      "public_id": "etfdmtme0vs2hxlemtmo",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778792725/etfdmtme0vs2hxlemtmo.mp4",
+      "asset_folder": "NextFLGHTs/03-RUTA DE GPS INTERNO/04-Maneja tu mente antes de que te maneje a ti",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:05:25+00:00",
+      "bytes": 276420272,
+      "duration": 227.266666
+    },
+    {
+      "public_id": "shqqnhrlvktzb0m9hukp",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778792760/shqqnhrlvktzb0m9hukp.mov",
+      "asset_folder": "NextFLGHTs/13-ZONA DE REPROGRAMACI\u00d3N MENTAL/02-Tu mente no quiere que actues",
+      "format": "mov",
+      "created_at": "2026-05-14T21:06:00+00:00",
+      "bytes": 240712691,
+      "duration": 211.835011
+    },
+    {
+      "public_id": "moxjvjdqa6bmippu51ci",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778792844/moxjvjdqa6bmippu51ci.mp4",
+      "asset_folder": "NextFLGHTs/34-TORRE DE EMBUDOS ESTRAT\u00c9GICOS/01-Qu\u00e9 es un embudo de ventas y por qu\u00e9 necesitas uno",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:07:24+00:00",
+      "bytes": 228491187,
+      "duration": 188
+    },
+    {
+      "public_id": "qbvl6ljbjxepblqamz50",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778793350/qbvl6ljbjxepblqamz50.mp4",
+      "asset_folder": "NextFLGHTs/10-DESPEGA CON CAPCUT/08-Filtros y ajustes visuales",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:15:50+00:00",
+      "bytes": 285326002,
+      "duration": 409.433333
+    },
+    {
+      "public_id": "khevvcppsesbflxucf8m",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778793509/khevvcppsesbflxucf8m.mov",
+      "asset_folder": "NextFLGHTs/38-MONETIZA CON UGC/27-C\u00f3mo recibir tus pagos",
+      "format": "mov",
+      "created_at": "2026-05-14T21:18:29+00:00",
+      "bytes": 261054729,
+      "duration": 171.525805
+    },
+    {
+      "public_id": "zzfqoik21mcnsuorxo7t",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778793597/zzfqoik21mcnsuorxo7t.mp4",
+      "asset_folder": "NextFLGHTs/26-TORRE DE CREACI\u00d3N DE PRODUCTOS DIGITALES/02-Visi\u00f3n Estrat\u00e9gica Tu producto debe transformar algo",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:19:57+00:00",
+      "bytes": 211584534,
+      "duration": 174.033991
+    },
+    {
+      "public_id": "rf0snf9y3q2fird7ypbk",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778793688/rf0snf9y3q2fird7ypbk.mp4",
+      "asset_folder": "NextFLGHTs/28-UN MILLON DE VISTAS/01-4 pasos para crear un gui\u00f3n",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:21:28+00:00",
+      "bytes": 360096077,
+      "duration": 295
+    },
+    {
+      "public_id": "tfii9zrrrocheforkltd",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778793768/tfii9zrrrocheforkltd.mp4",
+      "asset_folder": "NextFLGHTs/22-TORRE DE INFLUENCIA INVISIBLE/07-Cabina de cierre interno",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:22:48+00:00",
+      "bytes": 323447355,
+      "duration": 266.133333
+    },
+    {
+      "public_id": "fgsabd3gm50fy55jmt9b",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778793870/fgsabd3gm50fy55jmt9b.mp4",
+      "asset_folder": "NextFLGHTs/28-UN MILLON DE VISTAS/04-C\u00f3mo crear una moraleja que venda y posicione",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:24:30+00:00",
+      "bytes": 325637380,
+      "duration": 266.681995
+    },
+    {
+      "public_id": "zuflcamavxliiirpajak",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778793899/zuflcamavxliiirpajak.mp4",
+      "asset_folder": "NextFLGHTs/31-CABINA DE ORATORIA/04-Articular como arte",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:24:59+00:00",
+      "bytes": 271908968,
+      "duration": 223.666666
+    },
+    {
+      "public_id": "rq6r8fmn3wagcw5wfqtn",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778793931/rq6r8fmn3wagcw5wfqtn.mp4",
+      "asset_folder": "NextFLGHTs/30-MULTINIVEL EN LA TORRE CON PRESENCIA REAL/09-No reclutas. Proyectas",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:25:31+00:00",
+      "bytes": 218254373,
+      "duration": 179.533333
+    },
+    {
+      "public_id": "vcgnny7tzjdwvd4iljis",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778794038/vcgnny7tzjdwvd4iljis.mp4",
+      "asset_folder": "NextFLGHTs/16-PUERTA DE EMBARQUE DE TU MARCA/06-Despegue Magn\u00e9tico Vende con tu Marca",
+      "format": "mp4",
+      "created_at": "2026-05-14T21:27:18+00:00",
+      "bytes": 461034707,
+      "duration": 379.333333
+    },
+    {
+      "public_id": "g3wgzxj2nmhlnoptby8o",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778794295/g3wgzxj2nmhlnoptby8o.mov",
+      "asset_folder": "NextFLGHTs/08-VUELA M\u00c1S R\u00c1PIDO CON IA/02-\u00bfQu\u00e9 es la inteligencia artificial y por qu\u00e9 est\u00e1 revolucionando los negocios",
+      "format": "mov",
+      "created_at": "2026-05-14T21:31:35+00:00",
+      "bytes": 809369306,
+      "duration": 298.259002
+    },
+    {
+      "public_id": "fmiv1vbt944tnd1obwbu",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778794428/fmiv1vbt944tnd1obwbu.mov",
+      "asset_folder": "NextFLGHTs/09-VENDE M\u00c1S CON IA/02-Creaci\u00f3n de anuncio",
+      "format": "mov",
+      "created_at": "2026-05-14T21:33:48+00:00",
+      "bytes": 475201863,
+      "duration": 393.555011
+    },
+    {
+      "public_id": "xrbeyc3soaosal4d4aru",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778795687/xrbeyc3soaosal4d4aru.mov",
+      "asset_folder": "NextFLGHTs/29-RUTINAS EN GYM/04-Dia 4 Tren superior + abdominales",
+      "format": "mov",
+      "created_at": "2026-05-14T21:54:47+00:00",
+      "bytes": 1981706210,
+      "duration": 507.9
+    },
+    {
+      "public_id": "isfxsxiz0m1vuxgicyda",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778796313/isfxsxiz0m1vuxgicyda.mp4",
+      "asset_folder": "NextFLGHTs/27-TORRE DE CONTROL DE EMAIL MARKETING/02-Pasaporte de Atracci\u00f3n",
+      "format": "mp4",
+      "created_at": "2026-05-14T22:05:13+00:00",
+      "bytes": 321460000,
+      "duration": 264.5
+    },
+    {
+      "public_id": "qoo7hbsbhxxqgrblgu2b",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778796446/qoo7hbsbhxxqgrblgu2b.mp4",
+      "asset_folder": "NextFLGHTs/03-RUTA DE GPS INTERNO/01-Cuando tu mente no descansa tu vida se detiene",
+      "format": "mp4",
+      "created_at": "2026-05-14T22:07:26+00:00",
+      "bytes": 513986631,
+      "duration": 424.466666
+    },
+    {
+      "public_id": "qbr1touyevkqgmixwi64",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778809046/qbr1touyevkqgmixwi64.mp4",
+      "asset_folder": "NextFLGHTs/29-RUTINAS EN GYM/03-Dia 3 Core + Cardio HIT",
+      "format": "mp4",
+      "created_at": "2026-05-15T01:37:26+00:00",
+      "bytes": 1279901027,
+      "duration": 408.95
+    },
+    {
+      "public_id": "a2jqdfrvbmxuapm6e6ex",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778809102/a2jqdfrvbmxuapm6e6ex.mp4",
+      "asset_folder": "NextFLGHTs/29-RUTINAS EN GYM/02-Dia 2 Tren superior y abdominales",
+      "format": "mp4",
+      "created_at": "2026-05-15T01:38:22+00:00",
+      "bytes": 1290817496,
+      "duration": 577.866667
+    },
+    {
+      "public_id": "quwf4ynq7kskhzqqecl3",
+      "secure_url": "https://res.cloudinary.com/dwp64dtwa/video/upload/v1778809189/quwf4ynq7kskhzqqecl3.mp4",
+      "asset_folder": "NextFLGHTs/29-RUTINAS EN GYM/05-Dia 5 Gluteos",
+      "format": "mp4",
+      "created_at": "2026-05-15T01:39:49+00:00",
+      "bytes": 1409508229,
+      "duration": 449.633333
+    }
+  ]
+}

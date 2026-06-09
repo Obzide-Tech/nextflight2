@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build:web",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "destination": "https://jfmslfjkltclkldgzpil.supabase.co/functions/v1/well-known/apple-app-site-association"
+    },
+    {
+      "source": "/.well-known/assetlinks.json",
+      "destination": "https://jfmslfjkltclkldgzpil.supabase.co/functions/v1/well-known/assetlinks.json"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,666 @@
+import { useEffect, useRef, useState } from 'react';
+import { View, Text, StyleSheet, Pressable, ActivityIndicator, Platform, ScrollView, useWindowDimensions } from 'react-native';
+import { StatusPill } from '@/components/admin/StatusPill';
+import {
+  fetchProgramsAdmin,
+  fetchCoursesByProgram,
+  fetchModulesByCourse,
+  fetchLessonsByModule,
+  getUploadSignature,
+  updateLessonVideoUrl,
+} from '@/lib/admin';
+import { isCloudinaryUrl } from '@/lib/cloudinary';
+import { colors, fonts, fontSize, spacing, radius } from '@/theme/tokens';
+import { ChevronRight, ChevronLeft, Upload, CircleCheck as Check, Film, BookOpen, Layers, CirclePlay as PlayCircle, GraduationCap } from 'lucide-react-native';
+
+const MAX_SIZE_BYTES = 2 * 1024 * 1024 * 1024;
+
+type ColumnConfig = { title: string; icon: any; count: number };
+
+type MobileStep = 'programs' | 'courses' | 'modules' | 'lessons';
+
+export default function ContentAdmin() {
+  const { width } = useWindowDimensions();
+  const isMobile = width < 768;
+
+  const [programs, setPrograms] = useState<any[]>([]);
+  const [selectedProgram, setSelectedProgram] = useState<string | null>(null);
+  const [courses, setCourses] = useState<any[]>([]);
+  const [selectedCourse, setSelectedCourse] = useState<string | null>(null);
+  const [modules, setModules] = useState<any[]>([]);
+  const [selectedModule, setSelectedModule] = useState<string | null>(null);
+  const [lessons, setLessons] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  const [mobileStep, setMobileStep] = useState<MobileStep>('programs');
+
+  const [uploadingLessonId, setUploadingLessonId] = useState<string | null>(null);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [uploadError, setUploadError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    (async () => {
+      const p = await fetchProgramsAdmin();
+      setPrograms(p);
+      if (p[0]) setSelectedProgram(p[0].id);
+      setLoading(false);
+    })();
+  }, []);
+
+  useEffect(() => {
+    if (!selectedProgram) return;
+    (async () => {
+      const c = await fetchCoursesByProgram(selectedProgram);
+      setCourses(c);
+      setSelectedCourse(c[0]?.id ?? null);
+    })();
+  }, [selectedProgram]);
+
+  useEffect(() => {
+    if (!selectedCourse) { setModules([]); setSelectedModule(null); return; }
+    (async () => {
+      const m = await fetchModulesByCourse(selectedCourse);
+      setModules(m);
+      setSelectedModule(m[0]?.id ?? null);
+    })();
+  }, [selectedCourse]);
+
+  useEffect(() => {
+    if (!selectedModule) { setLessons([]); return; }
+    (async () => {
+      const l = await fetchLessonsByModule(selectedModule);
+      setLessons(l);
+    })();
+  }, [selectedModule]);
+
+  const triggerUpload = (lessonId: string) => {
+    if (Platform.OS !== 'web') return;
+    setUploadingLessonId(lessonId);
+    setUploadError(null);
+    setUploadProgress(0);
+    fileInputRef.current?.click();
+  };
+
+  const handleFileSelected = async (e: any) => {
+    const file = e.target?.files?.[0];
+    if (!file || !uploadingLessonId) return;
+
+    if (file.size > MAX_SIZE_BYTES) {
+      setUploadError('Archivo excede 2 GB (límite de Cloudinary)');
+      setUploadingLessonId(null);
+      return;
+    }
+
+    try {
+      const sig = await getUploadSignature({ folder: 'NextFLGHTs', resource_type: 'video' });
+      if (!sig.ok) {
+        setUploadError(sig.error ?? 'Error getting signature');
+        setUploadingLessonId(null);
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('api_key', sig.api_key);
+      formData.append('timestamp', String(sig.timestamp));
+      formData.append('signature', sig.signature);
+      formData.append('folder', sig.folder);
+      if (sig.eager) formData.append('eager', sig.eager);
+      if (sig.eager_async) formData.append('eager_async', sig.eager_async);
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', sig.upload_url);
+      xhr.upload.onprogress = (ev) => {
+        if (ev.lengthComputable) setUploadProgress(Math.round((ev.loaded / ev.total) * 100));
+      };
+      xhr.onload = async () => {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          const result = JSON.parse(xhr.responseText);
+          const cloudinaryUrl = result.secure_url || result.url;
+          if (!cloudinaryUrl) {
+            setUploadError('Cloudinary no retornó una URL válida');
+            setUploadingLessonId(null);
+            return;
+          }
+          await updateLessonVideoUrl(uploadingLessonId, cloudinaryUrl);
+          setLessons((prev) => prev.map((l) => l.id === uploadingLessonId ? { ...l, video_external_url: cloudinaryUrl } : l));
+          setUploadProgress(100);
+          setTimeout(() => { setUploadingLessonId(null); setUploadProgress(0); }, 1500);
+        } else {
+          setUploadError(`Upload failed: ${xhr.status}`);
+          setUploadingLessonId(null);
+        }
+      };
+      xhr.onerror = () => { setUploadError('Network error during upload'); setUploadingLessonId(null); };
+      xhr.send(formData);
+    } catch (err: any) {
+      setUploadError(err.message ?? 'Upload error');
+      setUploadingLessonId(null);
+    }
+    e.target.value = '';
+  };
+
+  if (loading) {
+    return (
+      <View style={styles.loaderWrap}>
+        <ActivityIndicator color={colors.gold[500]} size="large" />
+      </View>
+    );
+  }
+
+  const COLS: ColumnConfig[] = [
+    { title: 'Programas', icon: GraduationCap, count: programs.length },
+    { title: 'Cursos', icon: BookOpen, count: courses.length },
+    { title: 'Módulos', icon: Layers, count: modules.length },
+    { title: 'Lecciones', icon: PlayCircle, count: lessons.length },
+  ];
+
+  const stepIndex: Record<MobileStep, number> = { programs: 0, courses: 1, modules: 2, lessons: 3 };
+  const currentCol = COLS[stepIndex[mobileStep]];
+
+  const selectedProgramTitle = programs.find((p) => p.id === selectedProgram)?.title ?? '';
+  const selectedCourseTitle = courses.find((c) => c.id === selectedCourse)?.title ?? '';
+  const selectedModuleTitle = modules.find((m) => m.id === selectedModule)?.title ?? '';
+
+  const mobileStepBack: Record<MobileStep, MobileStep | null> = {
+    programs: null,
+    courses: 'programs',
+    modules: 'courses',
+    lessons: 'modules',
+  };
+
+  const mobileBackLabel: Record<MobileStep, string> = {
+    programs: '',
+    courses: selectedProgramTitle || 'Programas',
+    modules: selectedCourseTitle || 'Cursos',
+    lessons: selectedModuleTitle || 'Módulos',
+  };
+
+  return (
+    <View style={styles.wrap}>
+      {Platform.OS === 'web' && (
+        <input
+          ref={fileInputRef as any}
+          type="file"
+          accept="video/*"
+          style={{ display: 'none' } as any}
+          onChange={handleFileSelected}
+        />
+      )}
+
+      {/* Page header */}
+      <View style={[styles.pageHeader, isMobile && styles.pageHeaderMobile]}>
+        <Text style={styles.eyebrow}>Catálogo de contenido</Text>
+        <Text style={[styles.title, isMobile && styles.titleMobile]}>Programas · Módulos · Lecciones</Text>
+        {uploadError ? (
+          <View style={styles.errorBanner}>
+            <Text style={styles.errorText}>{uploadError}</Text>
+          </View>
+        ) : null}
+      </View>
+
+      {isMobile ? (
+        /* Mobile: step-by-step navigator */
+        <View style={styles.mobileExplorer}>
+          {/* Mobile breadcrumb nav bar */}
+          <View style={styles.mobileNavBar}>
+            {mobileStepBack[mobileStep] !== null ? (
+              <Pressable
+                onPress={() => setMobileStep(mobileStepBack[mobileStep]!)}
+                style={styles.mobileBackBtn}
+              >
+                <ChevronLeft size={16} color={colors.cream[200]} strokeWidth={2} />
+                <Text style={styles.mobileBackTxt} numberOfLines={1}>{mobileBackLabel[mobileStep]}</Text>
+              </Pressable>
+            ) : (
+              <View />
+            )}
+            <View style={styles.mobileNavRight}>
+              {(() => {
+                const Icon = currentCol.icon;
+                return <Icon size={13} color={colors.gold[400]} strokeWidth={1.8} />;
+              })()}
+              <Text style={styles.mobileNavTitle}>{currentCol.title}</Text>
+              <View style={styles.colBadge}>
+                <Text style={styles.colBadgeTxt}>{currentCol.count}</Text>
+              </View>
+            </View>
+          </View>
+
+          {/* Mobile column content */}
+          <ScrollView style={styles.mobileColScroll} contentContainerStyle={styles.colContent}>
+            {mobileStep === 'programs' && programs.map((p) => (
+              <Pressable
+                key={p.id}
+                onPress={() => {
+                  setSelectedProgram(p.id);
+                  setMobileStep('courses');
+                }}
+                style={[styles.colItem, selectedProgram === p.id && styles.colItemActive]}
+              >
+                <View style={{ flex: 1 }}>
+                  <Text style={[styles.colItemTitle, selectedProgram === p.id && styles.colItemTitleActive]} numberOfLines={2}>
+                    {p.title}
+                  </Text>
+                  <Text style={styles.colItemMeta}>${Number(p.price_usd).toFixed(2)} · {p.tier}</Text>
+                </View>
+                <View style={styles.colItemRight}>
+                  <StatusPill value={p.is_published ? 'active' : 'inactive'} />
+                  <ChevronRight size={13} color={colors.ink[300]} />
+                </View>
+              </Pressable>
+            ))}
+
+            {mobileStep === 'courses' && (
+              courses.length === 0 ? (
+                <Text style={styles.colEmpty}>Sin cursos en este programa</Text>
+              ) : courses.map((c) => (
+                <Pressable
+                  key={c.id}
+                  onPress={() => {
+                    setSelectedCourse(c.id);
+                    setMobileStep('modules');
+                  }}
+                  style={[styles.colItem, selectedCourse === c.id && styles.colItemActive]}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.colItemTitle, selectedCourse === c.id && styles.colItemTitleActive]} numberOfLines={2}>
+                      {c.title}
+                    </Text>
+                    <Text style={styles.colItemMeta}>orden #{c.display_order}</Text>
+                  </View>
+                  <ChevronRight size={13} color={colors.ink[300]} />
+                </Pressable>
+              ))
+            )}
+
+            {mobileStep === 'modules' && (
+              modules.length === 0 ? (
+                <Text style={styles.colEmpty}>Sin módulos en este curso</Text>
+              ) : modules.map((m) => (
+                <Pressable
+                  key={m.id}
+                  onPress={() => {
+                    setSelectedModule(m.id);
+                    setMobileStep('lessons');
+                  }}
+                  style={[styles.colItem, selectedModule === m.id && styles.colItemActive]}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.colItemTitle, selectedModule === m.id && styles.colItemTitleActive]} numberOfLines={2}>
+                      {m.title}
+                    </Text>
+                    <Text style={styles.colItemMeta}>orden #{m.display_order}</Text>
+                  </View>
+                  <ChevronRight size={13} color={colors.ink[300]} />
+                </Pressable>
+              ))
+            )}
+
+            {mobileStep === 'lessons' && (
+              lessons.length === 0 ? (
+                <Text style={styles.colEmpty}>Sin lecciones en este módulo</Text>
+              ) : lessons.map((l) => {
+                const hasVideo = !!l.video_external_url;
+                const isUploading = uploadingLessonId === l.id;
+                const hasCloudinary = hasVideo && isCloudinaryUrl(l.video_external_url);
+                return (
+                  <View key={l.id} style={styles.lessonItem}>
+                    <View style={{ flex: 1 }}>
+                      <Text style={styles.lessonTitle} numberOfLines={2}>{l.title}</Text>
+                      <View style={styles.lessonMeta}>
+                        <Text style={styles.colItemMeta}>{Math.round((l.duration_seconds ?? 0) / 60)} min · {l.is_free ? 'gratis' : 'premium'}</Text>
+                        {hasCloudinary && (
+                          <View style={styles.cdnBadge}>
+                            <Film size={9} color={colors.gold[500]} />
+                            <Text style={styles.cdnTxt}>CDN</Text>
+                          </View>
+                        )}
+                      </View>
+                      {isUploading ? (
+                        <View style={styles.progressWrap}>
+                          <View style={[styles.progressBar, { width: `${uploadProgress}%` as any }]} />
+                          <Text style={styles.progressPct}>{uploadProgress}%</Text>
+                        </View>
+                      ) : null}
+                    </View>
+                    <View style={styles.lessonRight}>
+                      <StatusPill value={l.is_published ? 'active' : 'inactive'} />
+                      {Platform.OS === 'web' ? (
+                        <Pressable
+                          onPress={() => triggerUpload(l.id)}
+                          style={[styles.uploadBtn, !!uploadingLessonId && { opacity: 0.4 }]}
+                          disabled={!!uploadingLessonId}
+                        >
+                          {isUploading && uploadProgress === 100 ? (
+                            <Check size={13} color='#2C5E3C' />
+                          ) : (
+                            <Upload size={13} color={colors.burgundy[700]} strokeWidth={2} />
+                          )}
+                        </Pressable>
+                      ) : null}
+                    </View>
+                  </View>
+                );
+              })
+            )}
+          </ScrollView>
+        </View>
+      ) : (
+        /* Desktop: 4-column finder layout */
+        <>
+          <View style={styles.colHeadersBar}>
+            {COLS.map((col, i) => {
+              const Icon = col.icon;
+              return (
+                <View key={col.title} style={[styles.colHeader, i < COLS.length - 1 && styles.colHeaderBorder]}>
+                  <Icon size={14} color={colors.gold[400]} strokeWidth={1.8} />
+                  <Text style={styles.colHeaderTxt}>{col.title}</Text>
+                  <View style={styles.colBadge}>
+                    <Text style={styles.colBadgeTxt}>{col.count}</Text>
+                  </View>
+                </View>
+              );
+            })}
+          </View>
+
+          <View style={styles.explorer}>
+            {/* Programs */}
+            <ScrollView style={styles.col} contentContainerStyle={styles.colContent}>
+              {programs.map((p) => (
+                <Pressable
+                  key={p.id}
+                  onPress={() => setSelectedProgram(p.id)}
+                  style={[styles.colItem, selectedProgram === p.id && styles.colItemActive]}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.colItemTitle, selectedProgram === p.id && styles.colItemTitleActive]} numberOfLines={2}>
+                      {p.title}
+                    </Text>
+                    <Text style={styles.colItemMeta}>${Number(p.price_usd).toFixed(2)} · {p.tier}</Text>
+                  </View>
+                  <View style={styles.colItemRight}>
+                    <StatusPill value={p.is_published ? 'active' : 'inactive'} />
+                    <ChevronRight size={13} color={selectedProgram === p.id ? colors.gold[400] : colors.ink[300]} />
+                  </View>
+                </Pressable>
+              ))}
+            </ScrollView>
+
+            <View style={styles.colDivider} />
+
+            {/* Courses */}
+            <ScrollView style={styles.col} contentContainerStyle={styles.colContent}>
+              {courses.length === 0 ? (
+                <Text style={styles.colEmpty}>Selecciona un programa</Text>
+              ) : courses.map((c) => (
+                <Pressable
+                  key={c.id}
+                  onPress={() => setSelectedCourse(c.id)}
+                  style={[styles.colItem, selectedCourse === c.id && styles.colItemActive]}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.colItemTitle, selectedCourse === c.id && styles.colItemTitleActive]} numberOfLines={2}>
+                      {c.title}
+                    </Text>
+                    <Text style={styles.colItemMeta}>orden #{c.display_order}</Text>
+                  </View>
+                  <ChevronRight size={13} color={selectedCourse === c.id ? colors.gold[400] : colors.ink[300]} />
+                </Pressable>
+              ))}
+            </ScrollView>
+
+            <View style={styles.colDivider} />
+
+            {/* Modules */}
+            <ScrollView style={styles.col} contentContainerStyle={styles.colContent}>
+              {modules.length === 0 ? (
+                <Text style={styles.colEmpty}>Selecciona un curso</Text>
+              ) : modules.map((m) => (
+                <Pressable
+                  key={m.id}
+                  onPress={() => setSelectedModule(m.id)}
+                  style={[styles.colItem, selectedModule === m.id && styles.colItemActive]}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={[styles.colItemTitle, selectedModule === m.id && styles.colItemTitleActive]} numberOfLines={2}>
+                      {m.title}
+                    </Text>
+                    <Text style={styles.colItemMeta}>orden #{m.display_order}</Text>
+                  </View>
+                  <ChevronRight size={13} color={selectedModule === m.id ? colors.gold[400] : colors.ink[300]} />
+                </Pressable>
+              ))}
+            </ScrollView>
+
+            <View style={styles.colDivider} />
+
+            {/* Lessons */}
+            <ScrollView style={[styles.col, { flex: 1.5 }]} contentContainerStyle={styles.colContent}>
+              {lessons.length === 0 ? (
+                <Text style={styles.colEmpty}>Selecciona un módulo</Text>
+              ) : lessons.map((l) => {
+                const hasVideo = !!l.video_external_url;
+                const isUploading = uploadingLessonId === l.id;
+                const hasCloudinary = hasVideo && isCloudinaryUrl(l.video_external_url);
+
+                return (
+                  <View key={l.id} style={styles.lessonItem}>
+                    <View style={{ flex: 1 }}>
+                      <Text style={styles.lessonTitle} numberOfLines={2}>{l.title}</Text>
+                      <View style={styles.lessonMeta}>
+                        <Text style={styles.colItemMeta}>{Math.round((l.duration_seconds ?? 0) / 60)} min · {l.is_free ? 'gratis' : 'premium'}</Text>
+                        {hasCloudinary && (
+                          <View style={styles.cdnBadge}>
+                            <Film size={9} color={colors.gold[500]} />
+                            <Text style={styles.cdnTxt}>CDN</Text>
+                          </View>
+                        )}
+                      </View>
+                      {isUploading ? (
+                        <View style={styles.progressWrap}>
+                          <View style={[styles.progressBar, { width: `${uploadProgress}%` as any }]} />
+                          <Text style={styles.progressPct}>{uploadProgress}%</Text>
+                        </View>
+                      ) : null}
+                    </View>
+                    <View style={styles.lessonRight}>
+                      <StatusPill value={l.is_published ? 'active' : 'inactive'} />
+                      {Platform.OS === 'web' ? (
+                        <Pressable
+                          onPress={() => triggerUpload(l.id)}
+                          style={[styles.uploadBtn, !!uploadingLessonId && { opacity: 0.4 }]}
+                          disabled={!!uploadingLessonId}
+                        >
+                          {isUploading && uploadProgress === 100 ? (
+                            <Check size={13} color='#2C5E3C' />
+                          ) : (
+                            <Upload size={13} color={colors.burgundy[700]} strokeWidth={2} />
+                          )}
+                        </Pressable>
+                      ) : null}
+                    </View>
+                  </View>
+                );
+              })}
+            </ScrollView>
+          </View>
+        </>
+      )}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  loaderWrap: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  wrap: { flex: 1, backgroundColor: colors.cream[50], display: 'flex' as any, flexDirection: 'column' },
+
+  pageHeader: {
+    paddingHorizontal: spacing.xl,
+    paddingTop: spacing.xl,
+    paddingBottom: spacing.lg,
+    backgroundColor: colors.surface.raised,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border.soft,
+  },
+  pageHeaderMobile: {
+    paddingHorizontal: spacing.md,
+    paddingTop: spacing.lg,
+  },
+  eyebrow: { fontFamily: fonts.support, color: colors.gold[600], fontSize: 10, letterSpacing: 3, textTransform: 'uppercase' as any },
+  title: { fontFamily: fonts.headingBold, color: colors.burgundy[900], fontSize: 24, marginTop: 4 },
+  titleMobile: { fontSize: 20 },
+
+  errorBanner: {
+    marginTop: spacing.sm,
+    backgroundColor: '#FCE3E3',
+    padding: spacing.sm,
+    borderRadius: radius.sm,
+    borderWidth: 1,
+    borderColor: '#D89A9A',
+  },
+  errorText: { fontFamily: fonts.bodyMedium, color: '#7A1A2C', fontSize: fontSize.sm },
+
+  /* Mobile step navigator */
+  mobileExplorer: { flex: 1, flexDirection: 'column' },
+  mobileNavBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: colors.burgundy[900],
+    paddingHorizontal: spacing.md,
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(175,137,86,0.25)',
+  },
+  mobileBackBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    flex: 1,
+    marginRight: spacing.sm,
+  },
+  mobileBackTxt: {
+    fontFamily: fonts.bodyMedium,
+    color: colors.cream[200],
+    fontSize: fontSize.sm,
+    flex: 1,
+  },
+  mobileNavRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  mobileNavTitle: {
+    fontFamily: fonts.bodySemibold,
+    color: colors.cream[100],
+    fontSize: fontSize.sm,
+  },
+  mobileColScroll: { flex: 1, backgroundColor: colors.surface.raised },
+
+  /* Desktop column headers */
+  colHeadersBar: {
+    flexDirection: 'row',
+    backgroundColor: colors.burgundy[900],
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(175,137,86,0.25)',
+  },
+  colHeader: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingHorizontal: spacing.md,
+    paddingVertical: 12,
+  },
+  colHeaderBorder: { borderRightWidth: 1, borderRightColor: 'rgba(255,255,255,0.08)' },
+  colHeaderTxt: {
+    fontFamily: fonts.bodySemibold,
+    color: colors.cream[200],
+    fontSize: fontSize.sm,
+    flex: 1,
+  },
+  colBadge: {
+    backgroundColor: 'rgba(175,137,86,0.25)',
+    borderRadius: 999,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+  },
+  colBadgeTxt: { fontFamily: fonts.bodySemibold, color: colors.gold[400], fontSize: 11 },
+
+  /* Desktop explorer */
+  explorer: {
+    flex: 1,
+    flexDirection: 'row',
+    overflow: 'hidden',
+  },
+  col: {
+    flex: 1,
+    backgroundColor: colors.surface.raised,
+  },
+  colContent: { paddingVertical: 4 },
+  colDivider: { width: 1, backgroundColor: colors.border.soft },
+
+  colItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+    paddingHorizontal: spacing.md,
+    paddingVertical: 11,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border.soft,
+  },
+  colItemActive: { backgroundColor: colors.burgundy[900] + '0D', borderLeftWidth: 3, borderLeftColor: colors.gold[500] },
+  colItemTitle: { fontFamily: fonts.bodyMedium, color: colors.burgundy[900], fontSize: fontSize.sm, lineHeight: 18 },
+  colItemTitleActive: { color: colors.burgundy[900], fontFamily: fonts.bodySemibold },
+  colItemMeta: { fontFamily: fonts.support, color: colors.ink[500], fontSize: 11, marginTop: 2 },
+  colItemRight: { flexDirection: 'row', alignItems: 'center', gap: 4 },
+  colEmpty: { fontFamily: fonts.body, color: colors.ink[300], fontSize: fontSize.sm, padding: spacing.md, fontStyle: 'italic' as any },
+
+  lessonItem: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: spacing.sm,
+    paddingHorizontal: spacing.md,
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border.soft,
+  },
+  lessonTitle: { fontFamily: fonts.bodyMedium, color: colors.burgundy[900], fontSize: fontSize.sm, lineHeight: 18 },
+  lessonMeta: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4, flexWrap: 'wrap' as any },
+  lessonRight: { flexDirection: 'column', alignItems: 'flex-end', gap: 6 },
+
+  cdnBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 3,
+    backgroundColor: colors.cream[200],
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  cdnTxt: { fontFamily: fonts.support, fontSize: 9, color: colors.gold[600], letterSpacing: 1 },
+
+  progressWrap: {
+    height: 5,
+    backgroundColor: colors.cream[200],
+    borderRadius: 3,
+    marginTop: 6,
+    overflow: 'hidden',
+    position: 'relative',
+  },
+  progressBar: { height: '100%' as any, backgroundColor: colors.gold[500], borderRadius: 3 },
+  progressPct: { position: 'absolute', right: 4, top: -14, fontFamily: fonts.support, fontSize: 9, color: colors.ink[500] },
+
+  uploadBtn: {
+    width: 30,
+    height: 30,
+    borderRadius: radius.sm,
+    borderWidth: 1,
+    borderColor: colors.border.soft,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.cream[100],
+  },
+});

@@ -1,0 +1,70 @@
+CONTEXTO: NextFlight Academy — Sistema de Logos y Reglas de Uso
+El proyecto
+App móvil/web en Expo Router + React Native (SDK 54) con backend Supabase. El nombre de la marca es NextFlight Academy — academia de emprendimiento digital orientada a mujeres latinas. Paleta principal: burgundy/vino #30050E / #4D0C12, crema #F1EEDB, gold #AF8956.
+
+LOS LOGOS SON PNG CON CANVAS CUADRADO O RECTANGULAR — NO SON SU FORMA REAL
+Todos los logos están alojados en Cloudinary y se importan desde constants/logos.ts como { uri: string }. Se usan con <Image source={...} resizeMode="contain" />.
+
+CRÍTICO: cada logo es un PNG con fondo transparente pero el canvas del archivo tiene márgenes/padding interno. El logo visual NO ocupa todo el bounding box del <Image>. Por ejemplo:
+
+Un avión en un canvas cuadrado: el avión real puede ser 60-70% del ancho del box
+Un wordmark en canvas 2:1: el texto real puede tener márgenes arriba/abajo del 15-20%
+Esto significa que si pones width: 100, height: 100 para un avión, visualmente se ve más pequeño de 100px porque el canvas tiene padding. Para compensar, hay que dar dimensiones más grandes de lo que parece necesario.
+
+MAPA COMPLETO DE ASSETS (constants/logos.ts)
+Base URL: 
+https://res.cloudinary.com/dwp64dtwa/image/upload
+
+
+Variantes por color:
+Grupo	Uso
+_BURGUNDY	Sobre fondos claros/crema
+_CREAM	Sobre fondos oscuros/burgundy
+_GOLD	Flat dorado, fondos neutros o oscuros
+_GOLD_GRAD	Gold con gradiente — uso premium/hero
+Piezas disponibles por variante:
+Constante sufijo	Descripción visual
+LOGO_SEAL_*	Sello circular completo — marca completa en medallón
+LOGO_PLANE_*	Solo el avión con "EST 2025" — ícono/accento
+LOGO_BADGE_*	Badge horizontal con avión y texto
+LOGO_MONOGRAM_*	Las iniciales "NF" estilizadas
+LOGO_OVAL_*	Diseño oval tipo vintage
+LOGO_WORDMARK_CENTERED_*	"NEXTFLIGHT / — ACADEMY —" centrado, sin avión
+LOGO_WORDMARK_LEFT_*	Wordmark alineado a la izquierda
+LOGO_WORDMARK_SOLO_*	Solo el texto NEXTFLIGHT sin submarca
+LOGO_ACADEMY_*	Solo el texto "ACADEMY"
+LOGO_ALT_1 / LOGO_ALT_2	Variantes alternativas
+Hero background:
+HERO_BACKGROUND — imagen de nubes/cielo para el fondo de pantallas de auth.
+
+REGLA DE JERARQUÍA DE LOGOS (MUY IMPORTANTE — NO OLVIDAR)
+En pantallas de auth y cualquier header de hero, la composición correcta es:
+
+
+[ AVIÓN pequeño ]   ← 14% del ancho de pantalla
+[ WORDMARK GRANDE ] ← 100% del ancho de pantalla  ← PROTAGONISTA
+El AVIÓN (LOGO_PLANE_GOLD_GRAD) es el accento/decoración — siempre pequeño arriba
+El WORDMARK (LOGO_WORDMARK_CENTERED_GOLD) es el protagonista — siempre grande abajo
+El círculo/ring decorativo va detrás del avión (1 solo ring, sin glows extras)
+El wordmark va LIMPIO, sin nada detrás — sin glows, sin circles, sin decoración
+El overlap entre avión y wordmark es mínimo (~12-16% del tamaño del avión) para que queden pegados
+NUNCA poner decoraciones, glows o halos detrás del wordmark
+En código (check-in.tsx como referencia):
+
+
+Layout:
+
+
+Componentes helper existentes
+components/BrandMark.tsx — componente genérico que acepta variant + theme + size y calcula el ancho con ratios predefinidos
+components/Wordmark.tsx — wrapper de conveniencia sobre BrandMark
+components/ScreenContainer.tsx — wrapper de pantalla con safe area
+components/VideoPlayer.tsx — player de video para lecciones Cloudinary
+Stack técnico relevante
+Expo Router 6, SDK 54, React Native 0.81
+Supabase (auth + DB + storage + edge functions)
+Fonts: Poppins-Regular/SemiBold/Bold, PlayfairDisplay-Italic (via expo-google-fonts)
+Iconos: lucide-react-native exclusivamente
+Animaciones: react-native-reanimated
+NO NativeWind — solo StyleSheet.create
+Build web: expo export --platform web → carpeta dist/
