@@ -8,18 +8,29 @@
     "scheme": "nextflight",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#30050E"
+    },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.nextflight.academy",
-      "associatedDomains": ["applinks:nextflight.app"]
+      "bundleIdentifier": "com.nextflightacademy.app",
+      "buildNumber": "1",
+      "associatedDomains": ["applinks:nextflightacademy.app"]
     },
     "android": {
-      "package": "com.nextflight.academy",
+      "package": "com.nextflightacademy.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#30050E"
+      },
       "intentFilters": [
         {
           "action": "VIEW",
           "autoVerify": true,
-          "data": [{ "scheme": "https", "host": "nextflight.app", "pathPrefix": "/r" }],
+          "data": [{ "scheme": "https", "host": "nextflightacademy.app", "pathPrefix": "/r" }],
           "category": ["BROWSABLE", "DEFAULT"]
         }
       ]

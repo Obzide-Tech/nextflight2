@@ -1,22 +1,21 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { supabase } from './supabase';
 
 const STORAGE_KEY = 'nf_referral_code';
 const EXPIRY_DAYS = 30;
 
-export function saveReferralCode(code: string) {
-  if (typeof localStorage === 'undefined') return;
+export async function saveReferralCode(code: string): Promise<void> {
   const expiry = Date.now() + EXPIRY_DAYS * 24 * 60 * 60 * 1000;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify({ code: code.toUpperCase(), expiry }));
+  await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify({ code: code.toUpperCase(), expiry }));
 }
 
-export function loadReferralCode(): string | null {
-  if (typeof localStorage === 'undefined') return null;
+export async function loadReferralCode(): Promise<string | null> {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = await AsyncStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
     const { code, expiry } = JSON.parse(raw);
     if (Date.now() > expiry) {
-      localStorage.removeItem(STORAGE_KEY);
+      await AsyncStorage.removeItem(STORAGE_KEY);
       return null;
     }
     return code as string;
@@ -25,9 +24,8 @@ export function loadReferralCode(): string | null {
   }
 }
 
-export function clearReferralCode() {
-  if (typeof localStorage === 'undefined') return;
-  localStorage.removeItem(STORAGE_KEY);
+export async function clearReferralCode(): Promise<void> {
+  await AsyncStorage.removeItem(STORAGE_KEY);
 }
 
 export async function captureAttribution(code: string, userId: string): Promise<void> {

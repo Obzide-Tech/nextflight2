@@ -6,11 +6,11 @@ import { Copy, ArrowUpRight, Wallet, TrendingUp, Users, Sparkles } from 'lucide-
 import { ScreenContainer } from '@/components/ScreenContainer';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
-import { isRewardfulEnabled, fetchRewardfulAffiliate, fetchRewardfulCommissions } from '@/lib/rewardful';
+import { fetchRewardfulAffiliate, fetchRewardfulCommissions } from '@/lib/rewardful';
 import { colors, fonts, fontSize, radius, spacing } from '@/theme/tokens';
 
 const APP_BASE_URL =
-  process.env.EXPO_PUBLIC_APP_URL?.replace(/\/$/, '') ?? 'https://nextflight.app';
+  process.env.EXPO_PUBLIC_APP_URL?.replace(/\/$/, '') ?? 'https://nextflightacademy.app';
 
 function buildReferralLink(code: string) {
   return `${APP_BASE_URL}/r/${code}`;
@@ -20,7 +20,6 @@ export default function Copilotos() {
   const router = useRouter();
   const { user, roles } = useAuth();
   const isAffiliate = roles.includes('affiliate');
-  const [dataSource, setDataSource] = useState<'builtin' | 'rewardful'>('builtin');
   const scrollRef = useRef<ScrollView>(null);
 
   const [loading, setLoading] = useState(true);
@@ -43,65 +42,37 @@ export default function Copilotos() {
       setLoading(true);
       setLoadError(false);
       try {
-        const useRewardful = await isRewardfulEnabled();
-        setDataSource(useRewardful ? 'rewardful' : 'builtin');
-
-        if (useRewardful) {
-          const { data: afProfile } = await supabase
-            .from('affiliate_profiles')
-            .select('rewardful_affiliate_id')
-            .eq('id', user.id)
-            .maybeSingle();
-          const rwId = afProfile?.rewardful_affiliate_id;
-          if (rwId) {
-            const [afRes, comRes] = await Promise.all([
-              fetchRewardfulAffiliate(rwId),
-              fetchRewardfulCommissions(rwId),
-            ]);
-            if (afRes.ok && afRes.data) {
-              // unpaid_earnings = total not yet paid; paid_earnings = already paid out
-              // pending = commissions not yet approved; available = approved but not paid
-              const unpaid = Number(afRes.data.unpaid_earnings ?? 0) / 100;
-              const paid = Number(afRes.data.paid_earnings ?? 0) / 100;
-              const pendingCommissions = (comRes.ok && Array.isArray(comRes.data))
-                ? comRes.data.filter((c: any) => c.state === 'pending').reduce((s: number, c: any) => s + Number(c.amount ?? 0) / 100, 0)
-                : 0;
-              setWallet({
-                pending: pendingCommissions,
-                available: Math.max(0, unpaid - pendingCommissions),
-                retained: 0,
-                paid,
-              });
-              setReferralsCount(afRes.data.visitors ?? 0);
-              setSalesCount(afRes.data.conversions ?? 0);
-            }
+        const { data: afProfile } = await supabase
+          .from('affiliate_profiles')
+          .select('rewardful_affiliate_id')
+          .eq('id', user.id)
+          .maybeSingle();
+        const rwId = afProfile?.rewardful_affiliate_id;
+        if (rwId) {
+          const [afRes, comRes] = await Promise.all([
+            fetchRewardfulAffiliate(rwId),
+            fetchRewardfulCommissions(rwId),
+          ]);
+          if (afRes.ok && afRes.data) {
+            const unpaid = Number(afRes.data.unpaid_earnings ?? 0) / 100;
+            const paid = Number(afRes.data.paid_earnings ?? 0) / 100;
+            const pendingCommissions = (comRes.ok && Array.isArray(comRes.data))
+              ? comRes.data.filter((c: any) => c.state === 'pending').reduce((s: number, c: any) => s + Number(c.amount ?? 0) / 100, 0)
+              : 0;
+            setWallet({
+              pending: pendingCommissions,
+              available: Math.max(0, unpaid - pendingCommissions),
+              retained: 0,
+              paid,
+            });
+            setReferralsCount(afRes.data.visitors ?? 0);
+            setSalesCount(afRes.data.conversions ?? 0);
           }
-          const { data: links } = await supabase.from('affiliate_links').select('code').eq('affiliate_user_id', user.id).eq('is_active', true).limit(1);
-          const c = links?.[0]?.code ?? null;
-          setCode(c);
-          setLink(c ? buildReferralLink(c) : null);
-          setLoading(false);
-          return;
         }
-
-        const [{ data: links }, { data: balance }, { count: refs }, { count: sales }] = await Promise.all([
-          supabase.from('affiliate_links').select('code').eq('affiliate_user_id', user.id).eq('is_active', true).limit(1),
-          supabase.from('wallet_balances').select('*').eq('affiliate_user_id', user.id).maybeSingle(),
-          supabase.from('referral_attributions').select('id', { count: 'exact', head: true }).eq('affiliate_user_id', user.id),
-          supabase.from('payment_transactions').select('id', { count: 'exact', head: true }).eq('affiliate_user_id', user.id).eq('status', 'confirmed'),
-        ]);
-
+        const { data: links } = await supabase.from('affiliate_links').select('code').eq('affiliate_user_id', user.id).eq('is_active', true).limit(1);
         const c = links?.[0]?.code ?? null;
         setCode(c);
         setLink(c ? buildReferralLink(c) : null);
-        setWallet({
-          pending: Number(balance?.pending_usd ?? 0),
-          available: Number(balance?.available_usd ?? 0),
-          retained: Number(balance?.retained_usd ?? 0),
-          paid: Number(balance?.paid_usd ?? 0),
-        });
-        setReferralsCount(refs ?? 0);
-        setSalesCount(sales ?? 0);
       } catch {
         setLoadError(true);
       }

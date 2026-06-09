@@ -104,10 +104,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
 
       // Capture referral attribution if the user arrived via an affiliate link
-      const referralCode = loadReferralCode();
+      const referralCode = await loadReferralCode();
       if (referralCode) {
         await captureAttribution(referralCode, data.user.id);
-        clearReferralCode();
+        await clearReferralCode();
       }
     }
     return { error: null };
