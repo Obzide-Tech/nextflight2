@@ -235,18 +235,20 @@ export default function AdminLayout() {
 }
 
 const styles = StyleSheet.create({
-  loaderWrap: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.cream[50] },
-  fill: { flex: 1, backgroundColor: colors.cream[50] },
-  shell: { flex: 1, flexDirection: 'row', backgroundColor: colors.cream[50], minHeight: '100%' as any },
+  loaderWrap: { flex: 1, height: '100%' as any, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.cream[50] },
+  fill: { flex: 1, height: '100%' as any, backgroundColor: colors.cream[50], overflow: 'hidden' as any },
+  shell: { flex: 1, height: '100%' as any, flexDirection: 'row', backgroundColor: colors.cream[50], overflow: 'hidden' as any },
 
   // Sidebar (large screens)
   sidebar: {
     width: 248,
+    flexShrink: 0,
     backgroundColor: colors.burgundy[900],
     paddingHorizontal: spacing.md,
     paddingBottom: spacing.lg,
     borderRightWidth: 1,
     borderRightColor: colors.burgundy[800],
+    overflow: 'hidden' as any,
   },
   brandBlock: {
     paddingHorizontal: spacing.sm,
@@ -284,7 +286,7 @@ const styles = StyleSheet.create({
   userRole: { fontFamily: fonts.support, color: colors.gold[400], fontSize: 10, marginTop: 2, letterSpacing: 1 },
   signOut: { flexDirection: 'row', alignItems: 'center', gap: 6, marginTop: spacing.sm },
   signOutText: { fontFamily: fonts.body, color: colors.cream[200], fontSize: fontSize.xs },
-  content: { flex: 1, backgroundColor: colors.cream[50] },
+  content: { flex: 1, backgroundColor: colors.cream[50], overflow: 'hidden' as any, minWidth: 0 },
 
   // Mobile header
   mobileHeader: {

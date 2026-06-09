@@ -273,7 +273,7 @@ export default function PublicacionesAdmin() {
 }
 
 const styles = StyleSheet.create({
-  wrap: { flex: 1, backgroundColor: colors.cream[50] },
+  wrap: { flex: 1, backgroundColor: colors.cream[50], minWidth: 0, overflow: 'hidden' as any },
 
   header: {
     flexDirection: 'row',

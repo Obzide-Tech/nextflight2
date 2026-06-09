@@ -146,7 +146,7 @@ export default function SettingsAdmin() {
 
 const styles = StyleSheet.create({
   loaderWrap: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  scroll: { flex: 1, backgroundColor: colors.cream[50] },
+  scroll: { flex: 1, backgroundColor: colors.cream[50], minWidth: 0 },
   container: { paddingBottom: 48, maxWidth: 1280, width: '100%', alignSelf: 'center' },
 
   pageHeader: {
@@ -220,8 +220,8 @@ const styles = StyleSheet.create({
   },
   flagRowLast: { borderBottomWidth: 0 },
   flagKeyRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  flagKey: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.sm },
-  flagDesc: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.xs, marginTop: 3 },
+  flagKey: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.sm, minWidth: 0 },
+  flagDesc: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.xs, marginTop: 3, minWidth: 0 },
 
   emptyTxt: { fontFamily: fonts.body, color: colors.ink[500], padding: spacing.lg },
 

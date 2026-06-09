@@ -60,34 +60,38 @@ export default function TransactionsAdmin() {
 
       {/* Filters */}
       <View style={[styles.filtersBar, isMobile && styles.filtersBarMobile]}>
-        <View style={styles.filterIcon}>
-          <Filter size={14} color={colors.ink[500]} strokeWidth={1.8} />
+        <View style={styles.filterRow}>
+          <View style={styles.filterIcon}>
+            <Filter size={14} color={colors.ink[500]} strokeWidth={1.8} />
+          </View>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.filterSection}>
+            {PLATFORMS.map((p) => (
+              <Pressable
+                key={p}
+                onPress={() => setPlatform(p)}
+                style={[
+                  styles.chip,
+                  platform === p && { backgroundColor: PLATFORM_COLOR[p], borderColor: PLATFORM_COLOR[p] },
+                ]}
+              >
+                <Text style={[styles.chipTxt, platform === p && styles.chipTxtActive]}>{p}</Text>
+              </Pressable>
+            ))}
+          </ScrollView>
         </View>
-        <View style={styles.filterSection}>
-          {PLATFORMS.map((p) => (
-            <Pressable
-              key={p}
-              onPress={() => setPlatform(p)}
-              style={[
-                styles.chip,
-                platform === p && { backgroundColor: PLATFORM_COLOR[p], borderColor: PLATFORM_COLOR[p] },
-              ]}
-            >
-              <Text style={[styles.chipTxt, platform === p && styles.chipTxtActive]}>{p}</Text>
-            </Pressable>
-          ))}
-        </View>
-        <View style={styles.filterDivider} />
-        <View style={styles.filterSection}>
-          {STATUSES.map((s) => (
-            <Pressable
-              key={s}
-              onPress={() => setStatus(s)}
-              style={[styles.chip, status === s && styles.chipActiveNeutral]}
-            >
-              <Text style={[styles.chipTxt, status === s && styles.chipTxtActiveNeutral]}>{s}</Text>
-            </Pressable>
-          ))}
+        <View style={styles.filterRow}>
+          <View style={styles.filterIconSpacer} />
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.filterSection}>
+            {STATUSES.map((s) => (
+              <Pressable
+                key={s}
+                onPress={() => setStatus(s)}
+                style={[styles.chip, status === s && styles.chipActiveNeutral]}
+              >
+                <Text style={[styles.chipTxt, status === s && styles.chipTxtActiveNeutral]}>{s}</Text>
+              </Pressable>
+            ))}
+          </ScrollView>
         </View>
       </View>
 
@@ -159,7 +163,7 @@ export default function TransactionsAdmin() {
 }
 
 const styles = StyleSheet.create({
-  scroll: { flex: 1, backgroundColor: colors.cream[50] },
+  scroll: { flex: 1, backgroundColor: colors.cream[50], minWidth: 0 },
   container: { paddingBottom: 48, maxWidth: 1280, width: '100%', alignSelf: 'center' },
 
   header: {
@@ -206,6 +210,7 @@ const styles = StyleSheet.create({
     padding: spacing.md,
     alignItems: 'flex-end',
     minWidth: 140,
+    flexShrink: 0,
   },
   totalBoxMobile: {
     minWidth: 0,
@@ -217,23 +222,32 @@ const styles = StyleSheet.create({
   totalCount: { fontFamily: fonts.support, color: colors.gold[400], fontSize: 11, marginTop: 2 },
 
   filtersBar: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.sm,
+    flexDirection: 'column',
+    gap: 6,
     paddingHorizontal: spacing.xl,
     paddingVertical: spacing.md,
     borderBottomWidth: 1,
     borderBottomColor: colors.border.soft,
-    flexWrap: 'wrap' as any,
   },
   filtersBarMobile: { paddingHorizontal: spacing.md },
+  filterRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.sm,
+  },
   filterIcon: {
     width: 30,
     height: 30,
     alignItems: 'center',
     justifyContent: 'center',
+    flexShrink: 0,
   },
-  filterSection: { flexDirection: 'row', gap: 6, flexWrap: 'wrap' as any },
+  filterIconSpacer: {
+    width: 30,
+    height: 30,
+    flexShrink: 0,
+  },
+  filterSection: { flexDirection: 'row', gap: 6, paddingRight: spacing.md },
   filterDivider: { width: 1, height: 20, backgroundColor: colors.border.medium, marginHorizontal: 4 },
   chip: {
     paddingHorizontal: 12,

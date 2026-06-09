@@ -494,7 +494,7 @@ export default function ContentAdmin() {
 
 const styles = StyleSheet.create({
   loaderWrap: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  wrap: { flex: 1, backgroundColor: colors.cream[50], display: 'flex' as any, flexDirection: 'column' },
+  wrap: { flex: 1, backgroundColor: colors.cream[50], display: 'flex' as any, flexDirection: 'column', minWidth: 0, overflow: 'hidden' as any },
 
   pageHeader: {
     paddingHorizontal: spacing.xl,

@@ -171,9 +171,9 @@ export default function Payouts() {
                 <View style={styles.payAvatar}>
                   <Text style={styles.payAvatarTxt}>{initials(r.affiliate_name ?? '?')}</Text>
                 </View>
-                <View style={{ flex: 1 }}>
-                  <Text style={styles.payName}>{r.affiliate_name}</Text>
-                  <Text style={styles.payProvider}>{r.provider} · {new Date(r.requested_at).toLocaleDateString()}</Text>
+                <View style={{ flex: 1, minWidth: 0 }}>
+                  <Text style={styles.payName} numberOfLines={1}>{r.affiliate_name}</Text>
+                  <Text style={styles.payProvider} numberOfLines={1}>{r.provider} · {new Date(r.requested_at).toLocaleDateString()}</Text>
                 </View>
                 <StatusPill value={r.status} />
               </View>
@@ -229,7 +229,7 @@ export default function Payouts() {
 }
 
 const styles = StyleSheet.create({
-  scroll: { flex: 1, backgroundColor: colors.cream[50] },
+  scroll: { flex: 1, backgroundColor: colors.cream[50], minWidth: 0 },
   container: { paddingBottom: 48, maxWidth: 1280, width: '100%', alignSelf: 'center' },
 
   header: {
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
   title: { fontFamily: fonts.headingBold, color: colors.burgundy[900], fontSize: 28, marginTop: 4 },
   titleMobile: { fontSize: 22 },
   subtitle: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.sm, marginTop: 2 },
-  headerActions: { flexDirection: 'row', gap: spacing.sm, alignItems: 'center', flexWrap: 'wrap' as any },
+  headerActions: { flexDirection: 'row', gap: spacing.sm, alignItems: 'center', flexShrink: 0 },
   headerActionsMobile: { flexDirection: 'row', marginTop: spacing.sm },
   statBox: {
     flexDirection: 'row',
@@ -373,6 +373,7 @@ const styles = StyleSheet.create({
     gap: spacing.md,
     flexDirection: 'row',
     flexWrap: 'wrap' as any,
+    alignItems: 'flex-start',
   },
   cardGridMobile: {
     padding: spacing.md,
@@ -387,13 +388,14 @@ const styles = StyleSheet.create({
     minWidth: 280,
     flex: 1,
     gap: spacing.sm,
+    overflow: 'hidden',
   },
   payCardMobile: {
     minWidth: 0,
     flex: 0,
     width: '100%',
   },
-  payCardTop: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
+  payCardTop: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, overflow: 'hidden' },
   payAvatar: {
     width: 40,
     height: 40,
@@ -401,10 +403,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.burgundy[900],
     alignItems: 'center',
     justifyContent: 'center',
+    flexShrink: 0,
   },
   payAvatarTxt: { fontFamily: fonts.bodySemibold, color: colors.cream[100], fontSize: 15 },
-  payName: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.base },
-  payProvider: { fontFamily: fonts.support, color: colors.ink[500], fontSize: fontSize.xs, marginTop: 2 },
+  payName: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.base, minWidth: 0 },
+  payProvider: { fontFamily: fonts.support, color: colors.ink[500], fontSize: fontSize.xs, marginTop: 2, minWidth: 0 },
 
   payAmount: {
     flexDirection: 'row',

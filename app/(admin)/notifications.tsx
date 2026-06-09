@@ -187,7 +187,7 @@ export default function NotificationsAdmin() {
 }
 
 const styles = StyleSheet.create({
-  scroll: { flex: 1, backgroundColor: colors.cream[50] },
+  scroll: { flex: 1, backgroundColor: colors.cream[50], minWidth: 0 },
   container: { paddingBottom: 48, maxWidth: 1280, width: '100%', alignSelf: 'center' },
 
   pageHeader: {

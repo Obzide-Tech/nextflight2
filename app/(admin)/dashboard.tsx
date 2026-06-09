@@ -98,9 +98,9 @@ export default function Dashboard() {
               <View style={[styles.kpiIconWrap, { backgroundColor: c.accent + '1A' }]}>
                 <Icon size={18} color={c.accent} strokeWidth={1.8} />
               </View>
-              <Text style={[styles.kpiLabel, isMobile && styles.kpiLabelMobile]}>{c.label}</Text>
-              <Text style={[styles.kpiValue, isMobile && styles.kpiValueMobile]}>{c.value}</Text>
-              <Text style={styles.kpiSub}>{c.sub}</Text>
+              <Text style={[styles.kpiLabel, isMobile && styles.kpiLabelMobile]} numberOfLines={2}>{c.label}</Text>
+              <Text style={[styles.kpiValue, isMobile && styles.kpiValueMobile]} numberOfLines={1} adjustsFontSizeToFit>{c.value}</Text>
+              <Text style={styles.kpiSub} numberOfLines={2}>{c.sub}</Text>
             </View>
           );
         })}
@@ -216,7 +216,7 @@ export default function Dashboard() {
 
 const styles = StyleSheet.create({
   loader: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  scroll: { flex: 1, backgroundColor: colors.cream[50] },
+  scroll: { flex: 1, backgroundColor: colors.cream[50], minWidth: 0 },
   container: { paddingBottom: 48, maxWidth: 1280, width: '100%', alignSelf: 'center' },
   containerMobile: { paddingBottom: 32 },
 
@@ -275,7 +275,7 @@ const styles = StyleSheet.create({
   kpiRowMobile: {
     padding: spacing.md,
     paddingBottom: 0,
-    gap: spacing.sm,
+    gap: 8,
   },
   kpiCard: {
     flex: 1,
@@ -286,12 +286,14 @@ const styles = StyleSheet.create({
     borderColor: colors.border.soft,
     padding: spacing.lg,
     gap: 4,
+    overflow: 'hidden',
   },
   kpiCardMobile: {
     flex: 0,
     minWidth: 0,
     width: '48%' as any,
     padding: spacing.md,
+    overflow: 'hidden',
   },
   kpiIconWrap: {
     width: 36,
@@ -307,6 +309,7 @@ const styles = StyleSheet.create({
     fontSize: 10,
     letterSpacing: 2,
     textTransform: 'uppercase' as any,
+    minWidth: 0,
   },
   kpiLabelMobile: { fontSize: 9, letterSpacing: 1 },
   kpiValue: {
@@ -315,12 +318,14 @@ const styles = StyleSheet.create({
     fontSize: 26,
     marginTop: 4,
     lineHeight: 30,
+    minWidth: 0,
   },
-  kpiValueMobile: { fontSize: 20, lineHeight: 24 },
+  kpiValueMobile: { fontSize: 18, lineHeight: 22 },
   kpiSub: {
     fontFamily: fonts.body,
     color: colors.ink[500],
     fontSize: fontSize.xs,
+    minWidth: 0,
   },
 
   grid: {

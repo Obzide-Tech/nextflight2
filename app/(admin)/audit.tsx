@@ -135,7 +135,7 @@ export default function AuditAdmin() {
 }
 
 const styles = StyleSheet.create({
-  scroll: { flex: 1, backgroundColor: colors.cream[50] },
+  scroll: { flex: 1, backgroundColor: colors.cream[50], minWidth: 0 },
   container: { paddingBottom: 48, maxWidth: 900, width: '100%', alignSelf: 'center' },
 
   header: {
@@ -247,6 +247,7 @@ const styles = StyleSheet.create({
     color: colors.burgundy[900],
     fontSize: fontSize.sm,
     flex: 1,
+    minWidth: 0,
   },
   entryTime: {
     fontFamily: fonts.support,
