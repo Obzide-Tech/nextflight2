@@ -83,12 +83,32 @@ Deno.serve(async (req: Request) => {
       .select("id")
       .single();
 
+    // Look up Rewardful affiliate attribution for this user
+    let rewardfulAffiliateId: string | null = null;
+    try {
+      const { data: attribution } = await admin
+        .from("referral_attributions")
+        .select("affiliate_user_id")
+        .eq("referred_user_id", user.id)
+        .gt("expires_at", new Date().toISOString())
+        .maybeSingle();
+
+      if (attribution?.affiliate_user_id) {
+        const { data: afProfile } = await admin
+          .from("affiliate_profiles")
+          .select("rewardful_affiliate_id")
+          .eq("id", attribution.affiliate_user_id)
+          .maybeSingle();
+        rewardfulAffiliateId = afProfile?.rewardful_affiliate_id ?? null;
+      }
+    } catch { /* best effort — never block checkout */ }
+
     // Build Stripe Checkout Session via REST API (no SDK needed)
     const params = new URLSearchParams({
       "mode": "payment",
       "success_url": `${successUrl}?tx=${tx?.id ?? ""}`,
       "cancel_url": cancelUrl,
-      "client_reference_id": tx?.id ?? user.id,
+      "client_reference_id": rewardfulAffiliateId ?? tx?.id ?? user.id,
       "customer_email": user.email ?? "",
       "line_items[0][price_data][currency]": "usd",
       "line_items[0][price_data][unit_amount]": String(Math.round(product.price_usd * 100)),
@@ -98,6 +118,10 @@ Deno.serve(async (req: Request) => {
       "metadata[transaction_id]": tx?.id ?? "",
       "metadata[user_id]": user.id,
     });
+
+    if (rewardfulAffiliateId) {
+      params.set("metadata[rewardful_affiliate_id]", rewardfulAffiliateId);
+    }
 
     if (product.description) {
       params.set("line_items[0][price_data][product_data][description]", product.description);
