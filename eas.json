@@ -31,9 +31,9 @@
   "submit": {
     "production": {
       "ios": {
-        "appleId": "owner@nextflight.demo",
-        "ascAppId": "0000000000",
-        "appleTeamId": "TEAMIDXXXX"
+        "appleId": "manager@obzide.com",
+        "ascAppId": "6778565977",
+        "appleTeamId": "6NBG9HRTDD"
       },
       "android": {
         "serviceAccountKeyPath": "./google-play-service-account.json",
