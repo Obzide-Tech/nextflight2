@@ -90,21 +90,56 @@ export default function Dashboard() {
       </View>
 
       {/* KPI stat cards */}
-      <View style={[styles.kpiRow, isMobile && styles.kpiRowMobile]}>
-        {cards.map((c) => {
-          const Icon = c.icon;
-          return (
-            <View key={c.label} style={[styles.kpiCard, isMobile && styles.kpiCardMobile]}>
-              <View style={[styles.kpiIconWrap, { backgroundColor: c.accent + '1A' }]}>
-                <Icon size={18} color={c.accent} strokeWidth={1.8} />
+      {isMobile ? (
+        <>
+          <View style={styles.kpiRowMobile}>
+            {cards.slice(0, 2).map((c) => {
+              const Icon = c.icon;
+              return (
+                <View key={c.label} style={styles.kpiCardMobile}>
+                  <View style={[styles.kpiIconWrap, { backgroundColor: c.accent + '1A' }]}>
+                    <Icon size={16} color={c.accent} strokeWidth={1.8} />
+                  </View>
+                  <Text style={styles.kpiLabelMobile} numberOfLines={2}>{c.label}</Text>
+                  <Text style={styles.kpiValueMobile} numberOfLines={1} adjustsFontSizeToFit>{c.value}</Text>
+                  <Text style={styles.kpiSub} numberOfLines={2}>{c.sub}</Text>
+                </View>
+              );
+            })}
+          </View>
+          <View style={[styles.kpiRowMobile, { marginTop: 8 }]}>
+            {cards.slice(2, 4).map((c) => {
+              const Icon = c.icon;
+              return (
+                <View key={c.label} style={styles.kpiCardMobile}>
+                  <View style={[styles.kpiIconWrap, { backgroundColor: c.accent + '1A' }]}>
+                    <Icon size={16} color={c.accent} strokeWidth={1.8} />
+                  </View>
+                  <Text style={styles.kpiLabelMobile} numberOfLines={2}>{c.label}</Text>
+                  <Text style={styles.kpiValueMobile} numberOfLines={1} adjustsFontSizeToFit>{c.value}</Text>
+                  <Text style={styles.kpiSub} numberOfLines={2}>{c.sub}</Text>
+                </View>
+              );
+            })}
+          </View>
+        </>
+      ) : (
+        <View style={styles.kpiRow}>
+          {cards.map((c) => {
+            const Icon = c.icon;
+            return (
+              <View key={c.label} style={styles.kpiCard}>
+                <View style={[styles.kpiIconWrap, { backgroundColor: c.accent + '1A' }]}>
+                  <Icon size={18} color={c.accent} strokeWidth={1.8} />
+                </View>
+                <Text style={styles.kpiLabel} numberOfLines={2}>{c.label}</Text>
+                <Text style={styles.kpiValue} numberOfLines={1} adjustsFontSizeToFit>{c.value}</Text>
+                <Text style={styles.kpiSub} numberOfLines={2}>{c.sub}</Text>
               </View>
-              <Text style={[styles.kpiLabel, isMobile && styles.kpiLabelMobile]} numberOfLines={2}>{c.label}</Text>
-              <Text style={[styles.kpiValue, isMobile && styles.kpiValueMobile]} numberOfLines={1} adjustsFontSizeToFit>{c.value}</Text>
-              <Text style={styles.kpiSub} numberOfLines={2}>{c.sub}</Text>
-            </View>
-          );
-        })}
-      </View>
+            );
+          })}
+        </View>
+      )}
 
       {/* Main panels */}
       <View style={[styles.grid, isMobile && styles.gridMobile]}>
@@ -267,13 +302,13 @@ const styles = StyleSheet.create({
 
   kpiRow: {
     flexDirection: 'row',
-    flexWrap: 'wrap' as any,
     gap: spacing.md,
     padding: spacing.xl,
     paddingBottom: 0,
   },
   kpiRowMobile: {
-    padding: spacing.md,
+    flexDirection: 'row',
+    paddingHorizontal: spacing.md,
     paddingBottom: 0,
     gap: 8,
   },
@@ -289,11 +324,15 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   kpiCardMobile: {
-    flex: 0,
-    minWidth: 0,
-    width: '48%' as any,
+    flex: 1,
+    backgroundColor: colors.surface.raised,
+    borderRadius: radius.xl,
+    borderWidth: 1,
+    borderColor: colors.border.soft,
     padding: spacing.md,
+    gap: 4,
     overflow: 'hidden',
+    minWidth: 0,
   },
   kpiIconWrap: {
     width: 36,
@@ -311,7 +350,14 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase' as any,
     minWidth: 0,
   },
-  kpiLabelMobile: { fontSize: 9, letterSpacing: 1 },
+  kpiLabelMobile: {
+    fontFamily: fonts.support,
+    color: colors.ink[500],
+    fontSize: 9,
+    letterSpacing: 1,
+    textTransform: 'uppercase' as any,
+    minWidth: 0,
+  },
   kpiValue: {
     fontFamily: fonts.headingBold,
     color: colors.burgundy[900],
@@ -320,7 +366,14 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     minWidth: 0,
   },
-  kpiValueMobile: { fontSize: 18, lineHeight: 22 },
+  kpiValueMobile: {
+    fontFamily: fonts.headingBold,
+    color: colors.burgundy[900],
+    fontSize: 18,
+    marginTop: 4,
+    lineHeight: 22,
+    minWidth: 0,
+  },
   kpiSub: {
     fontFamily: fonts.body,
     color: colors.ink[500],
