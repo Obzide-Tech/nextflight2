@@ -23,7 +23,7 @@ const LOGO_W = Math.round(SW * 0.65);
 const LOGO_H = Math.round(LOGO_W * 0.40);
 
 const APP_STORE_URL = 'https://apps.apple.com/app/nextflight-academy/id6745891557';
-const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.nextflightacademy.app';
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=app.nextflightacademy';
 
 function getDevicePlatform(): 'ios' | 'android' | 'other' {
   if (Platform.OS === 'ios') return 'ios';
