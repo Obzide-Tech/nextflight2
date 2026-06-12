@@ -94,7 +94,12 @@ export default function AffiliateActivate() {
           <Text style={styles.crumb}>Activación Copiloto</Text>
         </View>
 
-        <View style={styles.content}>
+        <ScrollView
+          style={{ flex: 1 }}
+          contentContainerStyle={styles.content}
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+        >
           <View style={styles.iconCircle}>
             <ShieldCheck size={28} color={colors.gold[400]} strokeWidth={1.4} />
           </View>
@@ -138,7 +143,7 @@ export default function AffiliateActivate() {
           <TouchableOpacity style={[styles.cta, !accepted && { opacity: 0.5 }]} onPress={onActivate} disabled={!accepted || activating}>
             {activating ? <ActivityIndicator color={colors.burgundy[900]} /> : <Text style={styles.ctaText}>Activar mi cabina</Text>}
           </TouchableOpacity>
-        </View>
+        </ScrollView>
       </SafeAreaView>
     </LinearGradient>
   );
@@ -148,7 +153,7 @@ const styles = StyleSheet.create({
   topBar: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: spacing.md, paddingVertical: spacing.sm, gap: spacing.sm },
   backBtn: { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(255,251,224,0.06)' },
   crumb: { fontFamily: fonts.supportMedium, fontSize: 11, letterSpacing: 3, color: colors.gold[400], textTransform: 'uppercase' },
-  content: { flex: 1, padding: spacing.lg, gap: spacing.md },
+  content: { padding: spacing.lg, gap: spacing.md, paddingBottom: spacing.xxxl },
   iconCircle: { alignSelf: 'center', width: 80, height: 80, borderRadius: 40, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(167,131,82,0.16)', borderColor: colors.gold[600], borderWidth: 1, marginVertical: spacing.md },
   title: { fontFamily: fonts.headingItalic, fontSize: fontSize.xxl, color: colors.cream[100], textAlign: 'center' },
   body: { fontFamily: fonts.body, fontSize: fontSize.sm, color: colors.cream[200], lineHeight: 22, textAlign: 'center', paddingHorizontal: spacing.sm },
