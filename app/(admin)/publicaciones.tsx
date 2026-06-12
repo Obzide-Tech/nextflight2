@@ -121,6 +121,7 @@ export default function PublicacionesAdmin() {
   const [selected, setSelected] = useState<Partial<Publication> | null>(null);
   const [saving, setSaving] = useState(false);
   const [deleting, setDeleting] = useState<string | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<Publication | null>(null);
   const [feedback, setFeedback] = useState<{ kind: 'ok' | 'error'; text: string } | null>(null);
 
   const load = async () => {
@@ -157,9 +158,15 @@ export default function PublicacionesAdmin() {
   };
 
   const onDelete = async (p: Publication) => {
-    if (!confirm(`¿Eliminar "${p.title}"? Esta acción no se puede deshacer.`)) return;
-    setDeleting(p.id);
-    await deletePublication(p.id);
+    setDeleteTarget(p);
+  };
+
+  const confirmDelete = async () => {
+    if (!deleteTarget) return;
+    const target = deleteTarget;
+    setDeleteTarget(null);
+    setDeleting(target.id);
+    await deletePublication(target.id);
     setDeleting(null);
     await load();
   };
@@ -319,6 +326,31 @@ export default function PublicacionesAdmin() {
           </View>
         </Modal>
       )}
+
+      {/* Delete confirmation modal */}
+      <Modal visible={!!deleteTarget} transparent animationType="fade" onRequestClose={() => setDeleteTarget(null)}>
+        <View style={styles.deleteOverlay}>
+          <TouchableOpacity style={styles.deleteBackdrop} onPress={() => setDeleteTarget(null)} activeOpacity={1} />
+          <View style={styles.deleteDialog}>
+            <View style={styles.deleteIconWrap}>
+              <Trash2 size={24} color={colors.state.error} strokeWidth={1.8} />
+            </View>
+            <Text style={styles.deleteTitle}>Eliminar publicación</Text>
+            <Text style={styles.deleteBody} numberOfLines={3}>
+              {`¿Eliminar "${deleteTarget?.title}"? Esta acción no se puede deshacer.`}
+            </Text>
+            <View style={styles.deleteBtns}>
+              <Pressable onPress={() => setDeleteTarget(null)} style={styles.deleteCancelBtn}>
+                <Text style={styles.deleteCancelTxt}>Cancelar</Text>
+              </Pressable>
+              <Pressable onPress={confirmDelete} style={styles.deleteConfirmBtn}>
+                <Trash2 size={14} color="#fff" strokeWidth={2} />
+                <Text style={styles.deleteConfirmTxt}>Eliminar</Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -479,4 +511,85 @@ const styles = StyleSheet.create({
   cancelBtnTxt: { fontFamily: fonts.bodyMedium, color: colors.ink[500], fontSize: fontSize.sm },
   saveBtn: { flex: 2, paddingVertical: 12, borderRadius: radius.md, backgroundColor: colors.burgundy[800], alignItems: 'center' },
   saveBtnTxt: { fontFamily: fonts.bodySemibold, color: colors.cream[100], fontSize: fontSize.sm },
+
+  deleteOverlay: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(48,5,14,0.55)',
+    padding: spacing.xl,
+  },
+  deleteBackdrop: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  deleteDialog: {
+    backgroundColor: colors.surface.raised,
+    borderRadius: radius.xl,
+    padding: spacing.xl,
+    width: '100%',
+    maxWidth: 360,
+    alignItems: 'center',
+    gap: spacing.md,
+    shadowColor: '#000',
+    shadowOpacity: 0.18,
+    shadowRadius: 24,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 12,
+  },
+  deleteIconWrap: {
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: '#FCE3E3',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 4,
+  },
+  deleteTitle: {
+    fontFamily: fonts.headingBold,
+    color: colors.burgundy[900],
+    fontSize: 18,
+    textAlign: 'center' as any,
+  },
+  deleteBody: {
+    fontFamily: fonts.body,
+    color: colors.ink[500],
+    fontSize: fontSize.sm,
+    textAlign: 'center' as any,
+    lineHeight: 20,
+  },
+  deleteBtns: {
+    flexDirection: 'row',
+    gap: spacing.sm,
+    width: '100%',
+    marginTop: 4,
+  },
+  deleteCancelBtn: {
+    flex: 1,
+    paddingVertical: 12,
+    borderRadius: radius.md,
+    borderWidth: 1,
+    borderColor: colors.border.soft,
+    alignItems: 'center',
+  },
+  deleteCancelTxt: {
+    fontFamily: fonts.bodyMedium,
+    color: colors.ink[500],
+    fontSize: fontSize.sm,
+  },
+  deleteConfirmBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    paddingVertical: 12,
+    borderRadius: radius.md,
+    backgroundColor: colors.state.error,
+  },
+  deleteConfirmTxt: {
+    fontFamily: fonts.bodySemibold,
+    color: '#fff',
+    fontSize: fontSize.sm,
+  },
 });

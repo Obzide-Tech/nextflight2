@@ -42,21 +42,37 @@ export default function TransactionsAdmin() {
     <ScrollView style={styles.scroll} contentContainerStyle={styles.container}>
       {/* Header */}
       <View style={[styles.header, isMobile && styles.headerMobile]}>
-        <View style={{ flex: isMobile ? 0 : 1 }}>
+        <View style={styles.headerIcon}>
+          <ArrowDownLeft size={22} color={colors.gold[400]} strokeWidth={1.8} />
+        </View>
+        <View style={{ flex: 1 }}>
           <Text style={styles.eyebrow}>Trazabilidad</Text>
           <Text style={[styles.title, isMobile && styles.titleMobile]}>Transacciones</Text>
           <Text style={styles.subtitle}>Apple StoreKit · Google Play Billing · Manual</Text>
         </View>
-        {!loading && (
-          <View style={[styles.totalBox, isMobile && styles.totalBoxMobile]}>
-            <Text style={styles.totalLabel}>Bruto filtrado</Text>
-            <Text style={styles.totalValue}>
-              ${totalGross.toLocaleString('en-US', { minimumFractionDigits: 2 })}
-            </Text>
-            <Text style={styles.totalCount}>{rows.length} registros</Text>
-          </View>
-        )}
       </View>
+
+      {/* Summary strip */}
+      {!loading && (
+        <View style={styles.summaryStrip}>
+          <View style={styles.summaryCard}>
+            <Filter size={16} color={colors.gold[400]} strokeWidth={1.8} />
+            <View>
+              <Text style={styles.summaryLabel}>Bruto filtrado</Text>
+              <Text style={styles.summaryValue}>
+                ${totalGross.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.summaryDivider} />
+          <View style={styles.summaryCard}>
+            <View>
+              <Text style={styles.summaryLabel}>Registros</Text>
+              <Text style={[styles.summaryValue, { color: colors.gold[300] }]}>{rows.length}</Text>
+            </View>
+          </View>
+        </View>
+      )}
 
       {/* Filters */}
       <View style={[styles.filtersBar, isMobile && styles.filtersBarMobile]}>
@@ -168,21 +184,27 @@ const styles = StyleSheet.create({
 
   header: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     paddingHorizontal: spacing.xl,
     paddingTop: spacing.xl,
-    paddingBottom: spacing.xl,
+    paddingBottom: spacing.lg,
     backgroundColor: colors.surface.raised,
     borderBottomWidth: 1,
     borderBottomColor: colors.border.soft,
-    gap: spacing.lg,
+    gap: spacing.md,
   },
   headerMobile: {
-    flexDirection: 'column',
     paddingHorizontal: spacing.md,
     paddingTop: spacing.lg,
-    paddingBottom: spacing.md,
-    gap: spacing.md,
+  },
+  headerIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: radius.lg,
+    backgroundColor: colors.burgundy[900],
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
   },
   eyebrow: {
     fontFamily: fonts.support,
@@ -194,32 +216,49 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: fonts.headingBold,
     color: colors.burgundy[900],
-    fontSize: 28,
-    marginTop: 4,
+    fontSize: 26,
+    marginTop: 2,
   },
-  titleMobile: { fontSize: 22 },
+  titleMobile: { fontSize: 20 },
   subtitle: {
     fontFamily: fonts.body,
     color: colors.ink[500],
     fontSize: fontSize.sm,
     marginTop: 2,
   },
-  totalBox: {
+
+  summaryStrip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
     backgroundColor: colors.burgundy[900],
-    borderRadius: radius.lg,
-    padding: spacing.md,
-    alignItems: 'flex-end',
-    minWidth: 140,
-    flexShrink: 0,
+    gap: spacing.lg,
   },
-  totalBoxMobile: {
-    minWidth: 0,
-    alignSelf: 'flex-start',
-    alignItems: 'flex-start',
+  summaryCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    flex: 1,
   },
-  totalLabel: { fontFamily: fonts.support, color: 'rgba(241,238,219,0.6)', fontSize: 9, letterSpacing: 2, textTransform: 'uppercase' as any },
-  totalValue: { fontFamily: fonts.headingBold, color: colors.cream[100], fontSize: 22, marginTop: 2 },
-  totalCount: { fontFamily: fonts.support, color: colors.gold[400], fontSize: 11, marginTop: 2 },
+  summaryLabel: {
+    fontFamily: fonts.support,
+    color: 'rgba(241,238,219,0.55)',
+    fontSize: 9,
+    letterSpacing: 2,
+    textTransform: 'uppercase' as any,
+  },
+  summaryValue: {
+    fontFamily: fonts.headingBold,
+    color: colors.gold[300],
+    fontSize: 20,
+    marginTop: 2,
+  },
+  summaryDivider: {
+    width: 1,
+    height: 36,
+    backgroundColor: 'rgba(175,137,86,0.2)',
+  },
 
   filtersBar: {
     flexDirection: 'column',

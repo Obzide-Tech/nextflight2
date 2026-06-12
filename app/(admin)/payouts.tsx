@@ -79,23 +79,48 @@ export default function Payouts() {
     <ScrollView style={styles.scroll} contentContainerStyle={styles.container}>
       {/* Header */}
       <View style={[styles.header, isMobile && styles.headerMobile]}>
-        <View style={{ flex: isMobile ? 0 : 1 }}>
+        <View style={styles.headerIcon}>
+          <Banknote size={22} color={colors.gold[400]} strokeWidth={1.8} />
+        </View>
+        <View style={{ flex: 1 }}>
           <Text style={styles.eyebrow}>Operación financiera</Text>
           <Text style={[styles.title, isMobile && styles.titleMobile]}>Cola de payouts</Text>
           <Text style={styles.subtitle}>Aprueba, rechaza o marca como pagado — cada acción queda auditada.</Text>
         </View>
-        <View style={[styles.headerActions, isMobile && styles.headerActionsMobile]}>
-          <View style={styles.statBox}>
-            <Clock size={14} color={colors.gold[400]} strokeWidth={1.8} />
-            <View>
-              <Text style={styles.statLabel}>Pendiente</Text>
-              <Text style={styles.statValue}>${pendingTotal.toFixed(2)}</Text>
-            </View>
+        <Pressable onPress={reload} style={styles.refreshBtn}>
+          <RefreshCw size={14} color={colors.burgundy[800]} strokeWidth={2} />
+          {!isMobile && <Text style={styles.refreshTxt}>Actualizar</Text>}
+        </Pressable>
+      </View>
+
+      {/* Summary strip */}
+      <View style={styles.summaryStrip}>
+        <View style={styles.summaryCard}>
+          <Clock size={16} color={colors.gold[400]} strokeWidth={1.8} />
+          <View>
+            <Text style={styles.summaryLabel}>Pendiente total</Text>
+            <Text style={styles.summaryValue}>${pendingTotal.toFixed(2)}</Text>
           </View>
-          <Pressable onPress={reload} style={styles.refreshBtn}>
-            <RefreshCw size={14} color={colors.burgundy[800]} strokeWidth={2} />
-            <Text style={styles.refreshTxt}>Actualizar</Text>
-          </Pressable>
+        </View>
+        <View style={styles.summaryDivider} />
+        <View style={styles.summaryCard}>
+          <DollarSign size={16} color='#3A7A5C' strokeWidth={1.8} />
+          <View>
+            <Text style={styles.summaryLabel}>Solicitudes</Text>
+            <Text style={[styles.summaryValue, { color: colors.burgundy[900] }]}>
+              {rows.filter((r) => r.status === 'requested').length}
+            </Text>
+          </View>
+        </View>
+        <View style={styles.summaryDivider} />
+        <View style={styles.summaryCard}>
+          <CheckCircle2 size={16} color='#3A547A' strokeWidth={1.8} />
+          <View>
+            <Text style={styles.summaryLabel}>Aprobadas</Text>
+            <Text style={[styles.summaryValue, { color: colors.burgundy[900] }]}>
+              {rows.filter((r) => r.status === 'approved').length}
+            </Text>
+          </View>
         </View>
       </View>
 
@@ -234,7 +259,7 @@ const styles = StyleSheet.create({
 
   header: {
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     paddingHorizontal: spacing.xl,
     paddingTop: spacing.xl,
     paddingBottom: spacing.lg,
@@ -244,9 +269,17 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface.raised,
   },
   headerMobile: {
-    flexDirection: 'column',
     paddingHorizontal: spacing.md,
     paddingTop: spacing.lg,
+  },
+  headerIcon: {
+    width: 48,
+    height: 48,
+    borderRadius: radius.lg,
+    backgroundColor: colors.burgundy[900],
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
   },
   eyebrow: {
     fontFamily: fonts.support,
@@ -255,34 +288,54 @@ const styles = StyleSheet.create({
     letterSpacing: 3,
     textTransform: 'uppercase' as any,
   },
-  title: { fontFamily: fonts.headingBold, color: colors.burgundy[900], fontSize: 28, marginTop: 4 },
-  titleMobile: { fontSize: 22 },
+  title: { fontFamily: fonts.headingBold, color: colors.burgundy[900], fontSize: 26, marginTop: 2 },
+  titleMobile: { fontSize: 20 },
   subtitle: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.sm, marginTop: 2 },
-  headerActions: { flexDirection: 'row', gap: spacing.sm, alignItems: 'center', flexShrink: 0 },
-  headerActionsMobile: { flexDirection: 'row', marginTop: spacing.sm },
-  statBox: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-    backgroundColor: colors.burgundy[900],
-    borderRadius: radius.md,
-    paddingHorizontal: spacing.md,
-    paddingVertical: 10,
-  },
-  statLabel: { fontFamily: fonts.support, color: colors.gold[400], fontSize: 9, letterSpacing: 2, textTransform: 'uppercase' as any },
-  statValue: { fontFamily: fonts.headingBold, color: colors.cream[100], fontSize: 18 },
   refreshBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    paddingHorizontal: spacing.md,
-    paddingVertical: 10,
+    width: 40,
+    height: 40,
     borderRadius: radius.md,
     borderWidth: 1,
     borderColor: colors.border.medium,
     backgroundColor: colors.surface.raised,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
   },
   refreshTxt: { fontFamily: fonts.bodyMedium, color: colors.burgundy[800], fontSize: fontSize.sm },
+
+  summaryStrip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: spacing.xl,
+    paddingVertical: spacing.md,
+    backgroundColor: colors.burgundy[900],
+    gap: spacing.lg,
+  },
+  summaryCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    flex: 1,
+  },
+  summaryLabel: {
+    fontFamily: fonts.support,
+    color: 'rgba(241,238,219,0.55)',
+    fontSize: 9,
+    letterSpacing: 2,
+    textTransform: 'uppercase' as any,
+  },
+  summaryValue: {
+    fontFamily: fonts.headingBold,
+    color: colors.gold[300],
+    fontSize: 20,
+    marginTop: 2,
+  },
+  summaryDivider: {
+    width: 1,
+    height: 36,
+    backgroundColor: 'rgba(175,137,86,0.2)',
+  },
 
   filterTabs: {
     flexDirection: 'row',
