@@ -3,10 +3,9 @@ import {
   View, Text, StyleSheet, ActivityIndicator, ScrollView,
   useWindowDimensions,
 } from 'react-native';
-import { StatusPill } from '@/components/admin/StatusPill';
 import {
-  fetchDashboardKpis, fetchPlatformBreakdown,
-  DashboardKpis, PlatformBreakdown, fetchPayouts, PayoutRow,
+  fetchDashboardKpis,
+  DashboardKpis,
 } from '@/lib/admin';
 import { colors, fonts, fontSize, spacing, radius } from '@/theme/tokens';
 import { TrendingUp, Users, Wallet, Star } from 'lucide-react-native';
@@ -27,16 +26,12 @@ export default function Dashboard() {
   const isMobile = width < 768;
 
   const [kpis, setKpis] = useState<DashboardKpis | null>(null);
-  const [platforms, setPlatforms] = useState<PlatformBreakdown[]>([]);
-  const [recentPayouts, setRecentPayouts] = useState<PayoutRow[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      const [k, p, pq] = await Promise.all([fetchDashboardKpis(), fetchPlatformBreakdown(), fetchPayouts()]);
+      const k = await fetchDashboardKpis();
       setKpis(k);
-      setPlatforms(p);
-      setRecentPayouts(pq.slice(0, 6));
       setLoading(false);
     })();
   }, []);
@@ -55,8 +50,6 @@ export default function Dashboard() {
     { ...KPI_META[2], value: formatUsd(kpis.pendingPayoutsUsd), sub: `${kpis.pendingPayoutsCount} solicitudes pendientes` },
     { ...KPI_META[3], value: String(kpis.affiliatesActive), sub: `${kpis.studentsTotal} estudiantes totales` },
   ];
-
-  const totalGross = platforms.reduce((s, p) => s + p.gross, 0) || 1;
 
   return (
     <ScrollView
@@ -124,68 +117,6 @@ export default function Dashboard() {
           })}
         </View>
       )}
-
-      {/* Main panels */}
-      <View style={[styles.grid, isMobile && styles.gridMobile]}>
-        {/* Platform breakdown */}
-        <View style={[styles.panel, isMobile && styles.panelMobile]}>
-          <Text style={styles.panelEyebrow}>Desglose</Text>
-          <Text style={styles.panelTitle}>Reparto por plataforma</Text>
-          <Text style={styles.panelSub}>Últimos 30 días · transacciones confirmadas</Text>
-          <View style={styles.divider} />
-          {platforms.length === 0 ? (
-            <Text style={styles.empty}>Sin transacciones en el periodo.</Text>
-          ) : (
-            <View style={{ gap: spacing.lg }}>
-              {platforms.map((p) => {
-                const pct = (p.gross / totalGross) * 100;
-                return (
-                  <View key={p.platform}>
-                    <View style={styles.platRow}>
-                      <Text style={styles.platLabel}>{p.platform}</Text>
-                      <View style={styles.platRight}>
-                        <Text style={styles.platPct}>{pct.toFixed(0)}%</Text>
-                        <Text style={styles.platValue}>{formatUsd(p.gross)}</Text>
-                      </View>
-                    </View>
-                    <View style={styles.platTrack}>
-                      <View style={[styles.platFill, { width: `${pct}%` as any }]} />
-                    </View>
-                    <Text style={styles.platMeta}>{p.count} transacciones</Text>
-                  </View>
-                );
-              })}
-            </View>
-          )}
-        </View>
-
-        {/* Recent payouts */}
-        <View style={[styles.panel, isMobile && styles.panelMobile]}>
-          <Text style={styles.panelEyebrow}>Cola reciente</Text>
-          <Text style={styles.panelTitle}>Últimos retiros</Text>
-          <Text style={styles.panelSub}>6 solicitudes más recientes</Text>
-          <View style={styles.divider} />
-          {recentPayouts.length === 0 ? (
-            <Text style={styles.empty}>Sin solicitudes recientes.</Text>
-          ) : (
-            <View style={{ gap: 2 }}>
-              {recentPayouts.map((p) => (
-                <View key={p.id} style={styles.payRow}>
-                  <View style={styles.payAvatar}>
-                    <Text style={styles.payAvatarTxt}>{(p.affiliate_name ?? '?')[0].toUpperCase()}</Text>
-                  </View>
-                  <View style={{ flex: 1, minWidth: 0 }}>
-                    <Text style={styles.payName} numberOfLines={1}>{p.affiliate_name}</Text>
-                    <Text style={styles.payDate}>{new Date(p.requested_at).toLocaleDateString()}</Text>
-                  </View>
-                  <Text style={styles.payAmount}>{formatUsd(Number(p.amount_usd))}</Text>
-                  <StatusPill value={p.status} />
-                </View>
-              ))}
-            </View>
-          )}
-        </View>
-      </View>
 
     </ScrollView>
   );
@@ -321,99 +252,5 @@ const styles = StyleSheet.create({
     color: colors.ink[500],
     fontSize: fontSize.xs,
     minWidth: 0,
-  },
-
-  grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap' as any,
-    gap: spacing.md,
-    padding: spacing.xl,
-  },
-  gridMobile: {
-    padding: spacing.md,
-    flexDirection: 'column',
-  },
-  panel: {
-    flex: 1,
-    minWidth: 280,
-    backgroundColor: colors.surface.raised,
-    borderRadius: radius.xl,
-    borderWidth: 1,
-    borderColor: colors.border.soft,
-    padding: spacing.lg,
-  },
-  panelMobile: {
-    flex: 0,
-    minWidth: 0,
-    width: '100%',
-  },
-  panelEyebrow: {
-    fontFamily: fonts.support,
-    color: colors.gold[600],
-    fontSize: 9,
-    letterSpacing: 3,
-    textTransform: 'uppercase' as any,
-  },
-  panelTitle: {
-    fontFamily: fonts.headingBold,
-    color: colors.burgundy[900],
-    fontSize: fontSize.lg,
-    marginTop: 4,
-  },
-  panelSub: {
-    fontFamily: fonts.body,
-    color: colors.ink[500],
-    fontSize: fontSize.xs,
-    marginTop: 2,
-  },
-  divider: {
-    height: 1,
-    backgroundColor: colors.border.soft,
-    marginVertical: spacing.md,
-  },
-  empty: { fontFamily: fonts.body, color: colors.ink[500], fontSize: fontSize.sm },
-
-  platRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
-  platLabel: {
-    fontFamily: fonts.bodySemibold,
-    color: colors.burgundy[900],
-    fontSize: fontSize.sm,
-    textTransform: 'capitalize' as any,
-    flex: 1,
-  },
-  platRight: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
-  platPct: { fontFamily: fonts.support, color: colors.ink[500], fontSize: fontSize.xs },
-  platValue: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.sm, minWidth: 70, textAlign: 'right' as any },
-  platTrack: { height: 6, borderRadius: 3, backgroundColor: colors.cream[200], overflow: 'hidden' },
-  platFill: { height: 6, borderRadius: 3, backgroundColor: colors.gold[500] },
-  platMeta: { fontFamily: fonts.support, color: colors.ink[500], fontSize: fontSize.xs, marginTop: 4 },
-
-  payRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.sm,
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border.soft,
-  },
-  payAvatar: {
-    width: 32,
-    height: 32,
-    borderRadius: 16,
-    backgroundColor: colors.burgundy[900],
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexShrink: 0,
-  },
-  payAvatarTxt: { fontFamily: fonts.bodySemibold, color: colors.cream[100], fontSize: 13 },
-  payName: { fontFamily: fonts.bodySemibold, color: colors.burgundy[900], fontSize: fontSize.sm },
-  payDate: { fontFamily: fonts.support, color: colors.ink[500], fontSize: fontSize.xs },
-  payAmount: {
-    fontFamily: fonts.bodySemibold,
-    color: colors.burgundy[900],
-    fontSize: fontSize.base,
-    minWidth: 72,
-    textAlign: 'right' as any,
-    flexShrink: 0,
   },
 });
