@@ -7,7 +7,7 @@
     "icon": "./assets/images/icon.png",
     "scheme": "nextflight",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
@@ -44,6 +44,7 @@
       "expo-router",
       "expo-font",
       "expo-web-browser",
+      "expo-camera",
       [
         "expo-build-properties",
         {
