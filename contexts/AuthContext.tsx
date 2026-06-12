@@ -85,47 +85,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signUp: AuthContextValue['signUp'] = async (email, password, fullName) => {
-    const { data, error } = await supabase.auth.signUp({
+    const { error } = await supabase.auth.signUp({
       email,
       password,
       options: { data: { full_name: fullName } },
     });
     if (error) return { error: error.message };
-    if (data.user) {
-      const { error: profileErr } = await supabase.from('user_profiles').upsert({
-        id: data.user.id,
-        full_name: fullName,
-        accepted_terms_at: new Date().toISOString(),
-        terms_version: 'v1',
-      });
-      if (profileErr) console.warn('user_profiles insert failed:', profileErr.message);
 
-      const { error: roleErr } = await supabase.from('user_roles').insert({
-        user_id: data.user.id,
-        role: 'student_free',
-      });
-      if (roleErr) console.warn('user_roles insert failed:', roleErr.message);
-
-      // Auto-enroll into the free Starter program
-      const { data: starter } = await supabase
-        .from('products_programs')
-        .select('id')
-        .eq('slug', 'nextflight-starter')
-        .maybeSingle();
-      if (starter?.id) {
-        await supabase.from('enrollments').insert({
-          user_id: data.user.id,
-          program_id: starter.id,
-        });
+    // Profile and role are created automatically by the DB trigger on_auth_user_created.
+    // Capture referral attribution if the user arrived via an affiliate link.
+    const referralCode = await loadReferralCode();
+    if (referralCode) {
+      const { data: sessionData } = await supabase.auth.getSession();
+      if (sessionData.session?.user) {
+        await captureAttribution(referralCode, sessionData.session.user.id);
       }
-
-      // Capture referral attribution if the user arrived via an affiliate link
-      const referralCode = await loadReferralCode();
-      if (referralCode) {
-        await captureAttribution(referralCode, data.user.id);
-        await clearReferralCode();
-      }
+      await clearReferralCode();
     }
+
     return { error: null };
   };
 
