@@ -36,12 +36,70 @@ const HEADER_LOGO_ML = Math.round(HEADER_LOGO_W * -0.30);
 const APP_BASE_URL =
   process.env.EXPO_PUBLIC_APP_URL?.replace(/\/$/, '') ?? 'https://nextflight.app';
 
+// ─── No-role enrollment CTA ───────────────────────────────────────────────────
+
+function EnrollmentCTA() {
+  const router = useRouter();
+  const { profile, signOut } = useAuth();
+  const firstName = profile?.full_name?.split(' ')[0];
+
+  return (
+    <View style={styles.bg}>
+      <SafeAreaView edges={['top']} style={{ flex: 1 }}>
+        <View style={styles.header}>
+          <Image
+            source={LOGO_WORDMARK_CENTERED_GOLD}
+            style={{ width: HEADER_LOGO_W, height: HEADER_LOGO_H, marginLeft: HEADER_LOGO_ML }}
+            resizeMode="contain"
+          />
+          <View style={styles.headerActions}>
+            <TouchableOpacity style={styles.logoutBtn} onPress={signOut}>
+              <LogOut size={20} color="#E0DBC3" strokeWidth={1.5} />
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <ScrollView contentContainerStyle={[styles.content, { paddingTop: 32 }]} showsVerticalScrollIndicator={false}>
+          <View style={styles.greetRow}>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.greetName}>{firstName ? `Hola, ${firstName}` : 'Hola'}</Text>
+              <Text style={styles.greetSub}>
+                Tu cuenta está lista.{'\n'}Inscríbete para acceder a todos{'\n'}los módulos de NextFlight Academy.
+              </Text>
+            </View>
+          </View>
+
+          <View style={styles.ctaCard}>
+            <Text style={styles.ctaEye}>NEXTFLIGHT ACADEMY</Text>
+            <Text style={styles.ctaTitle}>Programa{'\n'}Completo</Text>
+            <Text style={styles.ctaDesc}>
+              Accede a todos los módulos, lecciones, comunidad de copilotas y soporte directo.
+            </Text>
+            <TouchableOpacity
+              style={styles.ctaBtn}
+              onPress={() => router.push('/(app)/(tabs)/aduana')}
+              activeOpacity={0.85}
+            >
+              <Text style={styles.ctaBtnTxt}>Ver detalles e inscribirse</Text>
+              <ArrowRight size={16} color={colors.burgundy[700]} strokeWidth={2.5} />
+            </TouchableOpacity>
+          </View>
+
+          <Text style={styles.ctaNote}>
+            Una sola inscripción · Acceso de por vida
+          </Text>
+        </ScrollView>
+      </SafeAreaView>
+    </View>
+  );
+}
+
 // ─── Affiliate-only terminal ──────────────────────────────────────────────────
 
 function AffiliateTerminal() {
   const router = useRouter();
   const { user, profile, signOut } = useAuth();
-  const name = profile?.full_name?.split(' ')[0] ?? 'Copilota';
+  const firstName = profile?.full_name?.split(' ')[0];
   const scrollRef = useRef<ScrollView>(null);
 
   const [loading, setLoading] = useState(true);
@@ -136,7 +194,7 @@ function AffiliateTerminal() {
           {/* Greeting */}
           <View style={styles.greetRow}>
             <View style={{ flex: 1 }}>
-              <Text style={styles.greetName}>Hola, {name}</Text>
+              <Text style={styles.greetName}>{firstName ? `Hola, ${firstName}` : 'Hola'}</Text>
               <Text style={styles.greetSub}>
                 Bienvenida a tu cabina de copilota.{'\n'}Comparte tu enlace, sigue tus referidos{'\n'}y solicita tus retiros en USD.
               </Text>
@@ -237,10 +295,12 @@ export default function Terminal() {
   const router = useRouter();
   const { user, profile, roles, signOut } = useAuth();
   const isStudent = roles.includes('student_free') || roles.includes('student_premium');
+  const isAffiliate = roles.includes('affiliate');
 
-  if (!isStudent) return <AffiliateTerminal />;
+  if (!isStudent && !isAffiliate) return <EnrollmentCTA />;
+  if (!isStudent && isAffiliate) return <AffiliateTerminal />;
 
-  const name = profile?.full_name?.split(' ')[0] ?? 'Pasajera';
+  const firstName = profile?.full_name?.split(' ')[0];
   const scrollRef = useRef<ScrollView>(null);
 
   const [loading, setLoading] = useState(true);
@@ -374,7 +434,7 @@ export default function Terminal() {
           {/* ── Greeting ── */}
           <View style={styles.greetRow}>
             <View style={{ flex: 1 }}>
-              <Text style={styles.greetName}>Hola, {name}</Text>
+              <Text style={styles.greetName}>{firstName ? `Hola, ${firstName}` : 'Hola'}</Text>
               <Text style={styles.greetSub}>
                 Bienvenida a tu cabina. Aquí encuentras{'\n'}tu próximo vuelo, tus lecciones y los{'\n'}anuncios del comandante.
               </Text>
@@ -860,5 +920,59 @@ const styles = StyleSheet.create({
     color: colors.cream[100],
     textAlign: 'center',
     letterSpacing: 0.3,
+  },
+
+  // ─── Enrollment CTA ───
+  ctaCard: {
+    backgroundColor: 'rgba(175,137,86,0.10)',
+    borderWidth: 1,
+    borderColor: 'rgba(175,137,86,0.35)',
+    borderRadius: 20,
+    padding: 24,
+    marginBottom: 16,
+  },
+  ctaEye: {
+    fontFamily: fonts.supportMedium,
+    fontSize: 10,
+    letterSpacing: 3,
+    color: colors.gold[400],
+    textTransform: 'uppercase' as any,
+    marginBottom: 8,
+  },
+  ctaTitle: {
+    fontFamily: fonts.headingBold,
+    fontSize: 32,
+    color: colors.cream[50],
+    lineHeight: 38,
+    marginBottom: 12,
+  },
+  ctaDesc: {
+    fontFamily: fonts.body,
+    fontSize: 14,
+    color: colors.cream[200],
+    lineHeight: 22,
+    marginBottom: 20,
+  },
+  ctaBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    alignSelf: 'flex-start',
+    backgroundColor: colors.cream[100],
+    paddingHorizontal: 20,
+    paddingVertical: 13,
+    borderRadius: 999,
+  },
+  ctaBtnTxt: {
+    fontFamily: fonts.bodySemibold,
+    fontSize: 14,
+    color: colors.burgundy[700],
+  },
+  ctaNote: {
+    fontFamily: fonts.body,
+    fontSize: 12,
+    color: 'rgba(241,238,219,0.45)',
+    textAlign: 'center',
+    marginTop: 4,
   },
 });

@@ -194,7 +194,7 @@ export default function Profile() {
                   </View>
                 ) : null}
               </TouchableOpacity>
-              <Text style={styles.heroName}>{fullName || 'Pasajera'}</Text>
+              <Text style={styles.heroName}>{fullName || ''}</Text>
               <Text style={styles.email}>{user?.email}</Text>
             </View>
           </View>

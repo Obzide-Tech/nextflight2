@@ -7,7 +7,7 @@ import { Send, Users, Smartphone, Eye, EyeOff } from 'lucide-react-native';
 const AUDIENCES = [
   { value: 'all', label: 'Toda la comunidad', desc: 'Todas las usuarias registradas' },
   { value: 'students', label: 'Estudiantes', desc: 'Con matrícula activa' },
-  { value: 'premium', label: 'Premium', desc: 'Suscripción premium' },
+  { value: 'premium', label: 'Premium', desc: 'Inscripción premium' },
   { value: 'affiliates', label: 'Afiliadas', desc: 'Red de referidos' },
 ] as const;
 

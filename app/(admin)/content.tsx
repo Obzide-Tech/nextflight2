@@ -90,7 +90,7 @@ function LessonEditor({
         <View style={editorStyles.toggleRow}>
           <View style={{ flex: 1 }}>
             <Text style={editorStyles.label}>Gratis</Text>
-            <Text style={editorStyles.toggleSub}>Visible sin suscripción</Text>
+            <Text style={editorStyles.toggleSub}>Visible sin inscripción</Text>
           </View>
           <Switch
             value={draft.is_free}

@@ -347,7 +347,7 @@ export default function Bitacora() {
         <TouchableOpacity onPress={() => router.push('/(app)/profile')} style={styles.profileRow} activeOpacity={0.85}>
           <View style={styles.avatar}><User size={18} color={colors.gold[400]} strokeWidth={1.6} /></View>
           <View style={{ flex: 1 }}>
-            <Text style={styles.profileName}>{profile?.full_name ?? 'Pasajera'}</Text>
+            <Text style={styles.profileName}>{profile?.full_name ?? ''}</Text>
             <Text style={styles.profileSub}>Ver perfil</Text>
           </View>
           <ChevronRight size={16} color={colors.cream[200]} />

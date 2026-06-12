@@ -22,6 +22,8 @@ function PlaneTab({ focused }: { focused: boolean }) {
 export default function TabsLayout() {
   const { roles, loading } = useAuth();
   const isStudent = loading || roles.includes('student_free') || roles.includes('student_premium');
+  const isAffiliate = loading || roles.includes('affiliate');
+  const showCopilotos = isAffiliate || isStudent;
 
   return (
     <Tabs
@@ -77,6 +79,7 @@ export default function TabsLayout() {
           tabBarIcon: ({ color, size }) => (
             <Users size={size} color={color} strokeWidth={1.5} />
           ),
+          tabBarItemStyle: showCopilotos ? undefined : { display: 'none' },
         }}
       />
       <Tabs.Screen

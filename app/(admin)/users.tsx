@@ -176,7 +176,7 @@ function UserModal({ user, onClose, onUpdated }: UserModalProps) {
             </View>
 
             {/* ── Subscription section ── */}
-            <SectionHeader icon={<CreditCard size={14} color={colors.gold[600]} strokeWidth={2} />} label="Suscripción" />
+            <SectionHeader icon={<CreditCard size={14} color={colors.gold[600]} strokeWidth={2} />} label="Inscripción" />
             {user.subscription ? (
               <View style={ms.infoGrid}>
                 <InfoRow label="Estado" value={user.subscription.status} pill />
@@ -184,7 +184,7 @@ function UserModal({ user, onClose, onUpdated }: UserModalProps) {
                 <InfoRow label="Fin de periodo" value={fmtDate(user.subscription.period_end)} />
               </View>
             ) : (
-              <Text style={ms.emptySection}>Sin suscripción activa.</Text>
+              <Text style={ms.emptySection}>Sin inscripción activa.</Text>
             )}
 
             {/* ── Affiliate section ── */}
@@ -307,7 +307,7 @@ export default function UsersAdmin() {
           <View style={styles.tableHead}>
             <Text style={[styles.th, { flex: 3 }]}>Usuaria</Text>
             <Text style={[styles.th, { flex: 2 }]}>Roles</Text>
-            <Text style={[styles.th, { flex: 1.5 }]}>Suscripción</Text>
+            <Text style={[styles.th, { flex: 1.5 }]}>Inscripción</Text>
             <Text style={[styles.th, { flex: 1, textAlign: 'center' as any }]}>País</Text>
             <Text style={[styles.th, { flex: 1, textAlign: 'right' as any }]}>Alta</Text>
             <View style={{ width: 32 }} />

@@ -36,12 +36,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [roles, setRoles] = useState<Role[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const loadUserData = async (userId: string) => {
+  const loadUserData = async (userId: string, metaName?: string) => {
     const [{ data: profileData }, { data: rolesData }] = await Promise.all([
       supabase.from('user_profiles').select('*').eq('id', userId).maybeSingle(),
       supabase.from('user_roles').select('role').eq('user_id', userId),
     ]);
-    setProfile(profileData ?? null);
+    if (profileData) {
+      setProfile(profileData);
+    } else if (metaName) {
+      setProfile({ id: userId, full_name: metaName, avatar_url: null, country: null, city: null, timezone: null, language: null, onboarded_at: null, notification_prefs: null });
+    } else {
+      setProfile(null);
+    }
     setRoles((rolesData ?? []).map((r: any) => r.role as Role));
     registerPushTokenIfPossible(userId).catch(() => {});
   };
@@ -50,7 +56,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
       if (session?.user) {
-        loadUserData(session.user.id).finally(() => setLoading(false));
+        const metaName = session.user.user_metadata?.full_name ?? undefined;
+        loadUserData(session.user.id, metaName).finally(() => setLoading(false));
       } else {
         setLoading(false);
       }
@@ -59,8 +66,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const { data: subscription } = supabase.auth.onAuthStateChange((_event, newSession) => {
       setSession(newSession);
       if (newSession?.user) {
+        const metaName = newSession.user.user_metadata?.full_name ?? undefined;
         (async () => {
-          await loadUserData(newSession.user.id);
+          await loadUserData(newSession.user.id, metaName);
         })();
       } else {
         setProfile(null);
@@ -77,20 +85,28 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signUp: AuthContextValue['signUp'] = async (email, password, fullName) => {
-    const { data, error } = await supabase.auth.signUp({ email, password });
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: { data: { full_name: fullName } },
+    });
     if (error) return { error: error.message };
     if (data.user) {
-      await supabase.from('user_profiles').upsert({
+      const { error: profileErr } = await supabase.from('user_profiles').upsert({
         id: data.user.id,
         full_name: fullName,
         accepted_terms_at: new Date().toISOString(),
         terms_version: 'v1',
       });
-      await supabase.from('user_roles').insert({
+      if (profileErr) console.warn('user_profiles insert failed:', profileErr.message);
+
+      const { error: roleErr } = await supabase.from('user_roles').insert({
         user_id: data.user.id,
         role: 'student_free',
       });
-      // Auto-enroll into the free Starter program for the demo experience
+      if (roleErr) console.warn('user_roles insert failed:', roleErr.message);
+
+      // Auto-enroll into the free Starter program
       const { data: starter } = await supabase
         .from('products_programs')
         .select('id')
@@ -118,7 +134,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const refresh = async () => {
-    if (session?.user) await loadUserData(session.user.id);
+    if (session?.user) {
+      const metaName = session.user.user_metadata?.full_name ?? undefined;
+      await loadUserData(session.user.id, metaName);
+    }
   };
 
   return (
